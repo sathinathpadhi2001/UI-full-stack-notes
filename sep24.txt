@@ -1,0 +1,323 @@
+CSS Integration
+CSS Selectors
+CSS Inheritance
+CSS Colors
+CSS Rules
+
+             CSS Units
+- Units are used to configure the dimensions and location of element in page.
+- Units are of 2 types
+    a) Absolute Units
+    b) Relative Units
+
+- Absolute units are fixed units, they are not dependent of other elements in page.
+- CSS absolute units are of various types
+
+        in, cm, mm, Q, pt, px, pc etc.
+
+- Relative units can change according to the parent or root elements.
+
+        em    Element size
+        rem    Root element size
+        %    Fluid
+
+Syntax:
+    .parent {
+         font-size: 20px;
+    }
+    .child-1 {
+         font-size: 2em;
+     }
+    .child-2 {
+         font-size: 1rem;
+    }
+
+
+FAQ: Which unit is mostly used for fonts in page?
+Ans:  Relative units "em & rem".
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        .container {
+            font-size: 40px;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        span {
+            font-size: 2rem;
+        }
+    </style>
+
+</head>
+<body>
+    Body Text
+   <div class="container">
+       Container Text
+       <p>Para-1</p>
+       <span>Para-2</span>
+   </div>
+</body>
+</html>
+
+             CSS Box Model
+1. Margins
+
+    margin        : short hand for all directions, top, right, bottom, left.
+   
+            Syntax:
+                     {
+                     margin: 0px 0px 0px 0px;
+                     }            [ T     R    B     L ]
+
+    margin-left
+    margin-right
+    margin-top
+    margin-bottom
+
+
+2. Padding
+
+    padding        : short hand for all directions, top, right, bottom, left.
+    padding-left
+    padding-right
+    padding-top
+    padding-bottom
+
+
+3. Border
+
+    border        : short hand for all effects of border in all directions.
+    border-width    : size
+    border-style    : double, dotted, dashed, solid, groove etc.
+    border-color    : color
+
+    border-left        : left short hand
+    border-left-width
+    border-left-style
+    border-left-color
+
+    ... similarly all directions ...
+
+    border-image    : It sets image for border, Image have 3 values
+              a) size
+              b) style [stretch | space]
+              c) offset
+              You can set image using "url()".
+Syntax:
+     {
+      border: 10px solid transparent;
+      border-image: url("path") 80 stretch|space;
+    }
+
+
+    border-radius    : short hand for all directions
+    border-top-right-radius
+    border-top-left-radius
+    border-bottom-right-radius
+    border-bottom-left-radius
+
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        p {
+            border-left: 5px double red;
+            border-top: 12px solid red;
+            border-right: 5px double red;
+            border-bottom: 12px double blue;
+            padding: 20px 10px 20px 10px;
+            margin: 0px 30px 0px 30px;
+        }
+    </style>
+
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In corporis harum et aspernatur porro officia, debitis dolorum odio id illo ab iure vel nam eveniet consequatur ratione ducimus impedit. Iste?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nihil quam deleniti inventore molestias nobis delectus, mollitia ea tenetur veniam. Dicta nam aut distinctio magnam qui nisi alias optio itaque!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias nisi excepturi beatae sit debitis officiis ipsam deleniti, necessitatibus asperiores unde similique quisquam modi laboriosam error eaque alias earum ipsa ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, et vitae debitis est quaerat quia ducimus repudiandae amet nisi asperiores blanditiis hic odit itaque sequi porro veniam libero? Quis, architecto.
+    </p>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        p {
+            padding: 20px 10px 20px 10px;
+            margin: 0px 30px 0px 30px;
+            border: 20px solid transparent;
+            border-image: url("../public/images/border.gif") 90 stretch;
+        }
+    </style>
+
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In corporis harum et aspernatur porro officia, debitis dolorum odio id illo ab iure vel nam eveniet consequatur ratione ducimus impedit. Iste?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nihil quam deleniti inventore molestias nobis delectus, mollitia ea tenetur veniam. Dicta nam aut distinctio magnam qui nisi alias optio itaque!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias nisi excepturi beatae sit debitis officiis ipsam deleniti, necessitatibus asperiores unde similique quisquam modi laboriosam error eaque alias earum ipsa ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, et vitae debitis est quaerat quia ducimus repudiandae amet nisi asperiores blanditiis hic odit itaque sequi porro veniam libero? Quis, architecto.
+    </p>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        .pic-1 {
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+        }
+        .pic-2 {
+            border-top-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+        }
+
+        .pic-3 {
+            border-bottom-right-radius: 100px;
+            border-top-left-radius: 100px;
+        }
+        .pic-4 {
+            border-bottom-left-radius: 100px;
+            border-top-right-radius: 100px;
+        }
+    </style>
+
+</head>
+<body>
+   <div>
+    <img class="pic-1" src="../public/images/women-fashion.jpg" width="200" height="200">
+    <img class="pic-2" src="../public/images/kids-fashion.jpg" width="200" height="200">
+   </div>
+   <div>
+    <img class="pic-3" src="../public/images/kids-fashion.jpg" width="200" height="200">
+   
+    <img class="pic-4" src="../public/images/men-fashion.jpg" width="200" height="200">
+   </div>
+</body>
+</html>
+
+4. width        : It sets width for element.
+
+5. height        : It sets height for element.
+
+
+              CSS Positions
+1. Static Position
+2. Absolute Position
+3. Relative Position
+4. Fixed Position
+5. Sticky Position
+
+            CSS Z-Index
+- It is used to control the overlapping element.
+- You can send backward or back.
+- You can bring forward or front.
+- Zindex starts with bottom "0".
+
+Syntax:
+    element-1{
+         z-index:0;
+    }
+    element-2 {
+        z-index:1;
+    }
+    element-3 {
+       z-index:2;
+    }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+       .men-fashion {
+        background-image: url("../public/images/men-fashion.jpg");
+        background-size: cover;
+        width: 300px;
+        height: 100px;
+        z-index: 1;
+        top:50px;
+        left: 50px;
+       }
+       .women-fashion {
+        background-image: url("../public/images/women-fashion.jpg");
+        background-size: 100% 100%;
+        width: 300px;
+        height: 100px;
+     
+        z-index: 0;
+       }
+       .kids-fashion {
+        background-image: url("../public/images/kids-fashion.jpg");
+        background-size: 100% 100%;
+        width: 300px;
+        height: 100px;
+        top:100px;
+        left: 100px;
+        z-index:2;
+       }
+       div {
+         border:2px solid black;
+         border-radius: 20px;
+         position: absolute;
+         transition: 2s;
+       }
+       div:hover {
+         position: absolute;
+         top: 200px;
+         left: 500px;
+         transition: 5s;
+         width: 500px;
+         height: 300px;
+         border-radius: 50%;
+       }
+    </style>
+
+</head>
+<body>
+     <div class="men-fashion">
+
+     </div>
+     <div class="women-fashion">
+
+     </div>
+     <div class="kids-fashion">
+
+     </div>
+</body>
+</html>
+
+            CSS Display

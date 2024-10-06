@@ -1,0 +1,258 @@
+TextBox
+Password
+Number
+Range
+Email
+Date & Time
+Url
+Color
+
+                            File Input
+- It is a file browser.
+- It allows user to select a file from the device.
+- It is not a file uploading element, It is just a file selector.
+
+Syntax:
+    <input type="file"  name="photo">
+
+- You can set filters for file types by using "accept" attribute.
+
+Syntax:
+    <input type="file"  name="photo"  accept=".jpg, .png">
+
+- You can set "multiple" attribute to enable selection of multiple files.
+
+Syntax:
+    <input type="file" name="photos"  multiple>
+
+
+                          Radio Button
+- Radio allows to select one or multiple options from a group of choices.
+- Radio once checked can't be unchecked.
+- Radios are used with "Mutex" mechanism.  [Mutual Exclusion]
+- You can configure mutex by defining same name for all radios in a category.
+
+    <input type="radio" name="gender"> Male
+    <input type="radio" name="gender"> Female
+
+- Always use labels for binding with form elements.
+
+    <input type="radio"  name="gender"> <label for="gender"> Male </label>
+
+- You can make one radio selected by using "checked" attribute.
+
+    <input type="radio" name="gender" checked> Male
+
+- Radios by default submit "on" as value, hence every radio must have "value" attribute.
+   
+    <input type="radio" name="gender" value="Male">  Male
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="radio" name="gender" value="Male" checked> <label for="gender">Male</label>
+        <input type="radio" name="gender" value="Female"> <label for="gender">Female</label>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
+
+                            Checkbox
+- It is similar to radio button but allows to check and uncheck any option.
+- You can select any one or multiple from a group of choices.
+
+Syntax:
+ <input type="checkbox" name="course"  value="UI" checked>
+ <label for="course"> UI Full Stack </label>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+            height: 50px;
+            border: 1px solid gray;
+            width: 200px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <ul>
+            <li><input type="checkbox" name="course" value="Java"> <label>Java</label> </li>
+            <li><input type="checkbox" checked name="course" value="UI"> <label>UI Full Stack</label> </li>
+            <li><input type="checkbox" name="course" value=".NET"> <label>.NET</label> </li>
+            <li><input type="checkbox" name="course" value="Oracle"> <label>Oracle</label> </li>
+        </ul>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       div {
+        margin-bottom: 20px;
+       }
+       input {
+          border-right: none;
+          border-top: none;
+          border-left: none;
+          outline: none;
+       }
+    </style>
+</head>
+<body>
+    <form>
+        <div>
+            <input type="text" placeholder="User Name">
+        </div>
+        <div>
+            <input type="password" placeholder="Password">
+        </div>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
+
+Note: Radio's and Checkbox can have a switch type of appearance with bootstrap and CSS combination.
+
+                          Dropdown List
+- A dropdown list enables user to select any one option from a group of choices.
+- It is designed by using the following elements
+
+    <select>            It adds a dropdown
+    <optgroup>        It is used to group a category of options
+    <option>            It represents an option in dropdown.
+
+Syntax:
+    <select>
+        <optgroup label="Category">
+        <option> Item-1 </option>
+        <option> Item-2 </option>
+        </optgroup>
+    </select>
+
+- Dropdown is RC data type, It will not allows icons and other formats.
+- Option can display only plain text content.
+- Every option contains 3 attributes
+
+    a) value            It defines the value to submit.
+    b) selected        It selects the option on load.
+    c) disabled        It will not allow to select.
+
+    <option value="RGI"> Hyderabad Airport </option>
+    <option selected>  MYSQL </option>
+    <option disabled>  MongoDB </option>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       div {
+        margin-bottom: 20px;
+       }
+       input {
+          border-right: none;
+          border-top: none;
+          border-left: none;
+          outline: none;
+       }
+    </style>
+</head>
+<body>
+    <form>
+        <div>
+            <label>Select Course</label>
+            <div>
+                <select name="Course">
+                    <option>Select a Course</option>
+                    <optgroup label="Databases">
+                        <option value="MongoDB"> MongoDB </option>
+                        <option value="DBSQL001" disabled>MySQL</option>
+                    </optgroup>
+                    <optgroup label="Languages">
+                        <option selected>C#</option>
+                        <option>C++</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
+
+                                ListBox
+- A list box allows to select one or multiple from a group of choices.
+- A dropdown can transform into listbox by using 2 attributes
+    a) multiple
+    b) size
+
+Syntax:
+    <select>            => dropdown
+    <select size="2">    => list box
+    <select multiple>    => list box allows selection of multiple
+
+                              Textarea
+- It allows multiline text.
+- It is RC data type, you can use only for plain text content.
+
+Syntax:
+    <textarea  rows=""  cols=""  readonly   disabled>  
+         Your text
+    </textarea>
+
+C:\>mode
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+    </style>
+</head>
+<body>
+    <form>
+       <fieldset>
+           <legend>Your Comments</legend>
+           <textarea rows="4" cols="40"></textarea>
+           <br><br>
+           <h4>Terms of Service</h4>
+           <textarea disabled rows="4" cols="40"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nam tempore, eum illum labore necessitatibus quisquam est mollitia at ipsa, sit impedit temporibus ratione blanditiis minima porro aliquam dolores officiis. </textarea>
+           <br>
+           <input type="checkbox"><label>I Accept</label>
+           <br>
+           <br>
+           <button>Post Comment</button>
+       </fieldset>
+    </form>
+</body>
+</html>

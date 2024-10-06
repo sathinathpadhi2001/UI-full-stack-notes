@@ -1,0 +1,214 @@
+Unordered List
+- It sets a bullet symbol of list item instead of numbering.
+- List is defined by using <ul>
+- Items are defined by using <li>
+- The type attribute can use values as  "circle, disc & square".
+
+Syntax:
+    <ul  type="circle">
+        <li> Item-1 </li>
+        <li> Item-2 </li>
+    </ul>
+
+FAQ: How to set custom icon as bullet?
+Ans:  You can use "list-style-image" attribute of CSS.
+                      (or)    
+      You can apply bootstrap icons of <li> element.
+
+Ex:
+1. Open ms-paint and set Image properties : 30pixels size
+2. Draw and save image in into project by name
+            "bullet" [type as GIF]
+3. Set Image with CSS attribute
+
+        ul {
+            list-style : none;
+            list-style-image: url ("./images/bullet.gif");
+            font-size: 30px;
+        }
+
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+            list-style-image: url("images/star-bullet.gif");
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+     <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+     </ul>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+     <ul>
+        <li class="bi bi-person-circle"> <span>Profile</span> </li>
+        <li class="bi bi-gift"> <span>Rewards</span> </li>
+        <li class="bi bi-search"> <span>Search</span> </li>
+     </ul>
+</body>
+</html>
+
+FAQ: Can we set numbering for <ul> and symbol for <ol>?
+Ans:  Yes. By using CSS "list-style" attribute.
+
+Syntax:
+        ol {
+             list-style: disc;
+        }
+
+        ul {
+             list-style : lower-alpha;
+         }
+
+FAQ: How to create scrollable list?
+Ans:  By controlling height and overflow.
+
+Syntax:
+     ol {
+        height: 50px;
+        width: 200px;
+        overflow: auto;
+        border:1px solid gray;
+      }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+       ol {
+          height: 50px;
+          border:1px solid gray;
+          padding: 10px;
+          overflow: auto;
+          list-style: none;
+          width: 200px;
+       }
+    </style>
+</head>
+<body>
+     <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+     </ol>
+</body>
+</html>
+
+                            Images in HTML
+
+- Images are of various types in computing technologies.
+- Web will not support all types of images.
+- The image types popularly used for web are shown below
+
+Type        Description                         MIME            extension
+---------------------------------------------------------------------------------------------------------------------
+APNG    Animated Portable Network Graphics        image/apng        .apng
+
+PNG    Portable Network Graphics                image/png        .png
+
+JPEG    Joint Photographic Expert Group            image/jpeg        .jpg, .jpeg, .jfif
+
+GIF        Graphic Interchange Format                image/gif            .gif
+
+TIFF        Tagged Image File Format                image/tiff            .tiff
+
+BMP        Bitmap                                image/bmp        .bmp
+
+ICO        Microsoft Icon                            image/ico            .ico
+
+SVG        Scalar Vector Graphics                    application/xml    .svg
+
+Webp    Web Picture                            application/webp    .webp
+
+
+
+Note: "MIME" is  Multipurpose Internet Mail Extension.
+       Every MIME type have multiple extensions used for multiple purpose.
+
+
+PNG & APNG:
+- They are HD images.
+- They have more pixel depth.
+- They occupy more memory.
+- Always use PNG and APNG for downloadable images.
+
+JPEG:
+- They are HD images.
+- Less pixel depth than PNG
+- They are compressed images.
+- Occupy less memory when compared to PNG.
+- Good for on screen presentation.
+
+GIF:
+- They are images with 256 colors.
+- Not HD images.
+- But can be animated.
+- Memory is same as PNG.
+- Good for transporting via network.
+- Good for bullets, buttons, logos etc.
+
+TIFF:
+- It is sliced image format.
+- It is HD
+- It occupies more memory.
+- It is good for scanned documents.
+
+BMP
+- It is binary format of image.
+- It is HD
+- It is good for storing in binary format. [database]
+- It is good for transport.
+- It is heavy.
+- Firewalls block BMP.
+
+SVG
+- It is not pixel based.
+- It is vector based image.
+- It is designed using XML as language.
+- XML is Extensible Markup Language.
+- It is good for architectural diagrams, icons, maps etc.
+
+
+Webp
+- It is web picture.
+- It an image embedded into page.
+- It will not allow to separate image from page.
+- You can't save or download images from webp.

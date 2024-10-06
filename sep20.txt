@@ -1,0 +1,161 @@
+- Inline
+- Embedded
+    a) MIME Type
+    b) Media
+
+Note: You can't use embedded styles across pages.
+
+3. External Style Sheet [CSS]
+- CSS is "Cascading Style Sheet"
+- You can configure styles in a separate file. [.css]
+- You can link separate CSS file with various pages.
+- Hence styles are accessible arcoss pages.
+- Using an external style sheet will increase the number of requests for page and
+  also the page load time.
+
+Ex:
+1. Go to "src/styles" folder
+
+2. Add a new file "ticket.css"
+
+.ticket {
+    border: 2px dobule red;
+    background-color: yellow;
+    color:red;
+    padding: 20px;
+    box-shadow: 10px 10px 2px black;
+}
+h2 {
+    text-align: center;
+}
+dl {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+}
+
+3. Link the stylesheet to your HTML page
+
+ <link rel="stylesheet" href="../src/styles/ticket.css">
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/styles/ticket.css">
+</head>
+<body>
+   <div class="ticket">
+       <h2>Ticket</h2>
+       <aside>
+         <img src="../public/images/amazon-banner.jpg" width="100" height="100">
+       </aside>
+       <dl>
+        <dt>Departure</dt>
+        <dd>Hyd  14:30 </dd>
+        <dt>Arrival</dt>
+        <dd>Delhi 15:45 </dd>
+       </dl>
+       <button onclick="window.print()">Print Ticket</button>
+   </div>
+</body>
+</html>
+
+                Minification
+- Minification is the process of compressing CSS code.
+- It is a programming technique followed by developers to reduce the file size.
+- It removes line breaks, optional code blocks and uses various short hand techniques for handling specific functionality.
+
+     Uncompressed [un-minified code] => used in => Development [Design]
+
+    Compresess [minified code] => used in => Production [ Live ]
+
+Ex:
+1. Copy your actual CSS code
+
+2. Visit     https://www.toptal.com/developers/cssminifier
+
+3. Paste your CSS code
+
+4. Click "Minify" button
+
+5. Copy the minified code
+
+6. Go to project  "src/styles" folder
+
+7. Add a new file  "ticket.min.css"
+
+8. Paste the minified code
+
+9. Link the minified file to HTML page
+
+  <link rel="stylesheet" href="../src/styles/ticket.min.css">  
+
+               CDN
+- Content Delivery Network
+- You can configure resources on server.
+- You can access resources from server directly without downloading into project.
+- It saves the space in your project and allows to use across projects.
+
+FAQ: If we define styles for any element using all three techniques, then which set of styles will apply?
+Ans:
+      - Always 1st priority is for inline.
+      - 2nd priority depends on placement order, which ever the lastest that will apply.
+      - If different attributes are defined, then all will apply.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        h1 {
+            color:green;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="../src/styles/ticket.css">
+</head>
+<body>
+   <h1 style="background-color: yellow;" >Welcome</h1>
+</body>
+</html>
+
+                     Style Syntax
+Inline:
+- Inline style requires an attribute and value defined as object.
+
+    "attribute:value; attribute:value"
+
+   <h1  style="attribute:value; attribute:value">
+
+Embedded:
+- Embedded style requires  set of attributes and values defined in a block  {  }.
+- Embedded also requires a selector.
+
+Syntax:
+    selector
+    {
+      attribute:value;
+      attribute:value;
+    }
+
+External:
+- It is similar to embedded.
+- It requires a selector with block {  }.
+
+Note: It is often reffered as CSSOM.  [CSS Object Model]
+
+FAQ: What is an Object?
+- Object is used to keep all related data and logic together.
+- It allows reusability and separation.
+- "Alan Kay" introduced the concept of object into computer programming in early
+   1960's.
+- "Johan Olay & Kristian Nygaard" developed OOP in early 1967 with a language
+   called "SIMULA 67".
+
+            Selectors

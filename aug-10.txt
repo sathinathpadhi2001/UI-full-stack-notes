@@ -1,0 +1,105 @@
+					               HTML Parsing
+
+Markup => Bytes => Chars => Token => Node / Elements => DOM => Render => Layout => Paint
+
+- HTML comprises of set of elements arranged in a hierarchy called "DOM". 
+  [Document Object Model]
+- HTML elements are classified into 5 major groups
+
+		a) Normal Elements
+		b) Void Elements
+		c) RC Data Elements
+		d) Raw Text Elements
+		f) Foreign Elements
+
+Normal Element:
+- It returns a presentation directly on call back.
+- It doesn't require additional attributes for initial presentation.
+- It starts a presentation and can't stop implicitly.
+- Explicitly it is stopped by using end token.
+
+EX:
+	   <b>	Start Token
+	  </b>	End Token
+
+Void Element:
+- The term void refers to "no-return". 
+- Void element will not return any presentation directly on call back.
+- It ends implicitly.
+- Hence it doesn't require end token. 
+- It is a self ending element.
+- It returns presentation by using additional attributes.
+
+Ex:	
+	<img>
+
+RC Data Type:
+- Rich content data type element.
+- It only to display rich text content.
+- It will not allow any another element within the context.
+
+Ex:
+	<textarea> </textarea>
+
+Raw Text Elements:
+- Raw text is used for presentation.
+- It doesn't require a token.
+
+Ex:
+	 &#8377;  
+	 &copy;
+	 &deg;
+
+Foreign Elements:
+- A foreign element is an HTML element but requires special privilegations and credentials to use in browser.
+- You have to import special libraries and extensions to run in browser.
+
+Ex: 
+      SVG
+      MATHML
+      Canvas
+
+FAQ's:
+1. What are semantic and non-semantic elements?
+A. Semantic elements are used for a specific purpose. 
+     Non-Semantics can used universally for any purpose. 
+
+		<header>, <footer>, <h2>	semantics
+		<span>, <div>				non-semantics 
+
+2. What are block level and inline elements?
+A. Block level element will not allow other element to wrap beside. You can display above or below.
+    Inline Elements will allow other elements to wrap beside.
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

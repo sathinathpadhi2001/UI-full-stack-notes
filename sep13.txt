@@ -1,0 +1,413 @@
+11. Button Classes
+
+    .btn [base class]
+    .btn-{contextual}
+    .btn-sm|lg
+    .btn-outline-{contextual}
+    .btn-group
+    .btn-group-vertical
+    .btn-toolbar
+    .btn-close
+    .btn-link
+
+Syntax:
+    <button class="btn btn-primary">
+    <nav class="btn-toolbar">
+    <div class="btn-group">
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+       
+    </style>
+</head>
+<body class="container-fluid">
+     <dl class="mt-4">
+        <dt>Amazon</dt>
+        <dd>
+            <button class="btn btn-secondary w-100">Back to top</button>
+        </dd>
+        <dt>Toolbar</dt>
+        <dd>
+            <nav class="btn-toolbar bg-danger justify-content-between">
+                <div>
+                    <button class="btn btn-danger">Shopper</button>
+                </div>
+                <div>
+                    <button class="btn btn-danger">Home</button>
+                    <button class="btn btn-danger">Shop</button>
+                    <button class="btn btn-danger">Pages</button>
+                    <button class="btn btn-danger">Docs</button>
+                    <button class="btn btn-danger">Blog</button>
+                </div>
+                <div>
+                    <button class="bi bi-person btn btn-danger"></button>
+                    <button class="bi bi-heart btn btn-danger"></button>
+                    <button class="bi bi-cart btn btn-danger"></button>
+                </div>
+            </nav>
+        </dd>
+        <dt>Button Base</dt>
+        <dd><button class="btn">Submit</button></dd>
+        <dt>Contextual</dt>
+        <dd>
+            <button class="btn btn-primary">Insert</button>
+            <button class="btn btn-success">Update</button>
+            <button class="btn btn-danger">Delete</button>
+        </dd>
+        <dt>Outline Contextual</dt>
+        <dd>
+            <button class="btn btn-outline-primary">Insert</button>
+            <button class="btn btn-outline-success">Update</button>
+            <button class="btn btn-outline-danger">Delete</button>
+        </dd>
+        <dt>Size</dt>
+        <dd>
+            <button class="btn btn-primary">Ordinary</button>
+            <button class="btn btn-primary btn-sm">Small</button>
+            <button class="btn btn-primary btn-lg">Large</button>
+        </dd>
+        <dt>Button Group</dt>
+        <dd class="btn-group-vertical">
+            <button class="bi bi-play btn btn-danger"></button>
+            <button class="bi bi-pause btn btn-danger"></button>
+            <button class="bi bi-stop btn btn-danger"></button>
+        </dd>
+        <dt>Special</dt>
+        <dd>
+            <button class="btn btn-close"></button>
+            <button class="btn btn-link">Signout</button>
+        </dd>
+     </dl>
+</body>
+</html>    
+
+12. Form Classes
+
+     .form-control    text, number, password, url, date, email, textarea ..
+    .form-select    dropdown, listbox
+    .form-range    range input
+    .form-control-color    color
+    .form-control-file    file
+    .form-check-input    radio, checkbox
+    .form-check-label    label for checkbox & radio
+    .form-switch    radio and checkbox container
+    .form-label    label
+
+Syntax:
+    <input type="text" class="form-control">
+    <label class="form-label">
+    <input type="range" class="form-range">
+    <select class="form-select">
+
+    <div class="form-switch">
+       <input type="checkbox" class="form-check-input">
+    </div>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid d-flex justify-content-center">
+    <form class="mt-4 w-25 bg-dark text-white border border-1 p-3 rounded border-dark">
+        <div class="h4 bi bi-person-fill"> Register New User</div>
+        <div>
+            <label class="form-label" for="UserName">User Name</label>
+            <div>
+                <input type="text" name="UserName" class="form-control">
+            </div>
+        </div>
+        <div class="my-3">
+            <label class="form-label" for="Password">Password</label>
+            <div>
+                <input type="password" class="form-control" name="Password">
+            </div>
+        </div>
+        <div class="my-3">
+            <label class="form-label" for="Price">Price</label>
+            <div>
+                <input type="range" class="form-range" name="Price">
+            </div>
+        </div>
+        <div class="my-3">
+            <label for="City" class="form-label">Your City</label>
+            <div>
+                <select name="City" class="form-select">
+                    <option>Select City</option>
+                    <option>Delhi</option>
+                    <option>Hyd</option>
+                </select>
+            </div>
+        </div>
+        <div class="my-2">
+            <label class="form-label">Subscribe</label>
+            <div class="form-switch">
+                <input type="checkbox" class="form-check-input" checked > <label class="form-check-label"> Yes </label>
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-primary w-100">Register</button>
+        </div>
+    </form>
+</body>
+</html>
+
+
+13. Input Group Classes
+
+    .input-group
+    .input-group-sm | lg
+    .input-group-text
+
+Syntax:
+    <div class="input-group">
+           <span class="input-group-text"> Text </span>
+           <input type="text" class="form-control">
+    </div>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Group</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <h2>Amazon</h2>
+    <div class="w-50 input-group">
+        <select class="input-group-text">
+            <option>All</option>
+            <option>Mobiles</option>
+            <option>Fashion</option>
+        </select>
+        <input type="text" class="form-control" placeholder="Search Amazon.in">
+        <button class="bi bi-search btn btn-warning"></button>
+    </div>
+    <h2>Netflix</h2>
+    <div class="w-50 input-group input-group-lg p-4 bg-dark">
+        <input type="email" placeholder="Your email address" class="form-control">
+        <button class="btn  btn-danger">
+            Get Started <span class="bi bi-chevron-right"></span>
+        </button>
+    </div>
+    <h3>Login</h3>
+    <div class="w-25 input-group">
+        <span class="bi bi-person-fill input-group-text"></span>
+        <input type="text" class="form-control" placeholder="User Name">
+        <span class="bi bi-check-square input-group-text"></span>
+    </div>
+    <div class="w-25 mt-3 input-group">
+        <span class="bi bi-key-fill input-group-text"></span>
+        <input type="password" class="form-control" placeholder="Password">
+        <span class="bi bi-check-square input-group-text"></span>
+    </div>
+    <div class="w-25 mt-3 input-group">
+        <span class="bi bi-envelope input-group-text"></span>
+        <input type="email" class="form-control" placeholder="your email">
+        <span class="input-group-text">@gmail.com</span>
+    </div>
+</body>
+</html>
+
+14. Table Classes
+
+    .table
+    .table-hover
+    .table-bordered
+    .table-borderless
+    .table-striped
+    .table-responsive
+    .table-{contextual}
+    .caption-top
+
+Syntax:
+    <div class="table-responsive">
+        <table class="table table-hover table-dark">
+        </table>
+    </div>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <h2>Table</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-dark table-hover caption-top">
+            <caption>Product Details Update on 12 Sep 2024 </caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Rating</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Rating</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Rating</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Rating</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Rating</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Rating</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+15. Cards
+
+    .card
+    .card-header
+    .card-body
+    .card-footer
+    .card-img-top
+    .card-img-bottom
+    .card-img-overlay
+    .card-title
+    .card-subtitle
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        .card {
+            width: 200px;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+    <div class="d-flex">
+       <div class="card m-4 p-2">
+          <img src="../public/images/java.png" height="120" class="card-img-top">
+          <div class="card-header">
+             <div class="card-title fs-5 fw-bold">Java</div>
+             <div class="card-subtitle">Fullstack</div>
+          </div>
+          <div class="card-body">
+               <ul>
+                 <li>Core Java</li>
+                 <li>Spring</li>
+                 <li>Adv. Java</li>
+               </ul>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-warning w-100">Join Course</button>
+          </div>
+       </div>
+
+
+       <div class="card m-4 p-2">
+        <img src="../public/images/ds.png" height="120" class="card-img-top">
+        <div class="card-header">
+           <div class="card-title fs-5 fw-bold">Java</div>
+           <div class="card-subtitle">Fullstack</div>
+        </div>
+        <div class="card-body">
+             <ul>
+               <li>Core Java</li>
+               <li>Spring</li>
+               <li>Adv. Java</li>
+             </ul>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-warning w-100">Join Course</button>
+        </div>
+     </div>
+
+
+     <div class="card m-4 p-2">
+        <img src="../public/images/django.png" height="120" class="card-img-top">
+        <div class="card-header">
+           <div class="card-title fs-5 fw-bold">Java</div>
+           <div class="card-subtitle">Fullstack</div>
+        </div>
+        <div class="card-body">
+             <ul>
+               <li>Core Java</li>
+               <li>Spring</li>
+               <li>Adv. Java</li>
+             </ul>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-warning w-100">Join Course</button>
+        </div>
+     </div>
+    </div>
+</body>
+</html>

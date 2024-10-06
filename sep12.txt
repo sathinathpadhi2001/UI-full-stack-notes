@@ -1,0 +1,254 @@
+Bootstrap
+
+- Bootstrap is a front end tool kit used to build responsive and interactive UI rapidly.
+- It provides pre-defined components which you can customize and implement in your applications.
+- A component comprises of
+    a) Design         : with HTML
+    b) Styles        : with CSS
+    c) Functionality     : with JavaScript
+- The popular components of bootstrap are
+    a) Navbar
+    b) Cards
+    c) Carousel
+    d) Offcanvas
+    e) Input Group  etc..
+- Bootstrap provides pre-defined classes for CSS layout and design.
+- Bootstrap provides pre-defined website templates.
+- Bootstrap provides icons and fonts library.
+- Bootstrap is free, open source and cross platform tool kit.
+- Bootstrap latest version is 5x.
+
+Setup Bootstrap for project:
+
+1. Open terminal and install the following
+
+    > npm  install  bootstrap  bootstrap-icons --save
+
+    > npm  install bootstrap@4  [old version]
+
+2. Link the following file to HTML page
+
+ <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+ <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+ <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"> </script>
+
+Note: Bootstrap sets a default font called "Roboto".
+          It sets styles for HTML elements and margin to zero.
+
+
+                     Bootstrap Classes
+1. Container classes
+
+    .container            mobile
+    .container-sm        watch
+    .container-md        tab
+    .container-lg        pc
+    .container-xl        laptop
+    .container-xxl        laptop-wide
+    .container-fluid        responsive
+
+Syntax:
+    <div class="container-fluid">
+    </div>
+
+2. Margin Classes
+
+    .m-{size}        all directions size can be 1 to 4   ( m-4 )
+    .ms-{ }        left [start]
+    .me-{ }        right [end]
+    .mx-{ }        left and right
+    .mt-{ }        top
+    .mb-{ }        bottom
+    .my-{ }        top and bottom
+
+3. Padding Classes
+   
+    .p-{ }
+    .ps-{ }
+    .pe-{ }
+    .px-{ }
+    .pt-{ }
+    .pb-{ }
+    .py-{ }
+
+4. Border Classes
+
+    .border
+    .border-{size}        
+    .border-{contextual}   success, danger, warning, info, primary, dark etc..
+
+5. Border Radius
+
+    .rounded
+    .rounded-{size}
+    .rounded-circle
+    .rounded-pill
+
+Syntax:
+    <div class="border border-2 border-danger rounded rounded-3>
+    </div>
+
+6. Width
+    .w-{size}        size can be 0, 25, 50, 100
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <div class="mt-4">
+        <img class="rounded rounded-circle border border-4 border-info" src="../public/images/women-fashion.jpg" width="200" height="200">
+    </div>
+    <div class="border border-4 border-danger mt-4 ps-4 pt-4 rounded rounded-4 w-25">
+        <h2>Bootstrap</h2>
+        <dl>
+            <dt>Components</dt>
+            <dd>Carousel</dd>
+            <dd class="my-2">Navbar</dd>
+            <dd>Offcanvas</dd>
+            <dt>Classes</dt>
+            <dd>Background</dd>
+            <dd>Position</dd>
+            <dd>Display</dd>
+        </dl>
+    </div>
+</body>
+</html>
+   
+7. Background and Text Colors
+   
+    .bg-{contextual}
+    .text-{contextual}
+
+Syntax:
+    <div class="bg-danger text-light"> </div>
+
+8. Text Alignments
+
+    .text-center
+    .text-start
+    .text-end
+    .text-justify
+
+9. Font Style and Weight
+
+    .fw-bold
+    .fst-italic
+    .fs-{size}      font size  1 to 7
+    .h{size}      heading size 1 to 6            <div class="h5"> </div>
+
+Syntax:
+    <p class="fs-3 fw-bold fst-italic text-center"> </p>
+
+
+10. Display
+
+    .d-none
+    .d-block
+    .d-inline
+    .d-inline-block
+    .d-flex
+    .flex-direction-row | column
+    .flex-wrap
+    .justify-content-baseline
+    .justify-content-center
+    .jusitfy-content-end
+    .align-items-baseline
+    .align-items-center
+    .align-items-end
+    .justify-content-evenly
+    .justify-content-between
+    .justify-content-around
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        body {
+            height: 100vh;
+        }
+    </style>
+</head>
+<body class="container-fluid d-flex justify-content-center align-items-center">
+    <div class="mt-4">
+        <img class="rounded rounded-circle border border-4 border-info" src="../public/images/women-fashion.jpg" width="200" height="200">
+    </div>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        body {
+            height: 100vh;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+     <div class="mt-4">
+        <button class="d-block w-25">Insert</button>
+        <button class="d-block my-3 w-25">Update</button>
+        <button class="d-block w-25">Delete</button>
+     </div>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        body {
+            height: 100vh;
+        }
+        .h4 {
+            font-family: Arial Black;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+     <header class="border bg-dark text-white border-2 border-dark p-3 mt-3 d-flex justify-content-between">
+        <div class="h4">Shopper</div>
+        <nav class="fs-5">
+            <span>Home</span>
+            <span class="mx-3">Pages</span>
+            <span>Shop</span>
+            <span class="mx-3">Docs</span>
+            <span>Blog</span>
+        </nav>
+        <div class="fs-5">
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart mx-4"></span>
+            <span class="bi bi-cart3"></span>
+        </div>
+    </header>
+</body>
+</html>

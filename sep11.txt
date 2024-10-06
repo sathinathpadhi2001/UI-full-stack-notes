@@ -1,0 +1,216 @@
+CSS Classes for Form Elements
+
+1. Element State Classes
+
+    :read-only        Element defined with read-only attribute
+    :disabled        Element defined with disabled
+    :focus        When element gets focus [click inside element]
+    :target        Element is target of intra document link
+    :checked        Checkbox or radio is checked.
+
+CSS Selectors
+
+    Child Selector    parent   child {  }
+    Direct Child    parent > child {  }
+    Adjacent Sibling    element+adjacent { }
+    General Sibling    element~general {  }
+
+Syntax:
+    nav  span {  }    all spans in <nav> at any level
+    nav > span { }    all direct spans in <nav>
+    nav + span { }    span adjacent to nav
+    nav ~ span { }    span any where after nav but within same scope.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container > p {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Para-1</p>
+        <p>Para-2</p>
+        <div> <p>Para-3</p> </div>
+        <p>Para-4</p>
+    </div>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         h2~p {
+            color:red;
+         }
+    </style>
+</head>
+<body>
+        <h2>Heading</h2>
+        <p>Para-1</p>
+        <p>Para-2</p>
+        <p>Para-3</p>
+        <p>Para-4</p>
+   
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .password+div {
+            display: none;
+        }
+        .password:focus+div {
+            display: block;
+            color:red;
+            font-size: 14px;
+        }
+        .terms+label {
+            color:red;
+        }
+        .terms:checked+label {
+            color:green;
+        }
+        .terms~button {
+            display: none;
+        }
+        .terms:checked~button {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" readonly></dd>
+            <dt>Password</dt>
+            <dd>
+                <input type="password" class="password" pattern="\w{4,15}">
+                <div>Password 4 to 15 chars alpha numeric</div>
+            </dd>
+            <dt>Terms of Service</dt>
+            <dd>
+                <textarea disabled rows="4" cols="40">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus similique provident cum velit voluptatum laboriosam minima perspiciatis quas sed vitae reiciendis, dolorum fugit est corrupti blanditiis dolores. Dolores, sequi nobis.</textarea>
+                <div>
+                    <input type="checkbox" class="terms"> <label> I Accept </label>
+                    <br><br>
+                    <button>Login</button>
+                </div>
+            </dd>
+        </dl>
+       
+    </form>
+</body>
+</html>
+
+
+2. Validation State Classes
+
+    :required        It sets effects if input is defined with required.
+    :optional        It sets effects if input is optional.
+    :valid        It sets effects if input is valid. [validation pass]
+    :invalid        It sets effects if input is invalid. [validation fail]
+    :in-range        It defines effects if value is in range.
+    :out-of-range    It defines effects if values is out of range.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:optional+span {
+            display: none;
+        }
+        input:required+span {
+            display: inline;
+            color:red;
+        }
+        input:required {
+            border:1px solid red;
+        }
+        input:optional~div {
+            display: none;
+        }
+        input:required~div {
+            color:red;
+            display: block;
+            font-size: 13px;
+        }
+        input:valid~div {
+            display: none;
+        }
+        input:valid+span {
+            display: none;
+        }
+        input:valid {
+            border:1px solid black;
+        }
+        .mobile+div {
+            display: none;
+        }
+        .mobile:invalid+div {
+            display: block;
+            color:red;
+            font-size: 13px;
+        }
+        .age:in-range~div {
+            display: none;
+        }
+        .age:out-of-range~div {
+            display: block;
+            color:red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+        <form>
+            <dl>
+                <dt>User Name</dt>
+                <dd>
+                    <input type="text"><span>*</span>
+                    <div>Name Required</div>
+                </dd>
+                <dt>Password</dt>
+                <dd><input type="password" required><span>*</span>
+                    <div>Password Required</div>
+                </dd>
+                <dt>Age</dt>
+                <dd><input type="number" class="age" min="15" max="30"><span>*</span>
+                    <div>Age 15 to 30 only</div>
+
+                </dd>
+                <dt>Mobile</dt>
+                <dd>
+                    <input type="text" required class="mobile" pattern="\+91\d{10}">
+                    <span>*</span>
+                    <div>Invalid Mobile +91 10 digits required</div>
+                </dd>
+            </dl>
+            <button>Register</button>
+        </form>
+</body>
+</html>

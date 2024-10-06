@@ -1,0 +1,196 @@
+- Intra Document
+- Inter Document
+FAQ's:
+1. How to change the color of visited links?
+A. By using the body element attribute "vlink".
+    You can change color of active link by using "alink".
+                  (or)
+     You can change link colors with CSS classes
+        a : active { }
+        a : visited { }
+       
+2. How to remove underline for hyperlink?
+A. By using "text-decoration" set to "none"
+
+    a {
+        text-decoration: none;
+    }
+
+Ex:
+<style>
+        a:visited {
+            color:gray;
+        }
+        a:active {
+            color:red;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+3. How to open link target in a new tab?
+A. by setting the "target" attribute to "_blank".
+
+Syntax:
+    <a href="./images/pic.jpg"  target="_blank">
+
+4. How to open link target in a new window?
+A. By using "JavaScript"  open() method of window object.
+
+Syntax:
+    window.open("path", "title", "window features");
+
+    <a href="javascript:window.open()">  </a>
+
+Ex:
+<a href="javascript:window.open('./images/men-fashion.jpg', 'Men', 'width=300 height=400')"> Mens Fashion </a>
+
+5. How to open link target in the same tab and in the same page along with existing content?
+A. By using HTML <iframe> element.
+     Iframe is HTML 5 element used to embed any content into the page.
+
+Syntax:
+    <iframe  src="path"  width="" height=""  name=""> </iframe>
+
+Ex:
+    <a href="./images/pic.jpg"  target="frameBody">  Pic </a>
+
+    <iframe  name="frameBody"> </iframe>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        a:visited {
+            color:gray;
+        }
+        a:active {
+            color:red;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        body {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        iframe {
+            width: 100%;
+            height: 450px;
+            border:none;
+        }
+    </style>
+</head>
+<body>
+   <nav>
+    <ol>
+        <li><a href="./shopper-template.html" target="_blank">Shopper Template</a></li>
+        <li><a href="./images/artist3.jpg" target="frameBody"> AR Rehman </a></li>
+        <li><a href="./images/women-fashion.jpg" target="_blank">Women Fashion</a></li>
+        <li><a href="javascript:window.open('./images/men-fashion.jpg', 'Men', 'width=300 height=400')"> Mens Fashion </a></li>
+        <li><a href="./images/kids-fashion.jpg" download="DSC00045"> Kids Fashion [Download] </a></li>
+        <li><a href="./docs/kerala-tourism.pdf" target="frameBody">Kerala Tourism</a></li>
+        <li><a href="./docs/Bootstrap Tutorial.docx">Bootstrap Tutorial</a></li>
+        <li><a href="https://wa.me/+919876543210"&gt; +919876543210 <span class="bi bi-messenger"> Message </span> </a></li>
+        <li> <a href="https://www.instagram.com/nareshit&quot; class="bi bi-instagram"> Naresh IT Instagram </a> </li>
+        <li> Call <a href="tel:+919876543210">  +919876543210 </a> </li>
+        <li> Mail <a href="info@nareshit.in">  info@nareshit.in </a> </li>
+        <li> Skype <a href="skype:nareshit@outlook.com"> NareshIT <span class="bi bi-skype"></span> </a></li>
+        <li> <a href="javascript:window.print()" class="bi bi-printer-fill"> Print Page </a> </li>
+        <li> <a href="https://www.youtube.com/embed/mAkEwgfLoY8&quot; target="frameBody"> Oracle Tips </a></li>
+    </ol>
+   </nav>
+   <main>
+      <iframe name="frameBody"></iframe>
+   </main>
+</body>
+</html>
+
+Note: HTML 4 uses <frameset> with <frame> to embed any content. However the modern compact browser will not recommend <frameset>.
+
+1. HTML page that uses <frameset> can't have body section.
+
+2. <frameset> will have collection of <frame> elements.
+
+3. <frameset> can span the frames in rows or columns.
+
+4. <frame> can't display any content directly, it requires external resource "src".
+
+Syntax:
+    <html>
+      <head> <title> Frame </title> </head>
+      <frameset rows="20%, 60%, 20%">
+        <frame src=""> </frame>
+        <frame src="page.html"> </frame>
+        <frame src=""> </frame>
+      </frameset>
+    </html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFrame</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        iframe {
+            border:none;
+        }
+        ul {
+            list-style:none;
+            margin-left: -40px;
+        }
+        li {
+            background-color: black;
+            color:white;
+            padding: 5px;
+            width: 140px;
+            margin-bottom: 20px;
+            font-family: Arial;
+            font-size: 20px;
+        }
+        a {
+            color:white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <h3>Templates</h3>
+            <li> <a href="./shopper-template.html" target="preview">Shopper</a> </li>
+            <li> <a href="./netflix.html" target="preview">Netflix</a> </li>
+            <li> <a href="./landkit.html" target="preview">Landkit</a></li>
+            <h3>Books</h3>
+            <li> <a href="./docs/kerala-tourism.pdf" target="preview">Tourism</a> </li>
+            <li> <a href="./docs/ArrayProblems.pdf" target="preview">C# Arrays</a> </li>
+            <li> <a href="./docs/shopping-online.pdf" target="preview">Shopping Project</a> </li>
+            <h3>Videos</h3>
+            <li> <a href="https://www.youtube.com/embed/mAkEwgfLoY8&quot; target="preview"> Oracle </a> </li>
+        </ul>
+    </nav>
+    <section>
+        <iframe name="preview" width="100%" height="500">
+
+        </iframe>
+    </section>
+</body>
+</html>

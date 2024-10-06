@@ -1,0 +1,226 @@
+	<meta name="keywords" content="some keywords for finding page">
+	<meta name="description" content="something about your website">
+	<meta charset="utf-8">
+
+	a) UTF		: Unicode Transformation Format
+				  It used for defining memory for the type of language used for HTML.
+
+	b)  8			: It refers to 8 bit memory.
+				  16 bit	
+				  32 bit
+			          64 bit
+
+Ex:
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <title>Flipkart | Online Shopping</title>
+        <link href="./public/images/favicon.ico" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="refresh" content="5" >
+        <meta name="keywords" content="some words">
+        <meta name="description" content="something about your website">
+        <meta charset="utf-8">
+    </head>
+</html>
+
+4. Script & Style 
+ - <script> is used to embed client side and server side scripts into page.
+ - <style> is used to embed CSS styles into page.
+
+Summary:
+ <head>
+	<title>
+	<link>
+	<meta>
+	<style>
+	<script>
+ </head>
+
+							Body Section
+- It comprises of content to render in browser workspace.
+- Content of body always require a round trip.
+
+Syntax:
+	<body>
+
+	</body>
+
+Attributes:
+1. bgcolor		: It sets a background color for page.
+2. text			: It sets color for text in page.
+
+HTML Colors:
+1. Color Name
+2. Shade Name
+3. Hexadecimal code
+
+		<body bgcolor="green">
+		<body bgcolor="lightgreen">
+
+Note: Hexadecimal is a 3 or 6 chars value starting with "#". 
+	  Hexadecimal colors have RGB order. [Red Green Blue]
+
+			#RGB
+			#RRGGBB
+
+	  R, G, B values can be "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f"
+	  0 is dark
+	  f  is bright
+
+Syntax:
+	    <body bgcolor="#ff00ff"  text="#fff">
+
+3. background		: It sets a background image for your page.
+
+
+Note: Never use the physical path of any resource in web designing. You have to use
+	  only the virtual path.
+
+		<body  background="D:\MyProject\Photos\pic.jpg">     // invalid
+		<body  background="./public/images/pic.jpg"> 		// valid
+
+			"\"		=> back slash it is used for physical path
+			"/"		=> forward slash it is used for virtual path
+
+CSS Background Styles:
+
+		background-size			: width, height in pixels or cover, contain
+		background-position		: top, center, right, bottom, or you can use pixels
+		background-attachment		: fixed, scroll
+		background-repeat			: repeat, no-repeat, repeat-x, repeat-y
+
+Syntax:
+	<head>
+	   <style>
+		body {
+		       background-size: 400px 400px;
+		       background-repeat: no-repeat;
+		       background-position: center center;
+		       background-attachment: fixed;
+		  }
+	   </style>
+       </head>
+	<body background="./public/images/banner.jpg"> 
+        </body>
+
+Note: You can set the body height in CSS as "100vh" [Viewport Height] to fit the screen.
+
+		body {
+		    height: 100vh;
+		    width: 100vw;
+		}
+
+Ex:
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <title>Flipkart | Online Shopping</title>
+        <link href="./public/images/favicon.ico" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="some words">
+        <meta name="description" content="something about your website">
+        <meta charset="utf-8">
+        <style>
+            body {
+               height: 100vh;
+               background-size: 400px 400px;
+               background-position: center center;
+               background-repeat: no-repeat;
+               background-attachment: fixed;
+            }
+        </style>
+    </head>
+    <body background="./public/images/banner.jpg" text="white">
+
+    </body>
+</html>
+
+4. align		: It aligns the page content left, center, right or justify.
+
+Syntax:
+	<body align="center | justify | left | right">
+
+	</body>
+
+5. leftmargin			]
+6. rightmargin			]    margin is the space between page and content border.
+7. topmargin			]    If there is no border then it is distance between page and
+8. bottommargin		]    content.
+
+Syntax:
+	<body leftmargin="100"  rightmargin="100" topmargin="50" bottommargin="50">
+	</body>
+
+9. alink				: It sets color for active links in page.
+10. vlink				: It sets color for visited links in page.
+
+Syntax:
+	<body  alink="red"  vlink="#0d0">
+	
+		<a href="https://www.amazon.in"> Amazon </a>
+
+	</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

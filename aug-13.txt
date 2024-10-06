@@ -1,0 +1,150 @@
+HTML Page Structure
+- Document Declaration
+- Document Scope
+- Language for document
+- Head Section
+- Head Section Elements
+	a) Title
+
+2. Link		
+- It can link an external document to web page.
+- You can link shortcut icons, stylesheets etc.
+
+Ex: Setup Favicon for Webpage
+
+- Favicon must have extension ".ico"
+- Make sure that the size is not maximum than 32pixels.
+
+1. Open Ms-Paint on your PC 
+
+2. Go to File => Image Properties => Set size  32 x 32  pixels
+
+3. Draw your icon and save into project physical path
+
+		D:\flipkart\public\images\favicon.png
+
+4. Go to images folder in VS code and rename [F2]   [fn + f2]
+			
+		"favicon.ico"
+
+5. Link the webpage
+
+	<head>
+		<title> Flipkart </title>
+		<link rel="shortcut icon"  href="./public/images/favicon.ico">
+	</head>
+
+Ex: index.html
+
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <title>Flipkart | Online Shopping</title>
+        <link href="./public/images/favicon.ico" rel="shortcut icon">
+    </head>
+</html>
+
+
+3. Meta
+- Meta refers to meta data.
+- Meta data is information about your page given to browser or SEO.
+- Meta provides options to make page 
+
+	a) Responsive
+	b) SEO Friendly 
+
+Meta Responsive:
+- Responsive allows the page to adjust its content according to the screen and device.
+- To create a responsive web page several features are required. 
+- Meta is one of the feature to make page responsive. 
+
+     <meta  name="viewport"  content="width=device-width, initial-scale=1"> 
+
+	a) view port		: It identifies the device type and its screen width.
+	b) content		: It specifies that your page content width is equal to device 
+					  width.
+	c) initial-scale		: It is the default zoom level. 1=100%
+
+Note: To test responsive page your can download and install "Mobile Simulator" for
+	  google chrome browser.
+
+
+	<meta http-equiv="refresh"  content="4">
+
+	 a) http-equiv		 It defines the action to perform on browser.
+					 "refresh" specifies that the page is requested at regular 
+					  intervals.
+
+	 b) content		It defines the time interval in seconds.
+					"4" specifies that page reloads every 4 seconds.
+
+Meta SEO:
+- SEO is Search Engine Optimization.
+- Web Spiders and Web Crawlers are the robots used for searching and optimizing the results on Web.
+- You have to design a page easily readable by ROBOTS, which is often called as SEO friendly. 
+- To make page SEO friendly meta provides various options
+
+  <meta  name="keywords"  content="some words used to search your business">
+  <meta  name="description" content="something about your website">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

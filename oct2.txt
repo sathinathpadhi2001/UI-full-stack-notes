@@ -1,0 +1,346 @@
+1. Refer by DOM
+2. Refer by Name
+
+
+3. JavaScript can refer HTML elements by using "Id"
+- Every element can have a reference ID
+- You can access by using the document method  "getElementById()".
+- It can access any element directly.
+
+Syntax:
+    <img id="pic">
+    <input type="button"  id="btn">
+
+    document.getElementById("pic").src = " ";
+    document.getElementById("btn").value = " ";
+
+- ID is used as selector in CSS, where same ID can be defined for multiple elements.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        "use strict";
+        function bodyload(){
+             document.getElementById("pic").src = "../public/images/women-fashion.jpg";
+             document.getElementById("btnRegister").value = "Register";
+             document.getElementById("btnLogin").value = "Login";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img width="100" height="100" id="pic">
+    </div>
+    <div>
+        <form name="frmRegister">
+            <h3>Register</h3>
+            User Name : <input type="text"> Age: <input type="number"> <input id="btnRegister" type="button">
+        </form>
+    </div>
+    <div>
+        <form name="frmLogin">
+            <h3>Login</h3>
+            Mobile : <input type="text"> OTP : <input type="text" size="4"> <input id="btnLogin" type="button">
+        </form>
+    </div>
+</body>
+</html>
+
+4. JavaScript can refer HTML elements using CSS selectors
+- CSS selectors include primary, rational, attribute, structural etc.
+- JS provides a method "document.querySelector()" to access elements by CSS references.
+
+Syntax:
+    <img width="100" height="100">
+    <input type="button"  id="btn">
+    <input type="button"  class="btn-primary">
+
+    document.querySelector("img").src = " "
+    document.querySelector("#btn").value=" "
+    document.querySelector(".btn-primary").value=" "
+    document.querySelector("nav+h1")
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        "use strict";
+        function bodyload(){
+            document.querySelector("img").src="../public/images/men-fashion.jpg";
+            document.querySelector("#btnRegister").value = "Register";
+            document.querySelector(".btnLogin").value = "Login";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img width="100" height="100" id="pic">
+    </div>
+    <div>
+        <form name="frmRegister">
+            <h3>Register</h3>
+            User Name : <input type="text"> Age: <input type="number"> <input id="btnRegister" type="button">
+        </form>
+    </div>
+    <div>
+        <form name="frmLogin">
+            <h3>Login</h3>
+            Mobile : <input type="text"> OTP : <input type="text" size="4"> <input class="btnLogin" type="button">
+        </form>
+    </div>
+</body>
+</html>
+
+Note: JavaScript provides various methods to access multiple elements
+    a) getElementsByTagName()
+    b) getElementsByName()
+    c) getElementsByClassName()
+
+                            JavaScript Output & Input Techniques
+
+JavaScript Output Techniques:
+- Output is the process of rendering and painting the result so that user can view in UI.
+- Javascript have various output properties and methods
+
+    a) alert()
+    b) confirm()
+    c) document.write()
+    d) textContent
+    e) innerText
+    f) innerHTML
+    g) outerHTML
+    h) console methods
+
+
+
+1. alert()
+- It is a window method that pops up message box.
+- You can display any value or result of any expression.
+- It will not allow complex formats or markup for presentation.
+- It is RC data type.
+- You can add line break using "\n".
+- It will not allow to cancel.
+
+Syntax:
+    alert("message");        // alert("Hello\nWelcome");
+    alert(value);        // alert(30);
+    alert(expression);         // alert(10+20);
+    alert("message" + expression)    // alert("Addition=" + (10+20));
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function DeleteClick(){
+            alert((1+2) + " Record will be Deleted Successfully\nAre you sure?");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete</button>
+</body>
+</html>
+
+
+2. confirm()
+- It is similar to alert but allows to cancel.
+- It is a boolean method.
+- It returns "true" on OK and "false" on Cancel
+
+Syntax:
+    confirm("message / value / expression");
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function DeleteClick(){
+           flag =  confirm((1+2) + " Record will be Deleted Successfully\nAre you sure?");
+           if(flag==true){
+               alert("Deleted Successfully..");
+           } else {
+               alert("Canceled..");
+           }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete</button>
+</body>
+</html>
+
+3. document.write()
+- It renders to output on new screen of same page.
+- It can render message, value, expression or markup.
+
+Syntax:
+            document.write("Welcome");
+    document.write(19 + 20);
+    document.write(40);
+    document.write("<h2> Welcome </h2>");
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function DeleteClick(){
+           flag =  confirm("Record will be Deleted\nAre you sure?");
+           if(flag==true){
+               document.write("<h2 style='color:red'>Deleted Successfully..</h2><a href='output.html'>Back</a>");
+           } else {
+               alert("Canceled..");
+           }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete</button>
+</body>
+</html>
+
+4. textContent / innerText
+- It allows to render output into any HTML container that can display text.
+      <div> <span> <p> <label> <dd> <dt> <td>  <li> <header> <footer> ..
+- It will not allow complex formats or markup.
+- It is only for plain text.
+- textContent is a new method that supports majority browsers.
+
+Syntax:
+  document.querySelector("p").textContent = "message/value/expression";
+  document.querySelector("div").innerText= "";
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function DeleteClick(){
+           flag =  confirm("Record will be Deleted\nAre you sure?");
+           if(flag==true){
+               document.write("<h2 style='color:red'>Deleted Successfully..</h2><a href='output.html'>Back</a>");
+           } else {
+               document.getElementById("msg").textContent = "try again..";
+               document.querySelector("p").innerText = "Delete Canceled..";
+           }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete</button>
+    <p></p>
+    <div id="msg" style="position: absolute; right: 50px; top:50px"></div>
+</body>
+</html>
+
+5. innerHTML
+- It is similar to innerText or textContent but supports formats and markup.
+- It adds new markup into existing container.
+
+Syntax:
+  document.querySelector("p").innerHTML = "<h2> Welcome </h2>";
+
+    <p>
+       <h2> Welcome </h2>
+    </p>
+
+
+6. outerHTML
+- It will replace the existing markup with new markup that you have configured.
+
+Syntax:
+   document.querySelector("p").outerHTML = "<h2> Welcome </h2>";
+
+    <h2> Welcome </h2>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function DeleteClick(){
+           flag =  confirm("Record will be Deleted\nAre you sure?");
+           if(flag==true){
+               document.write("<h2 style='color:red'>Deleted Successfully..</h2><a href='output.html'>Back</a>");
+           } else {
+               document.getElementById("msg").textContent = "try again..";
+               document.querySelector("p").outerHTML = "<h2>Delete Canceled..</h2>";
+           }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete</button>
+    <p></p>
+    <div id="msg" style="position: absolute; right: 50px; top:50px"></div>
+</body>
+</html>
+
+7. console methods
+- Console is a command line tool used by developers.
+- It is a browser tool.
+- You can display messages in console while designing and testing application.
+- It provides various contextual methods.
+
+    log()
+    error()
+    debug()
+    info()
+    warn()
+Synax:
+    console.warn("message/value/expression");
+   
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function DeleteClick(){
+           console.warn("Delete Button Clicked..");
+           flag =  confirm("Record will be Deleted\nAre you sure?");
+           if(flag==true){
+               console.error("OK Clicked and Delete Completed");
+               document.write("<h2 style='color:red'>Deleted Successfully..</h2><a href='output.html'>Back</a>");
+           } else {
+               document.getElementById("msg").textContent = "try again..";
+               document.querySelector("p").outerHTML = "<h2>Delete Canceled..</h2>";
+               console.log("Cancel button clicked..");
+           }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete</button>
+    <p></p>
+    <div id="msg" style="position: absolute; right: 50px; top:50px"></div>
+</body>
+</html>

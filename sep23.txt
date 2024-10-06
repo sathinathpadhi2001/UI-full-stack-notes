@@ -1,0 +1,251 @@
+Selectors
+- Primary Selectors
+- Rational Selectors
+- Attribute Selectors
+
+
+                   Dynamic Pseudo Classes
+- Dynamic allows to change according to state and situation.
+- Pesudo specifies that the effects are virtual and not the real or actual.
+- Class is a pre-defined program template with data and logic.
+- You can implement and customize the classes according to requirement.
+
+1. Element State Classes
+
+    :read-only
+    :disabled
+    :checked
+    :hover
+    :focus
+    :active
+
+
+2. Validation State Classes
+
+    :required
+    :optional
+    :valid
+    :invalid
+    :in-range
+    :out-of-range
+
+3. Structural Classes
+
+    :first-child            : first element
+    :last-child            : last element
+    :nth-child()        : specific level or it can be "even & odd"
+    :nth-of-type()        : from top every specific occurrence
+    :nth-last-of-type()        : from bottom every specific occurrence
+
+Syntax:
+    li : nth-child(even) {  }
+    li : nth-child(2) { }
+    li : nth-of-type(2n) {  }        // every 2nd starting from top 2nd
+    li : nth-of-type(2n+1) { }    // every 2nd starting from top 1
+    li : nth-last-of-type(2n+1){ }    // every 2nd starting from bottom 1
+
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        ol {
+            list-style: none;
+            width: 200px;
+        }
+        li:nth-child(odd) {
+            color:red;
+            background-color: yellow;
+            padding: 10px;
+        }
+        li:nth-child(even) {
+            color:red;
+            background-color: rgb(244, 244, 203);
+            padding: 10px;
+        }
+    </style>
+ 
+</head>
+<body>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Bootstrap</li>
+        <li>Sass</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+        <li>React</li>
+        <li>Node</li>
+        <li>Express</li>
+    </ol>
+</body>
+</html>
+
+4. Occurrence and Behavioural Classes
+
+    ::first-letter
+    ::before
+    ::after
+    ::selection
+    ::placeholder
+
+- Inheritance comprisess of rules and functionality.
+- You have to implement the functionality by following certian rules.
+- You implement and inherit by using ": :"
+
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        ol {
+            list-style: none;
+            display: flex;
+        }
+        li::before {
+            content: " > ";
+        }
+        li {
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 20px;
+        }
+        li:first-child::before {
+            content: " ";
+        }
+        li:last-child {
+            color:gray;
+        }
+        p::selection {
+            background-color: yellow;
+        }
+        input::placeholder {
+            color:blue;
+        }
+    </style>
+ 
+</head>
+<body>
+    <input type="text" placeholder="Name Required">
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Bootstrap</li>
+        <li>Sass</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+        <li>React</li>
+        <li>Node</li>
+        <li>Express</li>
+    </ol>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, perspiciatis voluptatem! Libero, dicta? Minima assumenda unde maxime provident incidunt, vel molestias maiores laboriosam quasi repellat nulla placeat laudantium necessitatibus sed? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam facilis cum odio necessitatibus quo, nobis eos assumenda quas nam suscipit ipsa voluptate praesentium aliquam magni mollitia unde voluptatibus sunt temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro accusamus magni commodi cupiditate nemo nulla nobis, quasi praesentium. Ratione quidem explicabo vel, illum reprehenderit quod. Perferendis odit cupiditate voluptates minus.</p>
+</body>
+</html>
+
+             Universal Selector
+- It is defined using "*".
+- It is used to select all element in page.
+
+Syntax:
+    * {
+          font-family:Arial;
+     }
+
+             Root Selector
+- It selects the root from shadow DOM.
+- Every shadow DOM comprises of various elements.
+- It is defined for components in page.
+
+Syntax:
+    :root {
+
+    }
+
+            Language Selector
+- It selects a language based on styles defined.
+- It can configure various effects for elements that belong to specific language.
+
+Syntax:
+        :lang("en-in") {
+
+         }
+
+                       CSS Inheritance
+- Inheritance is the process of implementing the features of parent.
+- Child element can inherit the parent styles.
+- Child element can't inherit all parent styles, the style usually vary according to parent.
+- You can control the inheritance by using following values
+
+    a) inherit
+    b) initial
+    c) unset
+
+- You can define these values to element configured inside parent.
+- Value are specified for individual style attribute.
+
+    {
+       font-weight: initial;
+       color:unset;
+    }
+
+- You can configure for all attribute
+
+    {
+      all : unset | initial | inherit;
+    }
+     
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        .container {
+            border:3px double red;
+            padding: 20px;
+            color:red;
+        }
+        h1 {
+            border:inherit;
+            padding: inherit;
+            color:initial;
+            font-weight: unset;
+        }
+        h2 {
+            all : inherit;
+        }
+    </style>
+
+</head>
+<body>
+   <div class="container">
+       Container Text
+       <h1>Welcome</h1>
+       <h2>CSS</h2>
+   </div>
+</body>
+</html>
+
+            CSS Colors
+- Name
+- Shade Name
+- Hexa Decimal
+- rgb()
+- rgba()
+- hsl()
+- hsla()
+- linear-gradient
+- radial-gradient

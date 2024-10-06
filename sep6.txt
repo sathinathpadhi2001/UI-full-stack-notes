@@ -1,0 +1,124 @@
+Pre-defined Regular Expressions
+       
+        (?=.*[A-Z])        at least one uppercase letter
+        (?=.*[0-9])        at least one number
+        (?=.*[!@#$%])        at least one special character
+
+Query: Write a pattern to validate user name 4 to 15 chars alpha numeric with _ .
+
+        pattern="\w{4,15}"
+
+Query: user name 4 to 15 chars alpha numeric with _ and at least 1 uppercase letter.
+
+        pattern="(?=.*[A-Z])\w{4,15}"
+
+Query: user name 4 to 15 chars alpha numeric with _ and at least 1 uppercase letter
+        and one numeric value is mandatory.
+
+        pattern="(?=.*[A-Z])(?=.*[0-9])\w{4,15}"
+
+Query: user name 4 to 15 chars alpha numeric and special chars allowed with
+        at least one uppercase , number and special char.
+
+        pattern="(?=.*[A-Z])(?=.*[0-9])(?=.*[\W])[\w,\W]{4,15}"
+
+Summary:
+- id
+- name
+- class
+- value
+- size
+- placeholder
+- autofocus
+- minlength
+- maxlength
+- required
+- readonly
+- disabled
+- list
+- pattern
+
+FAQ's:
+1. What are state attributes?
+A. readonly, disabled
+
+2. What is difference between readonly and disabled?
+A. readonly allows to submit, disabled will not allow to submit.
+
+3. What are validation attributes?
+A. minlength, required, pattern
+
+
+                           Password Input
+- It is similar to textbox in attributes but will mask the chars with "*".
+
+Syntax:
+    <input type="password" name="Password" pattern=""  required>
+
+- "list" attribute is not recommended for password.
+
+                          Email Input
+- It is similar to textbox but validates email address without a pattern.
+
+Syntax:
+    <input type="email"  name="email" required>
+
+- Email pattern verifies "@" in address.
+
+                        URL Input
+- It verifies the format of URL.
+- URL must have protocol and domain name.
+
+        www.amazon.in        // invalid
+        https://www.amazon.in    // valid
+
+Syntax:
+    <input type="url"  required  name="URL">
+
+                       
+                        Number Input
+- It allows input of numeric type value.
+- It provides a numeric up-down control.
+- It can also restrict the range of values by using "min & max".
+- It can control the step value by using "step" attribute
+
+Syntax:
+    <input type="number"  name="age"  min="15" max="30"  value="22" required>
+    <input type="number"  name="rate" min="15.45" max="20.45" step="0.01">
+
+                         Range Input
+- It is for numeric type values.
+- It provides a slider to select range of values.
+- It can have min, max and range. [step]
+
+Syntax:
+    <input type="range"  name="price" min="1000" max="10000" value="3000">
+
+                         Color Input
+- It can display a color picker that allows to select color.
+- The color values are 6 char hexadecimal. [other color codes are not supported]
+
+
+Syntax:
+  <input type="color"  name="color"  value="#ff00ff">
+
+                        Date & Time Input
+- It provides a date and time picker.
+- Input includes various types like
+    a) date
+    b) time
+    c) datetime-local
+    d) week
+    e) month
+    f) year
+
+Syntax:
+    <input type="date">
+    <input type="month">
+    <input type="year">
+
+- You can restrict date by using "min" & "max" attributes.
+- The date format for developer is always "year-month-day".
+
+Syntax:
+    <input type="date" min="2024-09-06"  max="2024-09-20">

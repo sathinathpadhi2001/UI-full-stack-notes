@@ -1,0 +1,72 @@
+Inter Document Navigation [Links]:
+- Inter document navigation allows redirection to any
+    a) Page
+    b) URL
+    c) File
+    d) Application
+
+- Link Page
+    <a href="./shopper-template.html">  Shopper </a>
+
+- Link File
+    <a href="./images/women-fashion.jpg"> Women </a>
+    <a href="./docs/file.pdf">  Tutorial </a>
+
+FAQ: What type of files we can link?
+Ans:  You can link any type of file.
+
+FAQ: Can we open every file and view its content in browser?
+Ans: No. It depends on the plugin's. If relative plugin is not installed then the linked
+     document / file will download.
+
+FAQ: How to configure a link that always download the file?
+Ans:  HTML 5 provides "download" attribute for <a> anchor element, which downloads
+     the linked file without opening in browser.
+
+Syntax:
+    <a href="./images/kids-fashion.jpg" download="DSC00045">
+       
+        Kids Fashion [Download]
+
+    </a>
+
+- Link URL
+    <a href="https://www.amazon.in"&gt; Amazon </a>
+    <a href="https://wa.me/+919876543210"&gt;  Message +919876543210 </a>
+
+- Link Application
+    a) mail
+        <a href="email@gmail.com"> Email </a>
+    b) phone
+        <a href="tel:+919876543210">  Call </a>
+    c) skype
+        <a href="skype:info@outlook.com"> Skype </a>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <ol>
+        <li><a href="./shopper-template.html">Shopper Template</a></li>
+        <li><a href="./images/women-fashion.jpg">Women Fashion</a></li>
+        <li><a href="./images/kids-fashion.jpg" download="DSC00045"> Kids Fashion [Download] </a></li>
+        <li><a href="./docs/kerala-tourism.pdf">Kerala Tourism</a></li>
+        <li><a href="./docs/Bootstrap Tutorial.docx">Bootstrap Tutorial</a></li>
+        <li><a href="https://wa.me/+919876543210"&gt; +919876543210 <span class="bi bi-messenger"> Message </span> </a></li>
+        <li> <a href="https://www.instagram.com/nareshit&quot; class="bi bi-instagram"> Naresh IT Instagram </a> </li>
+        <li> Call <a href="tel:+919876543210">  +919876543210 </a> </li>
+        <li> Mail <a href="info@nareshit.in">  info@nareshit.in </a> </li>
+        <li> Skype <a href="skype:nareshit@outlook.com"> NareshIT <span class="bi bi-skype"></span> </a></li>
+    </ol>
+</body>
+</html>
+
+FAQ's:
+1. How to open linked document in a new tab?
+A.

@@ -1,0 +1,318 @@
+Summary - Components
+1. Alert
+2. Modal
+3. Offcanvas
+4. Collapse
+
+5. Accordion
+- It is a combination of multiple items with collapse and show.
+- It uses mutex mechanism.
+- It can collapse all other items when one is expanded.
+
+Classes:
+    .accordion
+    .accordion-item
+    .accordion-header
+    .accordion-body
+    .accordion-button
+    .accordion-collapse
+
+Attributes:
+    data-bs-toggle
+    data-bs-target
+    data-bs-parent  [It is defined for collapse to configure mutex]
+                 [All collapse must use the same parent]
+
+Syntax:
+    <div class="accordion"  id="faq">
+        <div class="accordion-item">
+           <div class="accordion-header">
+          </div>
+          <div class="accordion-collapse" data-bs-parent="#faq">
+              <div class="accordion-body">
+              </div>
+          </div>
+    </div>
+               </div>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+   <h1 class="text-center">Frequently Asked Questions</h1>
+   <div class="accordion" id="faqs">
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button data-bs-target="#q1" data-bs-toggle="collapse" class="accordion-button">What is Netflix?</button>
+            </div>
+            <div class="accordion-collapse collapse" id="q1" data-bs-parent="#faqs">
+                <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium neque quia ullam ratione dicta alias labore beatae quis, aliquid soluta. Inventore amet provident accusamus sed rerum eius earum quasi reprehenderit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil hic quaerat, id minus, error obcaecati fugiat tempora praesentium deserunt voluptatum, provident excepturi iusto eos. Tempore repudiandae dolorem adipisci qui consequuntur.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem facere quibusdam, quam reprehenderit saepe vitae iusto dolorum nemo ullam aliquid perferendis, animi modi quae blanditiis, eligendi consectetur beatae tenetur deleniti.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button data-bs-target="#q2" data-bs-toggle="collapse" class="accordion-button">How much does Netflix cost?</button>
+            </div>
+            <div class="accordion-collapse collapse" id="q2" data-bs-parent="#faqs">
+                <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis blanditiis impedit doloremque mollitia, non cum repellat animi explicabo, dolor minima laborum cumque consequuntur error corporis quisquam dolores et, reiciendis porro?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsam soluta temporibus earum itaque ullam perspiciatis dignissimos facere. Eaque cumque ratione vel libero placeat obcaecati illo officiis iste odit repudiandae?</p>
+                </div>
+            </div>
+        </div>
+   </div>
+</body>
+</html>
+
+6. Carousel
+- It is used to configure sliding and fading content in page.
+- You can customize with manual and auto control.
+
+Basic Carousel Classes:
+
+    .carousel
+    .carousel-inner
+    .carousel-item
+
+Syntax:
+    <div class="carousel">
+       <div class="carousel-inner">
+           <div class="carousel-item">
+        // any content
+           </div>
+       </div>
+    </div>
+
+- Carousel will not display any item on screen. You must set any one item as "active".
+
+    <div class="carousel-item active">
+    </div.
+
+- Carousel can't start implicitly, you have to start carousel by using the attribute
+"data-bs-ride".
+
+    <div class="carousel"  data-bs-ride="carousel">
+    </div>
+
+- Carousel requires "slide" class to define slide animation.
+
+    <div class="carousel slide">
+    </div>
+
+- You can also configure "carousel-fade" class to set fading effect.
+
+    <div class="carousel carousel-fade">
+    </div>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <div class="carousel slide" id="banners" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active ">
+                <img height="300" src="../public/images/slide-1.JPG" class="w-100 d-block">
+            </div>
+            <div class="carousel-item">
+                <img height="300" src="../public/images/slide-2.JPG" class="w-100 d-block">
+            </div>
+            <div class="carousel-item">
+                <img height="300" src="../public/images/slide-3.JPG" class="w-100 d-block">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+Carousel with Controls:
+- Controls can be defined to handle navigation between items.
+- You can allow previous or next item navigation.
+
+Classes:
+    carousel-control-prev
+    carousel-control-prev-icon
+    carousel-control-next
+    carousel-control-next-icon
+
+Attributes:
+    data-bs-target
+    data-bs-slide="prev | next"
+
+- You can set "carousel-dark" as class to apply dark controls.  [obsolete]
+- The new option for dark controls is "data-bs-theme=dark".
+
+    <div class="carousel" data-bs-theme="dark">
+    </div>
+
+- Controls require functionality to define
+
+    <button data-bs-slide="prev" data-bs-target="#carousel_id">
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <div class="carousel slide" id="banners" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active ">
+                <img height="300" src="../public/images/slide-1.JPG" class="w-100 d-block">
+            </div>
+            <div class="carousel-item">
+                <img height="300" src="../public/images/slide-2.JPG" class="w-100 d-block">
+            </div>
+            <div class="carousel-item">
+                <img height="300" src="../public/images/slide-3.JPG" class="w-100 d-block">
+            </div>
+        </div>
+        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banners">
+            <span class="carousel-control-prev-icon"></span>
+        </button>  
+        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banners">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</body>
+</html>
+
+Carousel with Indicators:
+- Indicators are used to design random navigation between items in carousel.
+- User can select any item directly to navigate.
+- It is a collection of items defined with "carousel-indicators" class.
+
+Syntax:
+    <div class="carousel-indicators">
+           <button></button>
+           <button></button>    every button refers to an item
+            ....
+    </div>
+
+        (or)
+    <ul class="carousel-indicators">
+      <li> </li>
+      <li> </li>
+    </ul>
+
+- Every indicator button requires the attributes to define
+
+    data-bs-slide-to="indexNumber"
+    data-bs-target="#carousel_id"
+
+       <button data-bs-slide-to="0" data-bs-target="#banners">
+
+- Make sure that any one indicator button is set to active. It must map with the item that is active.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <div class="carousel slide" id="banners" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active ">
+                <img height="300" src="../public/images/slide-1.JPG" class="w-100 d-block">
+            </div>
+            <div class="carousel-item">
+                <img height="300" src="../public/images/slide-2.JPG" class="w-100 d-block">
+            </div>
+            <div class="carousel-item">
+                <img height="300" src="../public/images/slide-3.JPG" class="w-100 d-block">
+            </div>
+        </div>
+        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banners">
+            <span class="carousel-control-prev-icon"></span>
+        </button>  
+        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banners">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-indicators">
+            <button class="active" data-bs-slide-to="0" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="1" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="2" data-bs-target="#banners"></button>
+        </div>
+    </div>
+</body>
+</html>
+
+Carousel Items with Timing:
+- You can control the timing of every item by using the attribute "data-bs-interval".
+- It refers to milliseconds. [1000ms = 1sec]
+
+Syntax:
+    <div class="carousel-item" data-bs-interval="3000">
+    </div>
+
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <div class="carousel slide" id="banners" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="4000">
+                <img height="300" src="../public/images/slide-1.JPG" class="w-100 d-block">
+            </div>
+            <div class="carousel-item"  data-bs-interval="1000">
+                <img height="300" src="../public/images/slide-2.JPG" class="w-100 d-block">
+            </div>
+            <div class="carousel-item" data-bs-interval="6000">
+                <img height="300" src="../public/images/slide-3.JPG" class="w-100 d-block">
+            </div>
+        </div>
+        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banners">
+            <span class="carousel-control-prev-icon"></span>
+        </button>  
+        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banners">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-indicators">
+            <button class="active" data-bs-slide-to="0" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="1" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="2" data-bs-target="#banners"></button>
+        </div>
+    </div>
+</body>
+</html>
+
+                  Navbars

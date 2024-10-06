@@ -1,0 +1,219 @@
+Tables in HTML
+- Tables are used to design data grids.
+- Grid arranges information in rows and columns.
+- Grids are used for display, filtering, sorting and manipulating data.
+- HTML 5 provides following elements for table design
+
+    <table>
+    <thead>
+    <tbody>
+    <tfoot>
+    <tr>
+    <th>
+    <td>
+    <caption>
+    <colgroup>
+
+Syntax:
+    <table>
+        <caption> Table Caption </caption>
+        <thead>
+            <tr> <th> Heading </th> </tr>
+        </thead>
+        <tbody>
+            <tr> <td> Cell </td> </tr>
+        </tbody>
+        <tfoot>
+            <tr> <td> Cell </td> </tr>
+        </tfoot>
+    </table>
+
+Note: Colgroup can display only when group is defined with attribute or style.
+
+      <colgroup span="2">
+
+Table Attributes:
+
+1. frame, rules, border
+
+        frame        : It is defined for table with values as:
+                        a) box
+                        b) void
+                        c) rhs
+                        d) lhs
+                        e) above
+                        f) below
+                      Syntax:
+
+                      <table frame="box | void | above | below | rhs | lhs">
+
+        rules        : It is defined for rows, columns and groups.
+                      It have values
+                        a) rows
+                        b) cols    
+                        c) groups
+                        d) none
+                        e) all
+
+        border        : It defined for cells. It can have "0 or 1" as value.
+                        0 = false, 1 = true
+                      To set border you have to remove rules attribute from table.
+
+Syntax:
+        <table rules="all" frame="void">
+        <table border="1" frame="void">
+
+2. cellspacing & cellpadding
+
+    cellspacing         : It set space between cells in table.
+    cellpadding        : It sets space between cell border and content inside.
+
+Syntax:
+    <table border="1"  frame="void" cellspacing="10" cellpadding="10">
+
+3. align  & valign
+
+    align                : It aligns cell content left, center, right or justify.
+    valign            : It aligns cell content vertically top, center or bottom.
+
+Syntax:
+    <td align="center" valign="top">
+    <tr align="center">
+   
+Note: You can control alignments only row-wise.
+
+4. width & height
+
+    width            : It set cell width. It effects all rows in the column.
+    height            : It set cell height, it effects all cells in the row.
+
+    <td width="200">
+    <th width="200">
+                       
+
+5. bgcolor and background
+
+   
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .bi-circle-fill {
+            font-size: 6px;
+        }
+        .flag {
+           width: 16%;
+        }
+        .flag+span {
+           font-family: Arial;
+           font-size: 20px;
+           font-weight: bold;
+        }
+        .player {
+            width:100px;
+            height: 100px;
+        }
+        .row-1 {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        .p-name {
+            font-family: Arial;
+            font-weight: bold;
+        }
+        table {
+            font-family: Arial;
+        }
+        thead {
+            color:gray;
+        }
+        caption {
+            color:gray;
+            text-align: left;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .col-1{
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            justify-content: center;
+        }
+        tbody tr:first-child {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .bi-chevron-up {
+            font-size: 13px;
+            font-weight: bold;
+            color:green;
+        }
+        td {
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <table width="100%"  cellspacing="0" cellpadding="10">
+        <caption> Men's test All-Rounder Rankings </caption>
+        <colgroup span="4"></colgroup>
+        <thead>
+            <tr>
+                <th width="100" align="left">Pos</th>
+                <th width="150" align="left">Team</th>
+                <th width="200" align="left">Players</th>
+                <th width="200" align="left">Rating</th>
+                <th width="300" align="left">Career Best Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr valign="center">
+                <td>01 <span class="bi bi-circle-fill"></span></td>
+                <td > <img src="./images/india.png" class="flag"> <span>IND</span> </td>
+                <td  background="./images/icc.png">  
+                    <div class="row-1">
+                        <div class="col-1">
+                            <div><font size="4" color="gray">Ravindra</font></div>
+                            <div class="p-name">JADEJA</div>
+                        </div>
+                        <div>
+                            <img src="./images/jadeja.png" class="player">
+                        </div>
+                    </div>
+
+                </td>
+                <td>444</td>
+                <td align="right">469 v England at Rajkot 2024</td>
+            </tr>
+            <tr>
+                <td>02 <span class="bi bi-circle-fill"></span></td>
+                <td> <img src="./images/india.png" class="flag"> <span>IND</span> </td>
+                <td>  
+                   <small>Ravichandran</small> <span class="p-name">ASHWIN</span>
+                </td>
+                <td>322</td>
+                <td align="right">492 v England at MOHALI 2016</td>
+            </tr>
+            <tr>
+                <td>08 <span class="bi bi-chevron-up"> 1 </span> </td>
+                <td> <img src="./images/eng.png" class="flag"> <span> ENGLAND </span> </td>
+                <td> <small>Chris</small> <span class="p-name">WOAKES</span> </td>
+                <td> 259 </td>
+                <td align="right">273 v Pakistan at Old Trafford 2020</td>
+            </tr>
+         
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">Last updated on 31 August 2024</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

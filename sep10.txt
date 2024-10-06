@@ -1,0 +1,235 @@
+Progress Bar
+- It is used to display status of any task performed in page.
+- Status can be time elapsed or time remaining etc.
+- Task includes actions like download, upload, copy, install etc.
+
+Syntax:
+   <progress> </progress>
+
+Attributes:
+  - min
+  - max
+  - value
+
+Syntax:
+   <progress min="1" max="100"  value="40"> </progress>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <dl>
+        <dt>Preparing for Download</dt>
+        <dd><progress></progress></dd>
+        <dt>30% Completed</dt>
+        <dd>
+            <progress min="1" max="100" value="30"></progress>
+        </dd>
+    </dl>
+</body>
+</html>
+
+                    Meter
+- It is used to display grade meter by using various colors.
+
+Syntax:
+    <meter  min=""  max=""  value=""  low=""  high="">  </meter>
+
+- If low and high are not defined or set to zero then color is green.
+- If low and high have less difference then color is red.
+- If low and high have more difference then color is yellow.
+
+Syntax:
+  <meter min="1" max="100" value="100" low="60" high="80"> </meter>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        meter {
+            width: 200px;
+        }
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li> 5 <span class="bi bi-star-fill"></span> <meter min="1" max="100" value="50"></meter> 5,600 </li>
+        <li> 3 <span class="bi bi-star-fill"></span> <meter min="1" max="100" low="40" high="80" value="100"></meter> 700 </li>
+        <li> 1 <span class="bi bi-star-fill"></span> <meter min="1" max="100" low="60" high="80" value="100"></meter> 100 </li>
+
+    </ul>
+</body>
+</html>
+
+                              Buttons
+- Buttons are used to confirm user actions.
+- User actions can be
+    a) Record Actions
+    b) Record Navigation
+    c) Miscellaneous actions etc.
+- Record actions like : insert, update, delete, clear, submit
+- Record navigation like : previous, next, first, last..
+- Miscellaneous actions like: open, close, save, print etc..
+- Buttons are of 2 types
+   
+    1. Generic Buttons
+    2. Non Generic
+
+- Generic buttons have pre-defined functionality.
+
+    a) Submit        : It submit form data to server.
+    b) Reset        : It resets the form data to default.
+
+ HTML 4 Generic Buttons:
+
+    <input type="submit">    ] value attribute can change the text
+    <input type="reset">        ]  for buttons
+
+HTML 5 Generic Buttons
+   
+    <button type="submit"> Text | Image | Icon </button>
+    <button type="reset">  Text | Image | Icon </button>
+
+- Non Generic buttons are with custom functionality. Developer have to define a functionality for button explicitly.
+
+HTML 4:
+    <input type="button"  value="any">
+
+HTML 5:
+    <button type="button"> Text | Image | Icon </button>
+
+Note: You can configure custom functionality to any non-generic button using client side
+          script.
+
+FAQ: Is it possible to disable generic functionality and add custom?
+Ans:  Yes. JavaScript provides a method called "preventDefault()".
+
+
+Summary:
+- Form
+- TextBox
+- Password
+- Number
+- Range
+- Email
+- URL
+- Color
+- Date & Time
+- File
+- Radio
+- Checkbox
+- Listbox
+- Dropdown List
+- Textarea
+- Progress
+- Meter
+- Button
+- Datalist
+
+                Basic Format of Form in Webpage
+1. All form elements must be in <form> container.
+
+2. Every category in form must be defined using <div>
+
+3. Every category must have a <label>
+
+4. Label must bind with form element by using "for" attribute.
+
+5. Every form must have a generic "submit"
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            padding: 20px;
+            border:1px solid gray;
+            box-shadow: 2px 2px 2px black;
+            font-family: Arial;
+            width: 200px;
+            height: 300px;
+        }
+        .form-group {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .form-label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .btn-login {
+            width: 100%;
+            border:none;
+            background-color: gold;
+            padding: 5px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        input {
+            width: 100%;
+            height: 25px;
+            border-radius: 5px;
+            border:1px solid gray;
+        }
+        .login-title {
+            font-size: 20px;
+        }
+        dd {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="login-title bi bi-person-fill"> User Login</div>
+        <div class="form-group">
+            <label for="UserName" class="form-label">User Name</label>
+            <div>
+                <input type="text" name="UserName">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Password" class="form-label">Password</label>
+            <div>
+                <input type="password" name="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <details>
+                <summary>Need Help ?</summary>
+                <dl>
+                    <dd><a href="#">Forgot Password</a></dd>
+                    <dd><a href="#">Recover Id</a></dd>
+                </dl>
+            </details>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn-login">Login</button>
+        </div>
+    </form>
+</body>
+</html>

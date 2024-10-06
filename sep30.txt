@@ -1,0 +1,65 @@
+JavaScript
+
+- JavaScript is light weight interpretted and JIT compiled programming language.
+- Light weight refers to less memory.
+- Interpretted indicates that the program is translated line-by-line.
+- Compiled specifies that all lines are translated simultaneously at the same time.
+- There are 2 types of compiling techniques
+    a) JIT
+    b) AOT
+- JIT is "Just-in-Time", which compiles the code only when it is requested.
+- AOT is "Ahead-of-Time", which compiles the code before it is requested.
+- If JavaScript is used in browser then a JavaScript interpreter will translate the code.
+- If it is used outside browser then a JavaScript compiler will translate the code. The popular JS compilers are "Babel, V8, Node etc."
+- JavaScript is a language that supports various programming paragdims like
+    a) Structural
+    b) Functional    
+    c) Imperative
+    d) Object Oriented etc..
+
+Note: JavaScript is not an OOP language, it supports only few features of OOP.
+
+- JavaScript is a language which is used in various implementations
+
+    a) Client Side
+    b) Server Side
+    c) Database
+    d) Animation etc.
+
+JavaScript Client Side:
+- JavaScript is used client side to reduce burden on server.
+- It manages various interactions client side and saves round trip.
+- JavaScript is used client side for
+    a) DOM Manipulations
+    b) Browser Interactions
+    c) Validations
+- DOM Manipulations
+    - Data Binding
+    - Class Binding
+    - Style Binding
+    - Event Binding
+- Browser Interactions
+    - Window
+    - Location
+    - Navigator
+    - History
+    - Document
+- Validations
+    - Contradictory Data
+    - Unauthorized Data
+
+Evolution of JavaScript:
+- CERN labs introduced a script for browser by name "ECMA Script" in the early days of internet.
+- Netscape communications started a browser called "Netscape Navigator".
+- Netscape appointed "Brendan Eich" to design a script for their browser.
+- Brendan Eich designed a script by name "Mocha", later renamed as "Live Script".
+- Netscape given the responsibility of Live Script to "Sun Microsystems".
+- Sun Microsystem and Netscape together renamed live script to "JavaScript".
+- Netscape stopped its services in 2000 and given responsibility of JavaScript to ECMA.
+- ECMA is evolving and maintaining JavaScript
+- The popular JavaScript versions are
+    ECMA Script 2015         ES5
+    ECMA Script 2016         ES6
+    ECMA Script 2017         ES7
+    ...............
+    Latest            ESNext

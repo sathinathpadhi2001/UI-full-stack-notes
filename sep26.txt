@@ -1,0 +1,507 @@
+6. Display Grid
+- Grid arranges content in rows and columns using the attributes
+    a) grid-template-columns
+    b) grid-row
+    c) grid-col
+- Grid configures responsive layout using media queries.
+
+
+                           Media Queries
+- CSS media query is used to design responsive page.
+- A responsive page can change the layout according to width and orientation.
+
+Syntax:
+    @media   type  (query)
+    {
+
+    }
+
+    type    : It defines screen, print and speech.
+    query    : It defines "orientation" & "width".
+
+          a) Orientation    : landscape, portrait
+          b) width        : width, min-width, max-width
+
+    @media  screen  and  (orientation:landscape)
+     {
+
+     }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header, nav, aside, footer, main {
+            border:1px solid black;
+            padding: 5px;
+            font-size: 22px;
+            margin: 5px;
+        }
+        main {
+            height: 350px;
+        }
+        @media screen and (orientation:landscape)
+        {
+            body {
+                display: grid;
+                grid-template-columns: 2fr 8fr 2fr;
+            }
+            header {
+                grid-row: 1;
+                grid-column: 1/4;
+            }
+            nav {
+                grid-row: 2;
+                grid-column: 1;
+            }
+            main {
+                grid-row: 2;
+                grid-column: 2;
+            }
+            aside {
+                grid-row: 2;
+                grid-column: 3;
+            }
+            footer {
+                grid-row: 3;
+                grid-column: 1/4;
+            }
+        }
+
+        @media screen and (orientation:portrait)
+        {
+            body {
+                display: grid;
+                grid-template-columns: 12fr;
+            }
+            header {
+                grid-row: 1;
+            }
+            nav {
+                grid-row: 2;
+            }
+            main {
+                grid-row: 3;
+            }
+            aside {
+                grid-row: 4;
+                display: none;
+            }
+            footer {
+                grid-row: 5;
+            }
+        }
+    </style>
+</head>
+<body>
+   <header>
+       Header
+   </header>
+   <nav>
+     Nav
+   </nav>
+   <main>
+    Main
+   </main>
+   <aside>
+    Aside
+   </aside>
+   <footer>
+    Footer
+   </footer>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+         button {
+            font-size: 22px;
+         }
+        .brand-title {
+            font-size: 22px;
+            font-weight: bold;
+            font-family: Arial;
+        }
+        nav span {
+            font-size: 22px;
+            margin: 0px 20px 0px 20px;
+        }
+
+        header {
+            background-color: black;
+            color:white;
+            padding: 20px;
+        }
+
+        @media screen and (orientation:landscape) {
+             header {
+                display: flex;
+                justify-content: space-between;
+             }
+             .navbar-toggler {
+                display: none;
+             }
+        }
+
+        @media screen and (orientation:portrait) {
+            nav {
+                display: none;
+            }
+            .navbar-toggler {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex;">
+            <button class="navbar-toggler bi bi-justify" style="margin-right: 20px;"></button>
+            <div class="brand-title">Shopper.</div>
+        </div>
+        <nav>
+            <span>Home</span>
+            <span>Shop</span>
+            <span>Docs</span>
+            <span>Pages</span>
+            <span>Blog</span>
+        </nav>
+    </header>
+</body>
+</html>
+
+- Media query "min-width" specifies the width starting form given units upto end.
+
+     (min-width:600px)        => starting from 600px upto end
+
+- Media query "max-width" specifies the width starting form zero upto given units.
+
+    (max-width:600px)        => starting from zero upto 600px
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and (min-width:600px) {
+            body {
+                background-image: url("../public/images/a2.jpg");
+                background-size: cover;
+            }
+        }
+        @media screen and (max-width:599px) {
+            body {
+                background-image: url("../public/images/a1.jpg");
+                background-size: cover;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+</body>
+</html>
+
+Ex: Shopper Responsive
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            background-color: black;
+            color:white;
+            padding: 10px;
+            font-family: Arial;
+            font-size: 20px;
+        }
+        article {
+            background-color: black;
+            margin-top: 10px;
+            color:white;
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+            font-family: Arial;
+        }
+        .women-fashion {
+            background-image: url("../public/images/women-fashion.jpg");
+            background-size: cover;
+        }
+        .men-fashion {
+            background-image: url("../public/images/men-fashion.jpg");
+            background-size: cover;
+        }
+        .kids-fashion {
+            background-image: url("../public/images/kids-fashion.jpg");
+            background-size: cover;
+        }
+        main {
+            height: 450px;
+        }
+
+        @media screen and (orientation:landscape) {
+            main {
+                display: grid;
+                grid-template-columns: 4fr 4fr 4fr;
+            }
+            header {
+                display: flex;
+                justify-content: space-between;
+            }
+            footer {
+            background-color: black;
+            color:white;
+            font-family: Segoe UI;
+            padding: 20px;  
+        }
+        .row-1 {
+            text-align: center;
+        }
+        .footer-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .row-2 {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .email {
+            display: inline-block;
+            padding: 20px;
+            background-color: #888;
+            color:white;
+            width: 300px;
+            text-align: left;
+        }
+        .subscribe {
+            display: inline-block;
+            padding: 20px;
+            background-color: #444;
+            width: 150px;
+            margin-left: 20px;
+        }
+        .row-3 {
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            margin-top: 30px;
+        }
+        .col span {
+            display: block;
+            margin-top: 15px;
+        }
+        .col-title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        aside span {
+            padding-right: 10px;
+            padding-top: 20px;
+            display: inline-block;
+        }
+        }
+
+        @media screen and (orientation:portrait) {
+            main {
+                display: grid;
+                grid-template-columns: 12fr;
+                margin-top: 10px;
+            }
+            .kids-fashion {
+                display: none;
+            }
+            .men-fashion {
+                display: none;
+            }
+            header {
+                display: flex;
+                justify-content: space-between;
+            }
+            nav {
+                display: none;
+            }
+            footer {
+            background-color: black;
+            color:white;
+            font-family: Segoe UI;
+            padding: 20px;  
+        }
+        .row-1 {
+            text-align: center;
+        }
+        .footer-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .row-2 {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .email {
+            display: inline-block;
+            padding: 20px;
+            background-color: #888;
+            color:white;
+            width: 100px;
+            text-align: left;
+        }
+        .subscribe {
+            display: inline-block;
+            padding: 20px;
+            background-color: #444;
+            width: 80px;
+            margin-left: 20px;
+        }
+        .row-3 {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            margin-top: 30px;
+        }
+        .col span {
+            display: block;
+            margin-top: 15px;
+        }
+        .col-title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        aside span {
+            padding-right: 10px;
+            padding-top: 20px;
+            display: inline-block;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand-title">Shopper.</div>
+        <nav>
+            <span>Home</span>
+            <span>Shop</span>
+            <span>Blog</span>
+            <span>Pages</span>
+            <span>Docs</span>
+        </nav>
+        <div>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-cart3"></span>
+        </div>
+    </header>
+    <section>
+        <article> <span class="bi bi-lightning-fill"></span> Happy Holiday Deals <span class="bi bi-lightning-fill"></span> </article>
+        <main>
+            <div class="men-fashion">
+
+            </div>
+            <div class="women-fashion">
+
+            </div>
+            <div class="kids-fashion">
+
+            </div>
+        </main>
+    </section>
+    <footer>
+        <div class="row-1">
+            <span class="footer-title">Want style Ideas and Treats?</span>
+        </div>
+        <div class="row-2">
+            <span class="email">Enter Email*</span>
+            <span class="subscribe"> Subscribe </span>
+        </div>
+        <div class="row-3">
+            <div>
+                <span class="brand-title">Shopper</span>
+                <aside>
+                    <span class="bi bi-facebook"></span>
+                    <span class="bi bi-twitter"></span>
+                    <span class="bi bi-instagram"></span>
+                    <span class="bi bi-youtube"></span>
+                    <span class="bi bi-linkedin"></span>
+                </aside>
+            </div>
+            <div class="col">
+                <span class="col-title">Support</span>
+                <span>Contact Us</span>
+                <span>FAQs</span>
+                <span>Size Guide</span>
+                <span>Shipping & Returns</span>
+            </div>
+            <div class="col">
+                <span class="col-title">Shop</span>
+                <span>Men's Shopping</span>
+                <span>Women's Shopping</span>
+                <span>Kids' Shopping</span>
+                <span>Discounts</span>
+            </div>
+            <div class="col">
+                <span class="col-title">Company</span>
+                <span>Our Story</span>
+                <span>Careers</span>
+                <span>Terms & Conditions</span>
+                <span>Privacy & Cookie policy</span>
+            </div>
+            <div>
+                <address class="col">
+                    <span class="col-title">Contact</span>
+                    <span>1-202-555-0105</span>
+                    <span>1-202-555-0106</span>
+                    <span>help@shopper.com</span>
+                </address>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+                   CSS Background
+background-color
+background-image
+background-size
+background-position
+background-repeat
+background-attchment
+background-clip [padding-container, border-container]
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            background-image: url("../public/images/a1.jpg"), url("../public/images/a5.jpg");
+            background-repeat: no-repeat, repeat;
+            background-position: center center, top right ;
+            background-size: 400px 300px, 150px 150px;
+        }
+    </style>
+</head>
+<body>
+   
+</body>
+</html>

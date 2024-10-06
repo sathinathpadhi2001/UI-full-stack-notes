@@ -1,0 +1,418 @@
+HTML  Image Element
+
+- HTML provides <img> for images. It can embed image into page.
+- If you want images SEO friendly then you can keep in <figure> element with <figcaption>.
+
+Syntax:
+        <figure>
+            <img>
+            <figcaption> Caption </figcaption>
+        </figure>
+
+Attributes:
+
+    1. src        : It refers to the resource path and name. [image path]
+
+    2. alt        : It defines alternative text to display when image fails to load.
+
+    3. width/height    : It sets width and height for image.
+
+    4. title        : It defines the tool tip to display when mouse is over.
+
+    5. border        : It sets border for image.
+
+    6. align        : It can align image left or right. It is used for wrapping text around
+                  image.
+
+    7. hspace    : It sets horizontal space between image and text.
+
+    8. vspace        : It sets vertical space between image and image.
+
+Syntax:
+  <img src="./images/pic.jpg" width="100" height="200" alt="alternative text"  title="Tooltip to display"  border="1" align="left" hspace="20" vspace="20">
+
+FAQ: How to design fluid-images?
+Ans:  By configuring the size in "%".
+   
+    <img src="./images/pic.jpg"  width="50%" height="50%">
+
+Cards Design with images:
+
+Ex1: NareshIT Cards
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NareshIT</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+
+        section {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .card {
+            width: 250px;
+            margin: 20px;
+            border-radius: 10px;
+            border:1px solid black;
+            box-shadow: 5px 5px 2px gray;
+        }
+        .card-img {
+            width: 100%;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+        .card-header {
+            text-align: center;
+            padding: 10px;
+        }
+        .card-title {
+            font-size: 20px;
+            font-family: Arial;
+            font-weight: bold;
+            height: 50px;
+        }
+        .ratings {
+            color:goldenrod;
+        }
+        .card-body {
+            padding: 10px;
+            font-family: Arial;
+        }
+        dl {
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+        }
+        dt {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        dd {
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+        .card-footer {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+           
+        }
+        .enroll {
+            background-color: blue;
+            color:white;
+            border-bottom-left-radius: 10px;
+            font-size: 20px;
+            font-family: Arial;
+            text-align: center;
+            padding: 10px;
+        }
+        .share {
+            background-color: whitesmoke;
+            color:black;
+            border-bottom-right-radius: 10px;
+            font-size: 20px;
+            font-family: Arial;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="card">
+            <img src="./images/ds.png" class="card-img">
+            <div class="card-header">
+                <div class="card-title"> FullStack Data Science & AI </div>
+                <div class="ratings">
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                </div>
+            </div>
+            <div class="card-body">
+                <dl>
+                    <dt class="bi bi-calendar-date"> Start Date </dt>
+                    <dd> 12 Aug 2024 </dd>
+                    <dt> By </dt>
+                    <dd class="bi bi-person"> Mr. Daniel </dd>
+                    <dt class="bi bi-clock"> Dur </dt>
+                    <dd> 4 months </dd>
+                </dl>
+            </div>
+            <div class="card-footer">
+                 <div class="enroll">Enroll</div>
+                 <div class="share"> <span class="bi bi-share"></span> Share </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="./images/testing.png" class="card-img">
+            <div class="card-header">
+                <div class="card-title"> FullStack Testing </div>
+                <div class="ratings">
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                </div>
+            </div>
+            <div class="card-body">
+                <dl>
+                    <dt class="bi bi-calendar-date"> Start Date </dt>
+                    <dd> 12 Aug 2024 </dd>
+                    <dt> By </dt>
+                    <dd class="bi bi-person"> Mr. Daniel </dd>
+                    <dt class="bi bi-clock"> Dur </dt>
+                    <dd> 4 months </dd>
+                </dl>
+            </div>
+            <div class="card-footer">
+                 <div class="enroll">Enroll</div>
+                 <div class="share"> <span class="bi bi-share"></span> Share </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="./images/java.png" class="card-img">
+            <div class="card-header">
+                <div class="card-title"> FullStack Java </div>
+                <div class="ratings">
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                </div>
+            </div>
+            <div class="card-body">
+                <dl>
+                    <dt class="bi bi-calendar-date"> Start Date </dt>
+                    <dd> 12 Aug 2024 </dd>
+                    <dt> By </dt>
+                    <dd class="bi bi-person"> Mr. Daniel </dd>
+                    <dt class="bi bi-clock"> Dur </dt>
+                    <dd> 4 months </dd>
+                </dl>
+            </div>
+            <div class="card-footer">
+                 <div class="enroll">Enroll</div>
+                 <div class="share"> <span class="bi bi-share"></span> Share </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./images/django.png" class="card-img">
+            <div class="card-header">
+                <div class="card-title"> Django with API </div>
+                <div class="ratings">
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                </div>
+            </div>
+            <div class="card-body">
+                <dl>
+                    <dt class="bi bi-calendar-date"> Start Date </dt>
+                    <dd> 12 Aug 2024 </dd>
+                    <dt> By </dt>
+                    <dd class="bi bi-person"> Mr. Daniel </dd>
+                    <dt class="bi bi-clock"> Dur </dt>
+                    <dd> 4 months </dd>
+                </dl>
+            </div>
+            <div class="card-footer">
+                 <div class="enroll">Enroll</div>
+                 <div class="share"> <span class="bi bi-share"></span> Share </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+Ex2: Amazon Cards
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Cards</title>
+    <style>
+        section {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            margin-top: -250px;
+        }
+        .card {
+            padding: 5px;
+            margin: 10px;
+            height: 400px;
+            background-color: white;
+            font-family: Arial;
+            box-shadow: 2px 2px 2px gray;
+        }
+        .row {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            grid-gap: 5px;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+        .card-body {
+            padding: 5px;
+            height: 300px;
+        }
+        .card-header {
+            height: 50px;
+        }
+        .card-title {
+            font-family: Arial;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .footer-link {
+            color:blue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./images/amazon-banner.jpg" width="100%">
+    </header>
+    <section>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Starting ₹149 | Headphones</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="./images/a1.jpg" width="100%">
+                        <p>Starting ₹249 | boAt</p>
+                    </div>
+                    <div>
+                        <img src="./images/a2.jpg" width="100%">
+                        <p>Starting ₹249 | boAt</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="./images/a3.jpg" width="100%">
+                        <p>Starting ₹249 | boAt</p>
+                    </div>
+                    <div>
+                        <img src="./images/a4.jpg" width="100%">
+                        <p>Starting ₹249 | boAt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="footer-link">See all offers</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Starting ₹149 | Headphones</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="./images/a5.jpg" width="100%">
+                        <p>Starting ₹249 | boAt</p>
+                    </div>
+                    <div>
+                        <img src="./images/a6.jpg" width="100%">
+                        <p>Starting ₹249 | boAt</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="./images/a7.jpg" width="100%">
+                        <p>Starting ₹249 | boAt</p>
+                    </div>
+                    <div>
+                        <img src="./images/a8.jpg" width="100%">
+                        <p>Starting ₹249 | boAt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="footer-link">See all offers</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Starting ₹149 | Headphones</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="./images/a9.jpg" width="100%">
+                        <p>Starting ₹249 | boAt</p>
+                    </div>
+                    <div>
+                        <img src="./images/a10.jpg" width="100%">
+                        <p>Starting ₹249 | boAt</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="./images/a11.jpg" width="100%">
+                        <p>Starting ₹249 | boAt</p>
+                    </div>
+                    <div>
+                        <img src="./images/a12.jpg" width="100%">
+                        <p>Starting ₹249 | boAt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="footer-link">See all offers</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Starting ₹149 | Headphones</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="./images/a13.jpg" width="100%">
+                        <p>Starting ₹249 | boAt</p>
+                    </div>
+                    <div>
+                        <img src="./images/a14.jpg" width="100%">
+                        <p>Starting ₹249 | boAt</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="./images/a15.jpg" width="100%">
+                        <p>Starting ₹249 | boAt</p>
+                    </div>
+                    <div>
+                        <img src="./images/a16.jpg" width="100%">
+                        <p>Starting ₹249 | boAt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="footer-link">See all offers</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

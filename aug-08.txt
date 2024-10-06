@@ -1,0 +1,147 @@
+1. Install Node JS
+	C:\>node -v
+	C:\>npm -v
+
+2. VS Code
+
+3. Extensions 
+
+					 Creating Web Application
+
+FAQ: What is a Website or Web Application?
+Ans:  Website is a virtual directory on server that provides access to resources on 	 
+	  server.
+
+FAQ: What is Web Server?
+Ans:  Web Server resembles both hardware and software, it satisfies client request by 	
+         sending and receiving data. Local web server runs on "http://127.0.0.1".
+
+
+FAQ: Where the resources are kept?
+Ans:  Web Application resources are kept in "Physical Path", which is accessed by using "Virtual Path".
+
+		D:\project						=> Physical Path
+		
+		http://127.0.0.1/project			=> Virtual Path
+		http://127.0.0.1:5500			=> Virtual Path
+
+	  Every project runs on specific "Port" number. 
+
+1. Create a new folder for your project at any location on your PC.
+
+				D:\Flipkart
+
+2. Open Project folder in VS Code
+
+3. Open Terminal in VS Code 
+
+		Terminal Menu => New Terminal 
+				     (or)
+		 Ctrl + `
+
+4. Switch terminal to "Command Prompt"  from  "Power Shell"
+
+5. Run the following command
+
+		> npm   init  -y
+
+     It generates "package.json", which is a configuration file required for project.
+     It comprises of project meta data, which includes details like
+		a) Author
+		b) Project Name
+		c) Version Number
+		d) Test Commands
+		e) Entry Point
+		f) Dependencies etc..
+
+6. Add a new file into project by name "README.md". It is a help document designed 
+    by developer for developer. 
+
+7. Add folders
+
+		a) public
+		b) src
+
+    - public is used to keep all static resources like html, images, documents, videos,
+      spread sheet, ppt, etc.
+
+    - src is used to keep all dynamic resources like  css, scss, js, ts, jsx, tsx etc.
+
+		D:\Flipkart
+			|
+			|_public
+			|  |_images
+			|  |_videos
+			|  |_docs
+			|
+			|_src
+			|  |_scripts		
+			|  |_styles
+			|  |_scss
+			|
+			|_package.json
+			|_README.md
+
+	https://www.freepik.com/
+	https://www.canva.com/
+	https://copilot.microsoft.com/
+
+8. Click  "Go Live" in the status bar of VS code
+
+
+						Web Page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

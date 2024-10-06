@@ -1,0 +1,236 @@
+JavaScript Input Techniques
+- Input is the process of accessing data from user.
+- JavaScript allows input using following techniques
+    1. Query String
+    2. Prompt
+    3. Form Input Elements
+
+Query String:
+- A query string is defined in the address bar of browser.
+- It is appended into address bar by using "?" operator with URL.
+
+            http://127.0.0.1:5500/js-examples/page.html?key=value
+
+- You can access the query string by using "location.search"
+
+    ?key=value
+
+- You have to use string functions to extract and display on the value of query string.
+
+    .slice()        It gets the chars between specified index
+    .indexOf()        It returns the index number of a character in string.
+
+    location.search.slice(location.search.indexOf("=")+1)
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyload(){
+            document.getElementById("lblName").innerHTML = location.search.slice(location.search.indexOf("=")+1);
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <p>Hello ! <span id="lblName"></span> </p>
+</body>
+</html>
+
+Ex: Query string from form data
+1. search.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div align="center">
+       <form action="results.html" method="get">
+        <h1>Google</h1>
+        <input type="text" name="search" size="40">
+        <br><br>
+        <div>
+            <button type="submit">Search</button>
+        </div>
+       </form>
+    </div>
+</body>
+</html>
+
+2. results.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyload(){
+            document.getElementById("lblValue").innerHTML = location.search.slice(location.search.indexOf("=")+1);
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <h3>Showing Results for <span id="lblValue"></span> </h3>
+    <a href="search.html">Back</a>
+</body>
+</html>
+
+2. prompt()
+- It is a method of Javascript window object.
+- It provides an input box that allows the user to input a value.
+- It returns the following
+   
+    a) Empty String    "  "    on OK click without value.
+    b) String        "val"    on OK click with value.
+    c) Null        null    on Cancel click with or without value.
+
+Syntax:
+    prompt("message", "default_value");
+    prompt("message");
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function AddClick(){
+           result = prompt("Enter Folder Name");
+           if(result==null){
+              alert("Action Canceled");
+           }
+           else if(result=="") {
+              alert("Folder name can't be empty");
+           } else {
+              document.getElementById("lblFolder").innerHTML += "Folder Created : " + result + "<br>";
+           }
+        }
+    </script>
+</head>
+<body>
+    <h3>Google Drive</h3>
+    <div>
+        <button onclick="AddClick()"> + Add Folder </button>
+    </div>
+    <br><br>
+    <div id="lblFolder">
+
+    </div>
+</body>
+</html>
+
+3. Input using form elements
+
+Ex: Inox
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inox</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        function GetSummary(){
+            document.getElementById("btnBooking").style.display = "none";
+            document.getElementById("BookingSummary").style.display = "block";
+           
+            document.getElementById("lblMovie").innerHTML = document.getElementById("lstMovies").value;
+            document.getElementById("lblCinema").innerHTML = document.getElementById("lstCinema").value;
+            document.getElementById("lblDate").innerHTML  = document.getElementById("lstDate").value;
+            document.getElementById("lblTime").innerHTML  = document.getElementById("lstTime").value;
+
+            movieName = document.getElementById("lstMovies").value;
+            if(movieName=="DEVARA (Part-1)"){
+                document.getElementById("imgPoster").src = "../public/images/devara.jpg";
+            } else {
+                document.getElementById("imgPoster").src = "../public/images/joker.jpg";
+            }
+        }
+
+        function ModifyClick(){
+            document.getElementById("lblBooking").innerHTML = "Modify Booking";
+            document.getElementById("btnBook").innerHTML = "Save";
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <button id="btnBooking" data-bs-target="#booking" data-bs-toggle="modal" class="btn btn-primary mt-3">Quick Booking</button>
+    <div class="modal fade" id="booking">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="lblBooking" class="text-primary">Quick Booking</h2>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <select id="lstMovies" class="form-select">
+                                <option>Select Movie</option>
+                                <option>DEVARA (Part-1)</option>
+                                <option>JOCKER FOLIE A DEUX</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" id="lstCinema">
+                                <option>Select Cinema</option>
+                                <option>INOX B-HILLS</option>
+                                <option>PVR AMEERPET</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" id="lstDate">
+                                <option>Select Date</option>
+                                <option>Today, 3 Oct</option>
+                                <option>Tomorrow, 4 Oct</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" id="lstTime">
+                                <option>Select Timing</option>
+                                <option>10:30 AM</option>
+                                <option>06:40 PM</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button data-bs-dismiss="modal" onclick="GetSummary()" id="btnBook" class="btn btn-info">Book</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="BookingSummary" class="mt-4 w-25" style="display: none;">
+        <h3 class="bg-dark p-2 text-white">Booking Summary</h3>
+        <img width="100%" height="300" id="imgPoster">
+       
+            <dl class="row">
+                <dt class="col-6">Movie Name</dt>
+                <dd class="col-6" id="lblMovie"></dd>
+                <dt class="col-6">Cinema</dt>
+                <dd class="col-6" id="lblCinema"></dd>
+                <dt class="col-6">Date</dt>
+                <dd class="col-6" id="lblDate"></dd>
+                <dt class="col-6">Show Time</dt>
+                <dd class="col-6" id="lblTime"></dd>
+            </dl>
+            <button onclick="ModifyClick()" data-bs-target="#booking" data-bs-toggle="modal" class="btn btn-warning w-100 bi bi-pen-fill"> Modify Booking </button>
+    </div>
+</body>
+</html>

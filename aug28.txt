@@ -1,0 +1,485 @@
+Hyperlinks in HTML
+- Hyper means "Beyond".
+- A hyperlink is clickable text, picture or graphic that navigates the user from one location to another.
+- Hyperlinks are created by using anchor element "<a>".
+- Hyperlinks are categorized into 2 types
+    a) Intra Document Links
+    b) Inter Document Links
+
+Intra Document Links:
+- An intra document link navigates user from one location to another within the same page.
+- The target element must have an "ID".
+
+        <h1  id="top">
+        <img  id="pic">
+        <div id="details">
+
+- Anchor element <a> uses "href" as attribute to refer the ID.
+
+        <a href="#top"> Text  | Image .. </a>
+        <a href="#pic">
+        <a href="#details">
+
+FAQ: What is difference between "src" & "href"?
+Ans:  "src" is a getter, which is used to get the path of resource and use in page.
+     "href" is a setter, which is used to set path for the resource.
+
+Syntax:
+        <a href="#top">    => It sets  "#top" in the address bar by appending to URL.
+
+Ex: Intra Document Links
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            background-color: black;
+            color:white;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            font-family: Arial;
+            font-size: 20px;
+        }
+        .title {
+            font-weight: bold;
+        }
+        header span {
+            margin-right: 20px;
+        }
+        section {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        main {
+            height: 400px;
+            overflow: auto;
+        }
+        ul {
+            list-style: none;
+            margin-left: -20px;
+        }
+        li {
+            font-size: 20px;
+            font-family: Arial;
+            margin-bottom: 20px;
+            width: 150px;
+            background-color: black;
+            color:white;
+            padding: 5px;
+            text-align: left;
+            border-radius: 10px;
+        }
+        nav a {
+            color:white;
+            text-decoration: none;
+        }
+        pre {
+            background-color: lightgray;
+            padding: 10px;
+        }
+        a img {
+            border-radius: 100px;
+        }
+        li:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title">Shopper.</div>
+        <div>
+            <span><a href="#women"><img src="./images/women-fashion.jpg" width="100" height="100"></a></span>
+            <span><a href="#men"><img src="./images/men-fashion.jpg" width="100" height="100"></a></span>
+            <span><a href="#kids"><img src="./images/kids-fashion.jpg" width="100" height="100"></a></span>
+        </div>
+        <div>
+            <span class="bi bi-person-fill"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart2"></span>
+        </div>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#women">Women Fashion</a></li>
+                <li><a href="#men">Men Fashion</a></li>
+                <li><a href="#kids">Kids Fashion</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h3 id="home">Home</h3>
+            <p>Lorem ipsum dolor sit, <span><b><a href="#offers">View Offers</a></b></span> amet consectetur adipisicing elit. Consequatur repellat excepturi praesentium est quae eos, corrupti asperiores amet sapiente error atque culpa iure assumenda tempore ullam inventore et sunt deserunt. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore dolores quam laudantium, repudiandae blanditiis et voluptatem aspernatur recusandae, deserunt possimus soluta dolore ducimus. Consequuntur vero natus omnis, nihil alias temporibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ea, saepe nam laborum magnam corporis accusamus voluptatibus consequatur molestiae, quos officia libero, cum eos aspernatur harum repudiandae tempore eligendi repellat?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur repellat excepturi praesentium est quae eos, corrupti asperiores amet sapiente error atque culpa iure assumenda tempore ullam inventore et sunt deserunt. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore dolores quam laudantium, repudiandae blanditiis et voluptatem aspernatur recusandae, deserunt possimus soluta dolore ducimus. Consequuntur vero natus omnis, nihil alias temporibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ea, saepe nam laborum magnam corporis accusamus voluptatibus consequatur molestiae, quos officia libero, cum eos aspernatur harum repudiandae tempore eligendi repellat?</p>
+            <h3 id="women">Women Fashion</h3>    
+            <img src="./images/women-fashion.jpg" width="200" height="200">    
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur repellat excepturi praesentium est quae eos, corrupti asperiores amet sapiente error atque culpa iure assumenda tempore ullam inventore et sunt deserunt. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore dolores quam laudantium, repudiandae blanditiis et voluptatem aspernatur recusandae, deserunt possimus soluta dolore ducimus. Consequuntur vero natus omnis, nihil alias temporibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ea, saepe nam laborum magnam corporis accusamus voluptatibus consequatur molestiae, quos officia libero, cum eos aspernatur harum repudiandae tempore eligendi repellat?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur repellat excepturi praesentium est quae eos, corrupti asperiores amet sapiente error atque culpa iure assumenda tempore ullam inventore et sunt deserunt. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore dolores quam laudantium, repudiandae blanditiis et voluptatem aspernatur recusandae, deserunt possimus soluta dolore ducimus. Consequuntur vero natus omnis, nihil alias temporibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ea, saepe nam laborum magnam corporis accusamus voluptatibus consequatur molestiae, quos officia libero, cum eos aspernatur harum repudiandae tempore eligendi repellat?</p>
+            <h3 id="men">Men's Fashion</h3>
+            <img src="./images/men-fashion.jpg" width="200" height="200">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur repellat excepturi praesentium est quae eos, corrupti asperiores amet sapiente error atque culpa iure assumenda tempore ullam inventore et sunt deserunt. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore dolores quam laudantium, repudiandae blanditiis et voluptatem aspernatur recusandae, deserunt possimus soluta dolore ducimus. Consequuntur vero natus omnis, nihil alias temporibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ea, saepe nam laborum magnam corporis accusamus voluptatibus consequatur molestiae, quos officia libero, cum eos aspernatur harum repudiandae tempore eligendi repellat?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur repellat excepturi praesentium est quae eos, corrupti asperiores amet sapiente error atque culpa iure assumenda tempore ullam inventore et sunt deserunt. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore dolores quam laudantium, repudiandae blanditiis et voluptatem aspernatur recusandae, deserunt possimus soluta dolore ducimus. Consequuntur vero natus omnis, nihil alias temporibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ea, saepe nam laborum magnam corporis accusamus voluptatibus consequatur molestiae, quos officia libero, cum eos aspernatur harum repudiandae tempore eligendi repellat?</p>
+            <div id="offers">
+                <pre>
+                    40% OFF         Electronics
+                    10% OFF         Men's Clothing
+                    15% OFF         Kids Fashion
+                </pre>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur repellat excepturi praesentium est quae eos, corrupti asperiores amet sapiente error atque culpa iure assumenda tempore ullam inventore et sunt deserunt. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore dolores quam laudantium, repudiandae blanditiis et voluptatem aspernatur recusandae, deserunt possimus soluta dolore ducimus. Consequuntur vero natus omnis, nihil alias temporibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ea, saepe nam laborum magnam corporis accusamus voluptatibus consequatur molestiae, quos officia libero, cum eos aspernatur harum repudiandae tempore eligendi repellat?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur repellat excepturi praesentium est quae eos, corrupti asperiores amet sapiente error atque culpa iure assumenda tempore ullam inventore et sunt deserunt. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore dolores quam laudantium, repudiandae blanditiis et voluptatem aspernatur recusandae, deserunt possimus soluta dolore ducimus. Consequuntur vero natus omnis, nihil alias temporibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ea, saepe nam laborum magnam corporis accusamus voluptatibus consequatur molestiae, quos officia libero, cum eos aspernatur harum repudiandae tempore eligendi repellat?</p>
+            <h3 id="kids">Kids Fashion</h3>
+            <img src="./images/kids-fashion.jpg" width="200" height="200">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur repellat excepturi praesentium est quae eos, corrupti asperiores amet sapiente error atque culpa iure assumenda tempore ullam inventore et sunt deserunt. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore dolores quam laudantium, repudiandae blanditiis et voluptatem aspernatur recusandae, deserunt possimus soluta dolore ducimus. Consequuntur vero natus omnis, nihil alias temporibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ea, saepe nam laborum magnam corporis accusamus voluptatibus consequatur molestiae, quos officia libero, cum eos aspernatur harum repudiandae tempore eligendi repellat?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur repellat excepturi praesentium est quae eos, corrupti asperiores amet sapiente error atque culpa iure assumenda tempore ullam inventore et sunt deserunt. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore dolores quam laudantium, repudiandae blanditiis et voluptatem aspernatur recusandae, deserunt possimus soluta dolore ducimus. Consequuntur vero natus omnis, nihil alias temporibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ea, saepe nam laborum magnam corporis accusamus voluptatibus consequatur molestiae, quos officia libero, cum eos aspernatur harum repudiandae tempore eligendi repellat?</p>
+        </main>
+    </section>
+</body>
+</html>
+
+Note: HTML can scroll your page only if it have content overflowing the container.
+      Intra document links can use ":target" class to highlight any content without
+      scrolling to the content.
+
+Syntax:
+       <div class="card"  id="topic1">  </div>
+
+       .card {
+             background-color:black;
+       }
+   
+       .card:target {
+             background-color:yellow;
+       }
+
+       <a href="#topic1"> Topic-1 </a>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        nav {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            width: 100px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 10px;
+            font-size: 15px;
+            font-family: Arial;
+        }
+        .artist {
+            display: flex;
+            border:1px groove black;
+            padding: 10px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .artist:target {
+            background-color: black;
+            color:white;
+        }
+        .card:target {
+            background-color: yellow;
+            color:black;
+        }
+        nav a {
+            color:white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="#artist1"> <img src="./images/artist1.jpg" width="100" height="100"> </a>
+        </div>
+        <div>
+            <a href="#artist2"> <img src="./images/artist2.jpg" width="100" height="100"> </a>
+        </div>
+        <div>
+            <a href="#artist3"> <img src="./images/artist3.jpg" width="100" height="100"> </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#song1">Song-1</a></li>
+                <li><a href="#song2">Song-2</a></li>
+                <li><a href="#song3">Song-3</a></li>
+                <li><a href="#song4">Song-4</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <div id="artist1" class="artist">
+            <h3>Artist-1</h3>
+            <div class="card" id="song1">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-1</span>
+                </div>
+            </div>
+            <div class="card" id="song2">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-2</span>
+                </div>
+            </div>
+            <div class="card" id="song3">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-3</span>
+                </div>
+            </div>
+            <div class="card" id="song4">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-4</span>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-5</span>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-6</span>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-7</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="artist2" class="artist">
+            <h3>Artist-2</h3>
+            <div class="card">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-1</span>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-2</span>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-3</span>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-4</span>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-5</span>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-6</span>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-7</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="artist3" class="artist">
+            <h3>Artist-3</h3>
+            <div class="card">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-1</span>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-2</span>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-3</span>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-4</span>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-5</span>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-6</span>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <span class="bi bi-play-circle"></span>
+                    <span class="bi bi-pause-circle"></span>
+                </div>
+                <div>
+                    <span>Song-7</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            border:1px solid black;
+            padding: 20px;
+            width: 200px;
+            margin: 20px;
+        }
+        section {
+            display: flex;
+        }
+        .card:target {
+            background-color: black;
+            color:white;
+            border-radius: 200px;
+            font-size: 20px;
+            font-family: Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#html">HTML</a> |
+        <a href="#css">CSS</a> |
+        <a href="#js">JavaScript</a>
+    </nav>
+    <section>
+        <div class="card" id="html">
+            <h2>HTML</h2>
+            <p>It is markup language</p>
+        </div>
+        <div class="card" id="css">
+            <h2>CSS</h2>
+            <p>It configure styles</p>
+        </div>
+        <div class="card" id="js">
+            <h2>JavaScript</h2>
+            <p>It manipulates DOM</p>
+        </div>
+    </section>
+</body>
+</html>

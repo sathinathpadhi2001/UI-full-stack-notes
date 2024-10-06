@@ -1,0 +1,190 @@
+6. How to define ellipsis in paragraph?
+A.
+     - Set  "nowrap" using  "white-space" attribute.
+     - Set  "width" for paragraph.
+     - Set  "overflow" to hidden.
+     - Set  "text-overflow" as "ellipsis"
+
+Syntax:
+    p {
+         width: 300px;
+         border: 1px solid gray;
+         padding: 2px;
+         white-space: nowrap;
+         overflow: hidden;
+         text-overflow: ellipsis;
+    }
+
+7. How to define screen tips?
+A. By using "title" attribute for any container.
+
+Syntax:
+        <span title="Hyper Text Markup Language"> HTML </span>
+
+EX:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            width: 350px;
+            border:1px solid gray;
+            padding: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+ 
+</head>
+<body>
+   <p title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi mollitia explicabo neque! Eveniet, harum itaque qui voluptas repudiandae quidem autem ipsum quisquam possimus fugit, consequuntur alias tempora, porro facere deserunt!">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi mollitia explicabo neque! Eveniet, harum itaque qui voluptas repudiandae quidem autem ipsum quisquam possimus fugit, consequuntur alias tempora, porro facere deserunt!</p>
+</body>
+</html>
+
+8. How to display paragraphs in multiple columns?
+A. You can use "display:grid"  or  "columns" of CSS
+
+9. What is difference between grid and columns?
+A. Grid will not allow content of one column to span into another.
+     Columns allow continuous content, the content of one column will continue to next.
+
+10. What are the attributes for columns?
+A.
+    a) column         : It defines the number of columns to display
+    b) column-gap      : It sets space between columns
+    c) column-width     : It sets width for columns.
+    d) column-rule         : It sets a separator line between columns.
+                       [size , style and color]
+
+Syntax:
+    section {
+        columns : 4;
+        column-gap: 20px;
+            column-width: 200px;
+        column-rule: 1px dotted gray;
+    }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title {
+            font-family: Arial;
+            font-size: 40px;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .row-2 {
+            columns: 4;
+            column-rule: 2px dotted gray;
+            font-size: 12px;
+            text-align: justify;
+            column-gap: 20px;
+        }
+        section {
+            width: 60%;
+            border:15px groove black;
+            padding: 15px;
+        }
+        .row-1 {
+            margin-bottom: 10px;
+            text-align: center;
+            padding: 10px;
+        }
+        .service {
+            font-size: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .update {
+            background-color: black;
+            padding: 5px;
+            color:white;
+            text-align: center;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="row-1">
+            <span class="title">GHMC give thumbs-up to 7 projects</span>
+        </div>
+        <div class="row-2">
+            <div class="service">
+                THE Hans News Service <br>
+                Hyderabad
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ipsum ab qui quisquam perferendis, quo tenetur rem quia eveniet repellendus fugiat eius? Minima ullam sunt voluptas suscipit ipsa vitae deleniti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, fugit omnis. Neque illo et id cumque excepturi sunt optio aliquam quibusdam quia voluptatem nobis tempore mollitia, quae minus commodi perferendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eveniet ut officiis voluptatibus fuga eius explicabo nisi velit facilis obcaecati perferendis mollitia quis, illo, itaque, voluptate iste earum nobis id?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ipsum ab qui quisquam perferendis, quo tenetur rem quia eveniet repellendus fugiat eius? Minima ullam sunt voluptas suscipit ipsa vitae deleniti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, fugit omnis. Neque illo et id cumque excepturi sunt optio aliquam quibusdam quia voluptatem nobis tempore mollitia, quae minus commodi perferendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eveniet ut officiis voluptatibus fuga eius explicabo nisi velit facilis obcaecati perferendis mollitia quis, illo, itaque, voluptate iste earum nobis id?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ipsum ab qui quisquam perferendis, quo tenetur rem quia eveniet repellendus fugiat eius? Minima ullam sunt voluptas suscipit ipsa vitae deleniti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, fugit omnis. Neque illo et id cumque excepturi sunt optio aliquam quibusdam quia voluptatem nobis tempore mollitia, quae minus commodi perferendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eveniet ut officiis voluptatibus fuga eius explicabo nisi velit facilis obcaecati perferendis mollitia quis, illo, itaque, voluptate iste earum nobis id?</p>
+            <div class="update"> Latest Updates </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ipsum ab qui quisquam perferendis, quo tenetur rem quia eveniet repellendus fugiat eius? Minima ullam sunt voluptas suscipit ipsa vitae deleniti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, fugit omnis. Neque illo et id cumque excepturi sunt optio aliquam quibusdam quia voluptatem nobis tempore mollitia, quae minus commodi perferendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eveniet ut officiis voluptatibus fuga eius explicabo nisi velit facilis obcaecati perferendis mollitia quis, illo, itaque, voluptate iste earum nobis id?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ipsum ab qui quisquam perferendis, quo tenetur rem quia eveniet repellendus fugiat eius? Minima ullam sunt voluptas suscipit ipsa vitae deleniti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, fugit omnis. Neque illo et id cumque excepturi sunt optio aliquam quibusdam quia voluptatem nobis tempore mollitia, quae minus commodi perferendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eveniet ut officiis voluptatibus fuga eius explicabo nisi velit facilis obcaecati perferendis mollitia quis, illo, itaque, voluptate iste earum nobis id?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ipsum ab qui quisquam perferendis, quo tenetur rem quia eveniet repellendus fugiat eius? Minima ullam sunt voluptas suscipit ipsa vitae deleniti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, fugit omnis. Neque illo et id cumque excepturi sunt optio aliquam quibusdam quia voluptatem nobis tempore mollitia, quae minus commodi perferendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eveniet ut officiis voluptatibus fuga eius explicabo nisi velit facilis obcaecati perferendis mollitia quis, illo, itaque, voluptate iste earum nobis id?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ipsum ab qui quisquam perferendis, quo tenetur rem quia eveniet repellendus fugiat eius? Minima ullam sunt voluptas suscipit ipsa vitae deleniti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, fugit omnis. Neque illo et id cumque excepturi sunt optio aliquam quibusdam quia voluptatem nobis tempore mollitia, quae minus commodi perferendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eveniet ut officiis voluptatibus fuga eius explicabo nisi velit facilis obcaecati perferendis mollitia quis, illo, itaque, voluptate iste earum nobis id?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ipsum ab qui quisquam perferendis, quo tenetur rem quia eveniet repellendus fugiat eius? Minima ullam sunt voluptas suscipit ipsa vitae deleniti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, fugit omnis. Neque illo et id cumque excepturi sunt optio aliquam quibusdam quia voluptatem nobis tempore mollitia, quae minus commodi perferendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eveniet ut officiis voluptatibus fuga eius explicabo nisi velit facilis obcaecati perferendis mollitia quis, illo, itaque, voluptate iste earum nobis id?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ipsum ab qui quisquam perferendis, quo tenetur rem quia eveniet repellendus fugiat eius? Minima ullam sunt voluptas suscipit ipsa vitae deleniti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, fugit omnis. Neque illo et id cumque excepturi sunt optio aliquam quibusdam quia voluptatem nobis tempore mollitia, quae minus commodi perferendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eveniet ut officiis voluptatibus fuga eius explicabo nisi velit facilis obcaecati perferendis mollitia quis, illo, itaque, voluptate iste earum nobis id?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ipsum ab qui quisquam perferendis, quo tenetur rem quia eveniet repellendus fugiat eius? Minima ullam sunt voluptas suscipit ipsa vitae deleniti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, fugit omnis. Neque illo et id cumque excepturi sunt optio aliquam quibusdam quia voluptatem nobis tempore mollitia, quae minus commodi perferendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eveniet ut officiis voluptatibus fuga eius explicabo nisi velit facilis obcaecati perferendis mollitia quis, illo, itaque, voluptate iste earum nobis id?</p>
+        </div>
+    </section>
+</body>
+</html>
+
+11. Text formatting in HTML
+- Text formatting includes font and font effects.
+- The font is defined by using <font> element with size, color and face.
+
+Syntax:
+      <font  size=" "   face=" "   color=" ">   Text  </font>
+
+    a) size        : It can be from 1 to 7 levels.
+    b) face        : It refers to font family name.
+    c) color        : It defines color name, shade or hexadecimal code.
+
+FAQ: What are web-safe fonts?
+Ans:  
+     - If developer is using a font family installed on his device then other users
+       can watch using default font family.
+     - Web safe fonts are the default font family available across all devices.
+     - Standard web safe font families are
+            a) serif
+            b) sans-serif
+            c) monospace
+
+Note: Don't use <font> element in modern web design.
+
+- Text styles and effects are controlled by using the following elements
+
+     <b>            Bold
+     <strong>        Strong - Bold
+     <i>            Italics
+     <em>        Emphasized - Italics
+     <u>            Underline
+     <ins>        Inserted - Underline
+     <strike>        Strikeout
+     <del>        Delete - Strikeout
+    <sup>        Super Script
+    <sub>        Sub Script
+
+FAQ: What is difference between <b> and <strong> if both look similar?
+Ans :  <b> is a design mode element to highlight.
+      <strong> is a review mode element to highlight.
+
+Note: Make sure that review elements are not present in page while publishing.
+
+Ex:
+<body>
+    Font style <b>Bold</b> is similar to <strong>Strong.</strong> <br>
+    Font style <i>Italics</i> is similar to <i> Emphasized.</i> <br>
+    Font effect <u>Underline</u> is similar to <ins>Inserted.</ins> <br>
+    Font effect <strike>Strikeout</strike> is similar to <del>Deleted.</del>
+</body>

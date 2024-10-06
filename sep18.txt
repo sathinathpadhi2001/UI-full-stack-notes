@@ -1,0 +1,351 @@
+10. Badge
+
+    .badge
+    .bg-{contextual}
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <button class="btn btn-warning mt-2 bi bi-cart4"> <span class="badge bg-danger rounded rounded-circle">2</span> </button>
+    <button class="btn btn-dark mt-2"> <span class="badge bg-primary rounded rounded-circle"><span class="bi bi-bell"></span></span> Subscribe </button>
+</body>
+</html>
+
+
+
+11. Position Classes
+
+    .position-static
+    .position-relative
+    .position-absolute
+    .position-sticky
+    .position-fixed
+    .top-{ }        ]
+    .end-{ }        ]  0, 50, 100
+    .start-{ }        ]
+    .bottom-{ }        ]
+
+Static Position:
+- It keeps the element according to normal flow of document.
+- It is default position.
+- It will not allow to move the element using start, end, top, bottom values.
+
+
+Absolute Position:
+- It removes the element from normal flow of document.
+- It allows to keep element at specified location using left, right, top or bottom.
+- It keeps the element with regard to content in page.
+- It moves along with content in page.
+
+Fixed Position
+- It removes the element from normal flow of document.
+- It allows to move element to specified position.
+- It keeps the element with regard to browser window not to the content in page.
+- It locks the scrolling along with content. [It will not scroll]
+
+
+Sticky Position
+- It keeps element according to normal flow of document.
+- It allows element to move along with content in page.
+- However it locks scrolling after reaching specified position in browser window.
+
+Relative Position
+- It is defined for parent container to keep its content relative to parent scope.
+- The child content will be with relative to the parent.
+- It keeps the element at specified position on page according to normal flow.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        #offer {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+        }
+        button {
+            position: relative;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+     <h2>Shopping</h2>
+     <button class="btn btn-warning bi bi-cart"> <div id="offer" class="badge bg-danger rounded rounded-circle">4</div> </button>
+</body>
+</html>
+
+Syntax:
+    <div class="position-relative">
+           <div class="position-absolute top-0 end-0">
+               Offer
+           </div>
+    </div>
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+       
+    </style>
+</head>
+<body class="container-fluid">
+     <h2>Shopping</h2>
+     <button class="btn position-relative btn-warning bi bi-cart"> Your Cart <div class="badge bg-danger position-absolute top-0 end-0 rounded rounded-circle">4</div> </button>
+</body>
+</html>
+
+EX:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+       .men {
+        width: 300px;
+        height: 400px;
+        background-image: url("../public/images/men-fashion.jpg");
+        background-size: cover;
+        padding: 20px;
+       }
+       .offer {
+        width: 50px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+       }
+    </style>
+</head>
+<body class="container-fluid">
+    <div class="men position-relative p-4">
+        <div class="bg-danger  text-center fs-6 p-2 offer text-white rounded rounded-circle">Save 20%</div>
+    </div>
+</body>
+</html>
+
+
+12. Pagination
+
+    .pagination
+    .page-item
+    .page-link
+    .page-text
+    .pagination-sm
+    .pagination-lg
+
+Syntax:
+    <ul class="pagination">
+        <li class="page-item"> <a class="page-link"> 1 </a> </li>
+    </ul>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <h2>Pagination</h2>
+    <ul class="pagination">
+        <li class="page-item"> <a class="page-link">&laquo;</a> </li>
+        <li class="page-item"> <a class="page-link">1</a> </li>
+        <li class="page-item"> <a class="page-link">2</a> </li>
+        <li class="page-item active"> <a class="page-link">3</a> </li>
+        <li class="page-item"> <a class="page-link">4</a> </li>
+        <li class="page-item disabled"> <a class="page-link">5</a> </li>
+        <li class="page-item"> <a class="page-link">&raquo;</a> </li>
+    </ul>
+</body>
+</html>
+
+13. Progress Bar    
+
+Classes:
+    .progress
+    .progress-bar
+    .progress-bar-animated
+    .progress-bar-striped
+   
+- Progress is displayed by using "style" attribute defined with "width" in "%".
+- In a progress you can display multiple progress bars.
+
+Syntax:
+<div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:30%">
+   </div>
+  ......
+  .....
+</div>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <h2>Progress</h2>
+    <div class="progress">
+        <div class="progress-bar bg-success" style="width:30%">
+             30% Completed
+        </div>
+        <div class="progress-bar mx-2 bg-warning progress-bar-striped progress-bar-animated" style="width: 60%;">
+            60% Processing
+        </div>
+        <div class="progress-bar bg-danger" style="width: 10%;">
+            10% Remaining
+        </div>
+    </div>
+</body>
+</html>
+
+14. Spinners
+
+Classes:
+    .spinner-border
+    .spinner-border-sm
+    .spinner-grow
+    .spinner-grow-sm
+
+Syntax:
+    <div class="spinner-grow spinner-grow-sm"> </div>
+    <span class="spinner-border text-danger"> </span>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <h2>Spinners</h2>
+    <div class="spinner-border text-danger"></div>
+    <div class="spinner-grow text-danger"></div>
+    <button class="btn btn-primary">
+        <span class="spinner-border spinner-border-sm"></span> Loading..
+    </button>
+</body>
+</html>
+
+15. Bread Crumb
+
+ Classes:
+    .breadcrumb
+    .breadcurmb-item
+   
+Syntax:
+    <ul class="breadcrumb">
+       <li class="breadcrumb-item">  Level1 </li>
+       <li class="breadcrumb-item">  Level2 </li>
+    </ul>
+
+- You can change the divider for breadcrumb by using sass variable "breadcrumb-divider".
+
+Syntax:
+         <ul  style="--bs-breadcrumb-divider: ' > ' ">
+
+         </ul>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <h2>Flipkart</h2>
+    <ul class="breadcrumb" style="--bs-breadcrumb-divider:' > '">
+        <li class="breadcrumb-item bi bi-house-door">Home</li>
+        <li class="breadcrumb-item">Mobiles & Accessories</li>
+        <li class="breadcrumb-item">Mobiles</li>
+        <li class="breadcrumb-item">Apple Mobiles</li>
+        <li class="breadcrumb-item">Apple iPhone</li>
+        <li class="breadcrumb-item active">iPhone 15</li>
+    </ul>
+</body>
+</html>
+
+16. List Group
+
+ Classes:
+    .list-group
+    .list-group-item
+    .list-unstyled
+    .list-group-numbered
+    .list-group-horizontal
+
+Syntax:
+    <ul class="list-group">
+     <li class="list-group-item"> </li>
+    </ul>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <nav>
+        <h2>Shopper.</h2>
+        <ul class="list-group w-25">
+            <li class="list-group-item">Home</li>
+            <li class="list-group-item">Shop</li>
+            <li class="list-group-item active">Pages</li>
+            <li class="list-group-item">Docs</li>
+            <li class="list-group-item">Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>

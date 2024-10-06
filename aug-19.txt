@@ -1,0 +1,478 @@
+- Header
+- Nav
+- Section
+- Article 
+
+							    Footer
+- Footer defines the content to display at bottom margin of page.
+- Typically footer comprises of
+		a) Services 
+		b) Contact
+		c) Copyrights
+		d) Sitemap 
+		e) Social Links etc..
+	
+							Aside
+- It is a semantic used to display content, which is not related to current context.
+- It navigates the user outside current context to some other external services. 
+- Typically it contains ads, social links etc.
+
+Syntax:
+	   <aside>
+		<span> Facebook </span>
+		<span> Twitter </span>
+	  </aside>
+
+CSS Grid:
+- It will set a fixed number of rows and columns.
+- You can dynamically change the content of rows and columns. 
+- Grid is designed by using the attribute  "display" set to "grid".
+
+		{
+		  display: grid;
+		}
+
+- Grid comprises columns defined using  "grid-template-columns".
+- Grid columns are defined with pixels [px] or fractions [fr].
+- You can share among 1200px  or 12fr.
+
+Syntax:
+	{ 
+	  display:grid;
+	  grid-template-columns: 6fr 6fr;
+	}
+
+Ex: Amazon Footer
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .back {
+            background-color: grey;
+            color:white;
+            padding: 5px;
+            text-align: center;
+            font-family: Arial;
+        }
+        footer {
+            background-color: black;
+            color:white;
+            padding: 20px;
+            font-family: Arial;
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+        }
+        footer span {
+            display: block;
+            margin-top: 20px;
+        }
+        .footer-title {
+            font-weight: bold;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <div class="back">
+        Back to Top
+    </div>
+    <footer>
+        <div>
+            <span class="footer-title">Get to Know Us</span>
+            <span>About Us</span>
+            <span>Careers</span>
+            <span>Press Releases</span>
+            <span>Amazon Science</span>
+        </div>
+        <div>
+            <aside>
+                <span class="footer-title">Connect with Us</span>
+                <span class="bi bi-facebook"> Facebook</span>
+                <span class="bi bi-twitter-x"> Twitter</span>
+                <span class="bi bi-instagram"> Instagram </span>
+            </aside>
+        </div>
+        <div>
+            <span class="footer-title">Make Money with Us</span>
+            <span>Sell on Amazon</span>
+            <span>Sell under Amazon Accelerator</span>
+            <span>Protect and Build Your Brand</span>
+            <span>Amazon Global Selling</span>
+            <span>Supply to Amazon</span>
+            <span>Become an Affiliate</span>
+            <span>Fulfilment by Amazon</span>
+            <span>Advertise Your Products</span>
+            <span>Amazon Pay on Merchants</span>
+        </div>
+        <div>
+            <span class="footer-title">Let Us Help You</span>
+            <span>Your Account</span>
+            <span>Returns Centre</span>
+            <span>Recalls and Product Safety Alerts</span>
+            <span>100% Purchase Protection</span>
+            <span>Amazon App Download</span>
+            <span>Help</span>
+        </div>
+    </footer>
+</body>
+</html>
+
+							Address
+- It is a semantic used for making contact details SEO friendly. 
+- Search engine can find the website contact details if they are defined in <address> element. 
+
+Syntax:
+	<address>
+		.. phone..
+		.. email..
+	</address>
+
+Ex: Shopper-Template
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopper</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            font-family: Segoe UI;
+            font-size: 22px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px;
+            align-items: baseline;
+        }
+        .brand-title {
+            font-weight: bold;
+            font-size: 28px;
+        }
+        nav span {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .shortcuts span {
+            margin-right: 5px;
+        }
+        article {
+            background-color: black;
+            color:white;
+            text-align: center;
+            padding: 10px;
+            font-family: Segoe UI;
+        }
+        .bi-lightning-fill {
+            color:goldenrod;
+        }
+        section {
+            height: 100px;
+        }
+        footer {
+            background-color: black;
+            color:white;
+            font-family: Segoe UI;
+            padding: 20px;  
+        }
+        .row-1 {
+            text-align: center;
+        }
+        .footer-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .row-2 {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .email {
+            display: inline-block;
+            padding: 20px;
+            background-color: #888;
+            color:white;
+            width: 300px;
+            text-align: left;
+        }
+        .subscribe {
+            display: inline-block;
+            padding: 20px;
+            background-color: #444;
+            width: 150px;
+            margin-left: 20px;
+        }
+        .row-3 {
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            margin-top: 30px;
+        }
+        .col span {
+            display: block;
+            margin-top: 15px;
+        }
+        .col-title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        aside span {
+            padding-right: 10px;
+            padding-top: 20px;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="brand-title">Shopper.</span>
+        </div>
+        <div>
+            <nav>
+                <span>Home</span>
+                <span>Catalog</span>
+                <span>Shop</span>
+                <span>Pages</span>
+                <span>Blog</span>
+                <span>Docs</span>
+            </nav>
+        </div>
+        <div class="shortcuts">
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart2"></span>
+        </div>
+    </header>
+    <section>
+        <article>
+            <span class="bi bi-lightning-fill"></span>
+            <span> HAPPY HOLIDAY DEALS ON EVERYTHING </span>
+            <span class="bi bi-lightning-fill"></span>
+        </article>
+    </section>
+    <footer>
+        <div class="row-1">
+            <span class="footer-title">Want style Ideas and Treats?</span>
+        </div>
+        <div class="row-2">
+            <span class="email">Enter Email*</span>
+            <span class="subscribe"> Subscribe </span>
+        </div>
+        <div class="row-3">
+            <div>
+                <span class="brand-title">Shopper</span>
+                <aside>
+                    <span class="bi bi-facebook"></span>
+                    <span class="bi bi-twitter"></span>
+                    <span class="bi bi-instagram"></span>
+                    <span class="bi bi-youtube"></span>
+                    <span class="bi bi-linkedin"></span>
+                </aside>
+            </div>
+            <div class="col">
+                <span class="col-title">Support</span>
+                <span>Contact Us</span>
+                <span>FAQs</span>
+                <span>Size Guide</span>
+                <span>Shipping & Returns</span>
+            </div>
+            <div class="col">
+                <span class="col-title">Shop</span>
+                <span>Men's Shopping</span>
+                <span>Women's Shopping</span>
+                <span>Kids' Shopping</span>
+                <span>Discounts</span>
+            </div>
+            <div class="col">
+                <span class="col-title">Company</span>
+                <span>Our Story</span>
+                <span>Careers</span>
+                <span>Terms & Conditions</span>
+                <span>Privacy & Cookie policy</span>
+            </div>
+            <div>
+                <address class="col">
+                    <span class="col-title">Contact</span>
+                    <span>1-202-555-0105</span>
+                    <span>1-202-555-0106</span>
+                    <span>help@shopper.com</span>
+                </address>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+Ex: Flipkart footer
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart</title>
+    <style>
+        footer {
+            height: 300px;
+            background-color: black;
+            color:white;
+            font-size: 25px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        .col-1 {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+        }
+        .col-2 {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            border-left: 1px solid white;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="col-1">
+            <div>
+                1
+            </div>
+            <div>
+                2
+            </div>
+            <div>
+                3
+            </div>
+            <div>
+                4
+            </div>
+        </div>
+        <div class="col-2">
+            <div>
+                1
+            </div>
+            <div>
+                2
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+Ex: Bootstrap header
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            background-color: #0033ff;
+            color:white;
+            padding: 20px;
+            font-size: 20px;
+            font-family: Segoe UI;
+            display: flex;
+            justify-content: space-between;
+        }
+        .bi-bootstrap {
+            font-size: 25px;
+        }
+        .search-bar {
+            display: flex;
+            width: 300px;
+            justify-content: space-between;
+            border:1px solid white;
+            padding: 5px;
+        }
+        .btn-ctrl {
+            font-size: 14px;
+            background-color: #0000aa;
+            padding: 2px;
+        }
+        nav span {
+            padding-left: 10px;
+        }
+        .shortcuts span {
+            padding-right: 10px;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <span class="bi bi-bootstrap"></span>
+                <span>Docs</span>
+                <span>Examples</span>
+                <span>Icons</span>
+                <span>Themes</span>
+                <span>Blog</span>
+            </nav>
+        </div>
+        <div>
+            <span class="search-bar">
+               <div>
+                <span class="bi bi-search"></span>
+                <span>Search</span>
+               </div>
+                <div>
+                    <span class="btn-ctrl">CTRL K</span>
+                </div>
+            </span>
+        </div>
+        <div class="shortcuts">
+            <span class="bi bi-github"></span>
+            <span class="bi bi-twitter"></span>
+            <span class="bi bi-circle-half"></span>
+            <span class="">|</span>
+            <span> v5.3 <span class="bi bi-chevron-down"></span> </span>
+            <span>|</span>
+            <span class="bi bi-sun-fill"></span>
+            <span class="bi bi-chevron-down"></span>
+        </div>
+    </header>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

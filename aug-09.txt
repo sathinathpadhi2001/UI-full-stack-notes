@@ -1,0 +1,151 @@
+						        Web Page
+
+- Web Page is a Hyper Text Document that provides an UI for interacting with the resources in application.
+- Hyper refers to the term "Beyond".
+- A Hyper Text Document can display content and take the user beyond displayed content. 
+- Web Pages are classified into 2 types
+
+	a) Static Page
+	b) Dynamic Page
+
+- Static Page comprises of same content to display as response across multiple requests. It have extensions ".html, .htm"
+
+- Dynamic page have a customized response for every client request. It have extensions ".jsp, .asp, .aspx, .php"
+
+- HTML is a language used for designing both static and dynamic pages.
+
+
+						        HTML 
+- Hyper Text Markup Language
+- Hyper means "Beyond".
+- Hyper text navigates the user beyond what he can see on screen.
+- Markup refers to the term "Marking Up", which is a process of preparing content to present on desired target location.
+- HTML is a markup language for presenting content on browser. 
+
+Evolution of HTML:
+- Internet started with a browser called "Mosaic".
+- CERN [Council for European Research and Nuclear] labs developed a language called GML [Generic Markup Language] for browser.
+- Later new features were added to GML and improved as "SGML". 
+  [Standard Generic Markup Language]
+- "Tim Berners Lee" in early 1990 introduced HTML which is super to GML & SGML.
+- IETF [Internet Engineering Task Force] developed HTML up to version 3.1.
+- In 2004 "WHATWG" [Web Hyper Text Application Technology Work Group] took the responsibility of HTML and started evolving and maintaining HTML till date.
+- WHATWG start HTML4 in 2004, and developed a new version HTML5 2014.
+- The latest available version of HTML is HTML5. 
+
+			https://whatwg.org/
+			mdn - https://developer.mozilla.org/en-US/
+
+					        Browser Architecture 
+- Browser is a software tool used by client to access and view web pages. 
+- Some of the popular browser softwares
+		* Chrome
+		* Edge
+		* FireFox
+		* Opera
+		* Safari etc..
+- Every browser comprises of following components
+		a) User Interface
+		b) UI Backend
+		c) Browser Engine
+		d) Rendering Engine
+		e) Networking
+		f) JavaScript Interpreter
+		g) Data Persistance
+
+User Interface & UI Backend:
+- UI comprises of buttons [ back, referesh, forward] and other elements for interaction.
+- The functionality for UI is defined in UI Backend.
+
+Browser Engine:
+- It is responsible for translating HTML & CSS into browser understandable content.
+- Every browser have its own engine
+
+				Chrome			V8, Blink
+				Safari			Webkit
+				FireFox			Spider Monkey, Gecko
+				Edge			Chakra
+				Opera			V8
+
+Rendering Engine:
+- It is responsible for creating a layout and rendering the output.
+- The generated output is presented by using a process called "Painting".
+
+JavaScript Interpreter:
+- Interactions in a web application are designed by using Javascript.
+- Javascript in browser is translated by "JavaScript Interpreter".
+
+Networking:
+- It identifies the requests.
+- It returns various resources on request.
+- It reports issues on requests.
+- It tracks the load time of resources.
+
+Data Persistance:
+- It is the storage for browser.
+- Client details can be stored in browser.
+- It have various storage locations like
+	a) Cookies
+	b) Local Storage
+	c) Session Storage
+	etc..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

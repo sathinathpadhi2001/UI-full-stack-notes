@@ -1,0 +1,129 @@
+14. pattern
+- It is used to validate the format of input value.
+- Pattern uses a "Regular Expression" to verify the format of input value.
+- Regular Expression is built by using
+    a) Meta Characters
+    b) Quantifiers
+
+Meta Character        Description
+-------------------------------------------------------------------------------------------------------------
+?                    zero or one occurrence of a character.
+
+                    Syntax:
+                    pattern="colou?r"        => color, colour
+
+*                    zero or more occurrences of a character.
+
+                    Syntax:
+                    pattern="colou*r"        => color, colour, colour, colouuur…
+
++                    one or more occurrences of a character.
+
+                    Syntax:
+                    pattern="colou+r"        => colour, colouur…
+
+
+. (dot)                any single character, alpha numeric and special character.
+
+                    Syntax:
+                    pattern=".at"         => cat, bat, @at, 2at, Mat
+
+| (pipe)                It defines multiple chars or words. logical "OR".
+
+                    Syntax:
+                    pattern="red|green|blue"    => red, green, blue
+                    pattern="$|%|A"            => $, %, A
+
+
+\                    It is used as escape sequence in pattern. It can transform
+                    a meta character into normal character & vice versa.
+
+                    Syntax:
+                    pattern="\+91"
+                    pattern="gmail\.com"
+
+[ ]                    It refers to specific set of characters or range of chars.
+
+                    Syntax:
+                    pattern="[a,d,s,4,7,$,&]"        
+                    pattern="[a-d,4-9,A-M]"
+                    pattern="[a-z,A-Z,0-9,!@#$%]"
+
+( )                    It refers to union of characters in an expression.
+
+                    Syntax:
+                    pattern="(?=.*[A-Z])"
+
+\d                    [0-9] only numeric allowed.
+
+                    Syntax:
+                    pattern="\d\d"        => 44, 67, 13
+                    pattern="\d?\d"    => 5, 24
+
+\D                    It refers to non-numeric [a-zA-Z,!@#$%^]
+
+                    Syntax:
+                    pattern="\d\D"        => 3A, 2@, 3b
+
+\w                    It defines a set of chars which include word chars.
+                    [A-Z, a-z, 0-9, _ ]
+
+                    Syntax:
+                    pattern="\w"
+
+\W                    It defines non-word chars. only special chars exclude "_".
+
+                    Syntax:
+                    pattern="\d\W\D"    => 3$A,  2@b,  2@$
+
+\s                    It refers to blank space.
+       
+                    Syntax:
+                    pattern="\d\s\d"    2 5, 6 8
+
+[^]                    exclude the specified chars or range of chars.
+
+                    Syntax:
+                    pattern="[^a-d, A-D, 4-9]"
+                    pattern="[^a, d, s]"
+
+\^                    Starts with
+
+$                    Ends with
+
+                    Syntax:
+                        pattern="\^ expression $"
+
+\i                    Ignore case
+
+                    Syntax:
+                        pattern="chars\i"
+
+
+Quantifier            Description
+-------------------------------------------------------------------------
+ { n }                    exact number of chars.
+
+                    pattern="\d{10}"
+
+{n, m}                n- is minimum , m- is maximum
+   
+                    pattern="\d{4,10}"
+
+{n, }                    minimum - n and maximum any
+
+                    pattern="\d{4, }"
+
+
+Query: Write a pattern to validation mobile number starting with +91 and have exactly
+        10 digits after 91.
+
+Syntax:
+        pattern="\+91\d{10}"
+
+Query: Write a pattern to validate US mobile format
+
+            +(1)(425) 555-0100
+            +(1)(000) 000-0000
+
+        pattern="\+\(1\)\(\d{3}\)\s\d{3}-\d{4}"

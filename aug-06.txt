@@ -1,0 +1,55 @@
+						      Web Applications
+
+1. What is Network?
+- A computer network comprises of group of computers connecting with each other for sharing of information and resources.
+- ARPANET [Advance Research Projects Agency Network] is the first computer network introduces by US-DOD.
+- Network is classified into various type group based on range and capacity. 
+
+		a) LAN
+		b) MAN
+		c) WAN
+
+2. What is Internet?
+- Internet is a wide area network that connects computers across the globe.
+- CERN labs introduced the concept of Internet. 
+  [Council for European Research and Nuclear]
+
+3. What is Web?
+- Web is a portion of Internet with restricted access. 
+- "Tim Berners Lee" introduced the concept of web.
+- Web standards are now maintained by a community "W3C".
+   [Word Wide Web Consortium]  - w3.org
+- Web Standards follow 4 basic principles 
+	a) Accessibility
+	b) Internationalization 
+	c) Privacy 
+	d) Security 
+- The latest version of Web is "Web3".
+
+4. What web comprises of ?
+- A typical web comprises of 
+	a) Website
+	b) Web Application
+	c) Blogs [Web-Log]
+	d) Micro Blogs
+	e) Wiki  [Quick]
+	f) Podcasting 
+	g) Widgets 
+	   etc.. 
+
+5. Web Application Architecture 
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+

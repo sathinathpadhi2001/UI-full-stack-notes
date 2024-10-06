@@ -1,0 +1,261 @@
+Body Semantic and Entities
+1. Line Break            <br>
+2. Blank Space        &nbsp;
+3. Pre Formatted        <pre>
+4. Code                <code>
+5. Variables            <var>
+
+Syntax:
+      var  <var> x </var> = 10;
+
+6. Sample Text        <samp>
+
+Syntax:
+     Write a program to print <samp> Hello ! World </samp>.
+
+7. Big [Large Text]        <big>
+
+8. Small [Small Text]    <small>
+
+Syntax:
+      <small> createHelloWorld </small>  
+      <big> Hello ! World </big>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        var {
+            color:blue;
+        }
+        samp {
+            background-color: rgb(237, 236, 236);
+            padding: 2px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+       Write a function <samp><small>createHelloWorld</small></samp> in JavaScript to print <samp><big>"Hello ! World"</big></samp>.
+       <pre>
+        <code>
+            var <var>createHelloWorld</var> = function() {
+   
+                return function(...args) {
+                   
+                }
+            };
+        </code>
+       </pre>
+    </div>
+</body>
+</html>
+
+9. Headings
+- Headings are used to summarize the content in page.
+- Headings make the topics SEO friendly.
+- Heading is defined with <hn> element, where "n" is level number from 1 to 6.
+
+Syntax:
+     <h1> Heading-1 </h1>
+     <h2> Heading-2 </h2>
+     …
+     …
+     <h6> Heading-6 </h6>
+
+FAQ's:
+1. Why you need a heading element if you can define same appearance with styles?
+A. To keep the topics SEO friendly.
+
+
+2. What are the default styles applied for heading element?
+A. font-size, font-weight, display:block.
+
+3. How to remove any specific default style?
+A. By using CSS style attributes defined for element, and set value as "unset".
+
+Syntax:
+    h1 {                            h1 {
+        font-weight:unset;
+        font-size:unset;                all : unset;
+        display:unset;
+    }                            }
+
+
+4. Can we change the default style of heading?
+A. Yes. By using style attributes.
+
+Rules:
+- Don't use too many headings in a page, it may SPAM the page.
+- Don't use headings to highlight any word or sentence in page.
+
+
+10. Paragraphs and Blockquotes
+- A paragraph is defined with <p> element.
+- Blockquote is similar to paragraph but used to summarize the detailed content.
+
+Syntax:
+    <p>  Paragraph </p>
+
+    <blockquote>
+       … your text...
+    </blockquote>
+
+- Blockquote have default padding left and right, which you can customize with styles.
+
+FAQ's:
+1. How to set first line indent in paragraph or blockquote?
+A. By using CSS attribute "text-indent"
+
+Syntax:
+    blockquote {
+        text-indent : 200px;
+    }
+
+2. How to set a Dropcap?
+A. By using CSS class "first-letter" and CSS attributes like "float, font-size, line-height".
+
+Syntax:
+    p::first-letter {
+            font-size : 45px;
+            font-weight: bold;
+        font-family: Arial;
+            float:left;
+        line-height:30px;
+    }
+
+3. How to set space between lines, words and chars?
+A. By using CSS attributes
+
+        a) line-height
+        b) letter-spacing
+        c) word-spacing
+
+Syntax:
+    p {
+       line-height : 40px;
+       letter-spacing: 2px;
+       word-spacing: 10px;
+    }
+
+4. How to reduce the raggedness of right edge in a paragraph?
+A. By using
+        a) text-align: justify
+        b) word-break:break-all
+
+Syntax:
+    p {
+        word-break: break-all ;
+    }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        blockquote {
+            padding-left: 300px;
+            padding-right: 300px;
+            font-style: italic;
+            text-indent: 100px;
+            line-height: 40px;
+            word-spacing: 10px;
+            letter-spacing: 2px;
+        }
+        .para1::first-letter {
+            font-size: 60px;
+            font-weight: bold;
+            font-family: Algerian;
+            float: left;
+            line-height: 35px;
+            color:blue;
+        }
+        .para-2 {
+            word-break: break-all;
+        }
+    </style>
+ 
+</head>
+<body>
+    <h2 align="center">Sports News</h2>
+    <blockquote align="justify">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut neque fugiat numquam consectetur ullam vero. Delectus ad officiis, repudiandae, sint dicta neque incidunt maxime accusantium eaque accusamus atque reprehenderit molestiae!
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum veritatis dolores soluta, ipsam molestiae enim ullam quam tenetur laboriosam fuga? Quod odit dolores rerum? Esse, nisi numquam? Dignissimos, quod expedita?
+    </blockquote>
+    <p class="para1" align="justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta nostrum incidunt nesciunt veritatis aspernatur praesentium facilis labore iure adipisci fugiat! Id iure illo ratione blanditiis maxime ducimus facilis necessitatibus quidem?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga illum officiis optio quos, saepe ut, consequatur quidem at repudiandae perspiciatis laboriosam quaerat dicta incidunt ipsa facere debitis reprehenderit. Eveniet, architecto.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus voluptatem non sed minima officia nostrum id deleniti corrupti accusamus amet, modi cum itaque illum incidunt, hic quo alias? Voluptatibus, maiores?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga illum officiis optio quos, saepe ut, consequatur quidem at repudiandae perspiciatis laboriosam quaerat dicta incidunt ipsa facere debitis reprehenderit. Eveniet, architecto.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus voluptatem non sed minima officia nostrum id deleniti corrupti accusamus amet, modi cum itaque illum incidunt, hic quo alias? Voluptatibus, maiores?
+    </p>
+    <p class="para-2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam est accusamus eligendi voluptates temporibus laudantium veniam. Pariatur quasi corrupti odio corporis at dolorum suscipit? Veritatis, itaque explicabo. Eligendi, ipsum et?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima molestias delectus qui pariatur animi veritatis error distinctio, et eligendi ut! Porro eligendi recusandae repellat mollitia molestias voluptas, vero dolores officiis.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione nisi cum aut aperiam repellendus praesentium quos omnis nam mollitia labore aliquid odit, voluptatum veniam quisquam autem iure cumque similique corrupti?
+    dolor sit amet consectetur adipisicing elit. Minima molestias delectus qui pariatur animi veritatis error distinctio, et eligendi ut! Porro eligendi recusandae repellat mollitia molestias voluptas, vero dolores officiis.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione nisi cum aut aperiam repellendus praesentium quos omnis nam mollitia labore aliquid odit, voluptatum veniam quisquam autem iure cumque similique corrupti?
+
+    </p>
+</body>
+</html>
+
+5. How to design scrollable paragraph?
+A. By using CSS attribute "overflow" set to scroll.
+    To define overflow container width and height must be less than the content length.
+
+Syntax:
+       .container {
+        height: 200px;
+        width: 400px;
+        border:1px solid gray;
+        padding:10px;
+        overflow: auto;
+        text-align:justify;
+    }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .container {
+         border:1px solid gray;
+         padding: 10px;
+         width: 500px;
+         height: 200px;
+         text-align: justify;
+         overflow: auto;
+       }
+    </style>
+ 
+</head>
+<body>
+    <h3>Terms of Service</h3>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, beatae delectus! Dicta, architecto id sed accusantium corporis placeat eius impedit deleniti vero assumenda doloribus vel deserunt! Quaerat recusandae dignissimos quos?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nostrum nulla maxime molestias amet, officia tempore omnis. Porro, repellat! Debitis adipisci officiis quidem exercitationem ipsa nihil molestias sed quos sequi?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptate repellendus ipsam aspernatur magni natus quo? Quasi nostrum iste dignissimos dicta labore excepturi beatae fugiat mollitia ducimus fuga, impedit assumenda.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, beatae delectus! Dicta, architecto id sed accusantium corporis placeat eius impedit deleniti vero assumenda doloribus vel deserunt! Quaerat recusandae dignissimos quos?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nostrum nulla maxime molestias amet, officia tempore omnis. Porro, repellat! Debitis adipisci officiis quidem exercitationem ipsa nihil molestias sed quos sequi?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptate repellendus ipsam aspernatur magni natus quo? Quasi nostrum iste dignissimos dicta labore excepturi beatae fugiat mollitia ducimus fuga, impedit assumenda.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, beatae delectus! Dicta, architecto id sed accusantium corporis placeat eius impedit deleniti vero assumenda doloribus vel deserunt! Quaerat recusandae dignissimos quos?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nostrum nulla maxime molestias amet, officia tempore omnis. Porro, repellat! Debitis adipisci officiis quidem exercitationem ipsa nihil molestias sed quos sequi?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptate repellendus ipsam aspernatur magni natus quo? Quasi nostrum iste dignissimos dicta labore excepturi beatae fugiat mollitia ducimus fuga, impedit assumenda.
+        </p>
+       
+    </div>
+</body>
+</html>

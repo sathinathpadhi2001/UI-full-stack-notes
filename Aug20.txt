@@ -1,0 +1,208 @@
+Semantics for Layout Design
+- header
+- footer
+- section
+- article
+- aside
+- address
+
+                              Main
+- Main in computer programming refers to "Entry Point".
+- Website entry point is usually for new users.
+- A new user can start browsing or accessing resources from Main area.
+
+Syntax:
+    <main>
+        … entry point …
+    </main>
+
+- A page can have multiple entry points.
+
+CSS Colors:
+
+1. Color Name
+2. Shade Name
+3. Hexadecimal
+4. rgb()
+    - Red, Green, Blue
+    - Every color is derived from combination of RGB.
+    - It is a method that uses color value range from 0 to 255.
+
+Syntax:
+     h2 {
+        color: rgb(redValue, greenValue, blueValue);
+     }
+
+Ex:
+    h2 {
+        color: rgb(255, 0, 0);
+     }
+
+
+5. rgba()
+    - Red, Green, Blue, Alpha
+    - Alpha is used to set transparent color, its value range is 0 to 1.
+
+Syntax:
+    body {
+        background-color: rgba(250,0,0,0.5);
+     }
+
+6. hsl()
+    - Hue, Saturation, Lightness
+    - Hue is RGB shade from 0 to 360 deg.
+            0 - 120    Red
+            121-240    Green
+            241-360    Blue
+    - Saturation is Grey % in color from 1% to 100%
+    - Lightness is brightness in color from 1% to 100%
+
+Syntax:
+    body {
+           background-color: hsl(hue, sat, light);
+    }
+
+Ex:
+    body {
+        background-color: hsl(20deg, 50%, 40%);
+    }
+
+7. hsla()
+    - Hue, Saturation, Lightness, Alpha
+   
+Syntax:
+    body {
+        background-color: hsla(5deg, 50%, 50%, 0.6);
+    }
+
+
+8. Gradient Colors
+    - You can apply gradient by using "background-image"
+    - Linear Gradient
+    - Radial Gradient
+    - Gradient is a combinations of multiple colors and shades.
+
+    a) linear-gradient()        horizontal, vertical and diagonal
+    b) radial-gradient()        from center
+
+Syntax:
+    body {
+        background-image:  linear-gradient(to top right, red 50%, yellow, green);
+    }
+
+Ex:
+Netflix.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-size: cover;
+        }
+        .shade {
+            height: 100vh;
+            background-color: rgba(0,0,0,0.6);
+            margin-top: -10px;
+            margin-left: -10px;
+            width: 101.4%;
+        }
+        header {
+            color:white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .brand-title {
+            color:red;
+            font-size: 40px;
+            font-family: Arial;
+            font-weight: bold;
+        }
+        .language {
+            background-color: white;
+            color:black;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-family: Segoe UI;
+        }
+        .btn-signin {
+            background-color: red;
+            color:white;
+            padding: 5px;
+            border-radius: 5px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Segoe UI;
+            display: inline-block;
+            width: 80px;
+            text-align: center;
+        }
+        section {
+            text-align: center;
+            color:white;
+            margin-top: 150px;
+            font-family: Arial;
+        }
+        .title {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 30px;
+        }
+        main {
+            margin-top: 40px;
+        }
+        .email {
+            padding: 20px;
+            display: inline-block;
+            background-color: rgba(0,0,0,0.5);
+            width: 300px;
+            border:1px solid white;
+            text-align: left;
+            margin-right: 10px;
+        }
+        .btn-start {
+            background-color: red;
+            display: inline-block;
+            width: 200px;
+            padding: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body background="./images/netflix-banner.jpg">
+  <div class="shade">
+      <header>
+          <div>
+             <span class="brand-title">NETFLIX</span>
+          </div>
+          <div>
+              <span class="language">
+                  <span class="bi bi-translate"></span>
+                  <span>English</span>
+                  <span class="bi bi-chevron-down"></span>
+              </span>
+              <span class="btn-signin">
+                    <span>Signin</span>
+              </span>
+          </div>
+      </header>
+      <section>
+          <div class="title">Unlimited movies, TV shows and more</div>
+          <div class="subtitle">Watch anywhere. Cancel anytime.</div>
+          <main>
+               <span class="email">Your email address</span>
+               <span class="btn-start"> Get Started <span class="bi bi-chevron-right"></span> </span>
+          </main>
+      </section>
+  </div>  
+</body>
+</html>

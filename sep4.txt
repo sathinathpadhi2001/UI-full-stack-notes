@@ -1,0 +1,174 @@
+Form Element Attributes
+1. id
+2. name
+3. class
+4. method
+5. action          : It defines the target location where you can submit current page data.
+               Typically it is a server side page.
+
+Syntax:
+    <form method="get" action="./page.html">
+
+    </form>
+
+6. novalidate    : It disables the default HTML validations.
+
+FAQ: Why to disable default validations?
+Ans:  Every time the default validations may not be according to client requirements,
+     hence we disable default validations and write custom validation.
+
+Syntax:
+        <form method="get"  novalidate> </form>
+
+      "novalidate" is a Boolean attribute, which is default set to "true".
+
+
+                           Input Element
+- It allows user to input any type of value.
+
+Syntax:
+        <input>
+
+- You can restrict input of value to specific type by using "type" attribute.
+
+Syntax:
+        type="text"
+        type="email"
+        type="password"
+        type="number"    
+        etc..
+
+                              Text Box
+- It is used for string input.
+- String is a literal with alphabet, number and special chars.
+
+Syntax:
+    <input type="text">
+
+Attributes:
+1. id                ]
+2. name            ]  used for reference in code [JS or CSS]
+3. class            ]
+
+Note: It is mandatory to maintain "name" attribute for every element.
+      If name is not defined then form can't submit its value.
+
+Syntax:
+    <input type="text" name="City">
+
+4. value            : It defines the default value to display in text box.
+
+Syntax:
+    <input type="text"  name="City"  value="Hyd">
+
+5. readonly        : It will not allow to change the value of textbox, but you can submit
+                  the value.
+
+Syntax:
+    <input type="text" name="City" value="Hyd" readonly>
+
+6. disabled        : It will not allow to change and submit.
+
+Syntax:
+    <input type="text" name="City" value="Hyd" disabled>
+
+Note: CSS provides "read-only" and "disabled" classes to configure style for elements
+      set with readonly and disabled attributes.
+
+Syntax:
+       input : read-only {
+         cursor: not-allowed;
+       }
+       input : disabled {
+        background-color:gray;
+            color:white;
+       }
+
+7. placeholder        : It defines watermark text to display for input element.
+                  Watermark can be displayed only when value is not defined.
+
+Syntax:
+    <input type="text" placeholder="User Name" name="UserName">
+    <input type="text" placeholder="Search Amazon.in" name="Search">    
+
+8. size            : It sets width for textbox, the default is 20.
+                  It is not limit of chars in textbox.
+
+Syntax:
+    <input type="text" name="OPT" size="6">
+
+
+9. maxlength        : It sets restriction for maximum number of chars in textbox.
+
+Syntax:
+    <input type="text" name="OTP" size="4" maxlength="4">
+
+10. minlength        : It sets validation for minimum number of chars in textbox.
+
+Syntax:
+    <input type="text" name="OTP" size="4"  minlength="4" maxlength="4">
+
+11. required        : It is a validation used for mandatory fields. It will not allow
+                  to submit empty.
+
+Syntax:
+    <input type="text" name="OTP" size="4" minlength="4" maxlength="4" required>
+
+Note: Minlength and Maxlength are the attributes that verify only when value is
+      defined, they can't check empty.
+
+12. autofocus        : It sets focus to element automatically on page load.
+
+Syntax:
+    <input type="text" name="OTP"  autofocus>
+
+13. list            : It can configure a data list for input.
+                  Data list is designed by using <datalist> element.
+                  Data list is used as auto complete text.
+
+Syntax:
+    <input type="text" name="search"  list="terms">
+    <datalist id="terms">
+    <option> Term-1 </option>
+    <option> Term-2 </option>
+    </datalist>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:read-only {
+            cursor:not-allowed;
+        }
+        input:disabled {
+            cursor: not-allowed;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <form method="get" align="center">
+        <h3>Search Tutorial</h3>
+         <div>
+            <input type="text" name="Tutorial" size="40" list="terms">
+            <datalist id="terms">
+                <option>HTML Tutorial</option>
+                <option>HTML Examples</option>
+                <option>JavaScript Tutorial</option>
+                <option>JavaScript Projects</option>
+                <option>HTML Projects</option>
+                <option>CSS Examples</option>
+                <option>CSS Projects</option>
+                <option>CSS Tutorial</option>
+            </datalist>
+         </div>
+         <br>
+        <button>Search</button>
+    </form>
+   
+</body>
+</html>

@@ -1,0 +1,212 @@
+CSS Selectors
+
+- Selector can select any HTML element in page, so that it can apply the defined styles.
+- Selectors can be classified into various categories
+
+    1. Primary Selectors
+    2. Rational Selectors
+    3. Attribute Selectors
+    4. Dynamic pseudo classes
+    5. Element state pseudo classes
+    6. Validation classes
+    7. Structural Selectors
+    8. Universal Selector
+    9. Language Selector
+    10. Root Selector etc..
+
+Primary Selectors:
+
+1. Type Selector
+ - It refers to the element token name.
+
+    p, div, span, h2, dd, table tc..
+
+- It applies the effects to every occurence of element in page.
+- You can't ignore any specific occurrence.
+
+Syntax:
+    h1 {  }
+    p {  }
+    div { }
+    input { }
+
+2. ID Selector
+- Every element can have a reference "id", which is used as identification.
+- CSS can define styles using ID selector starting with "#" and reference name.
+   
+    #bg-style {
+
+    }
+
+- Any HTML element can access the ID using "id" attribute.
+
+    <div id="bg-style">
+    <p id="bg-style">
+    <input id="bg-style">
+
+- You can choose an apply styles to specific element.
+- Every element can use only one Id reference.
+- You can't apply multiple categories of styles to one element.
+
+3. Class Selector
+- Class selector is defined by using "." and reference name.
+- You can access and apply to any element in page by using "class" attribute.
+
+Syntax:
+    .text-style {
+
+    }
+
+    <div class="text-style">
+    <input class="text-style">
+    <p class="text-style">
+
+- You can implement multiple classes for one element.
+- All classes are sperated with "blank space".
+
+Syntax:
+    <div class="class1  class2  class3...">
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+         .bg-style {
+            background-color: yellow;
+         }
+         .text-style {
+            color:red;  
+            text-align: center;
+         }
+         .box-style {
+            padding: 10px;
+            border:2px solid red;
+         }
+    </style>
+   
+</head>
+<body>
+   <h1 class="text-style box-style bg-style">Web Technologies</h1>
+   <h1>HTML</h1>
+   <h1 class="bg-style text-style">CSS</h1>
+   <h1 class="box-style">JavaScript</h1>
+</body>
+</html>
+
+FAQ: If we define styles to any element by using all 3 primary selectors then which one will apply?
+Ans:
+     - If different attributes are defined then all will apply.
+     - If same attribute is defined then the priority
+
+    1st    Id selector
+    2nd    Class selector
+    3rd     Type selector
+
+Note: You can group the selectors by using "," delimeter.
+
+    h2, .text-style {
+        color:red;
+    }
+
+    blockquote, samp, code, pre {
+        font-family : "Arial";
+    }
+
+    #text-style,  .head-style {
+          font-style: italics;
+    }
+
+2. Rational Selectors
+
+    Child Selector             parent  child {   }
+
+    Direct Child             parent > child { }
+
+    Adjacent                 element + element { }
+
+    General sibling             element ~ element {  }
+
+
+Syntax:    
+    nav+p {  }        // first paragraph after nav.
+    nav~p { }        // all paragraphs afer name.
+    nav  p { }        // only paragraphs inside nav.
+    nav > p { }        // only paragraphs that are directly inside nav.
+
+
+3. Attribute Selectors
+
+    element[attribute]
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        input[type="button"] {
+            background-color: yellow;
+        }
+    </style>
+   
+</head>
+<body>
+        <form>
+            <dl>
+                <dt>Name</dt>
+                <dd><input type="text"></dd>
+                <dt>Age</dt>
+                <dd><input type="text"></dd>
+            </dl>
+            <input type="button" value="Login">
+            <input type="button" value="Cancel">
+        </form>
+</body>
+</html>
+
+Syntax:
+         p[id]     all paragraphs that have "id" attribute.
+        p[id="p4"]  only the paragraph that have id with value p4
+
+Operators:
+
+    [attribute=value]    exact match
+    [attribute^=value]    starts with
+    [attribute$=value]      ends with
+    [attribute|=value]    individual and can start with & separated with "-".
+    [attribute~=value]      any individual occurrence.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        p[class~="Effect"] {
+            color:red;
+        }
+    </style>
+   
+</head>
+<body>
+    <p class="Effect">Para-1</p>
+    <p class="TextEffect">Para-2</p>
+    <p class="EffectText">Para-3</p>
+    <p class="ParaEffectText">Para-4</p>
+    <p class="Text-Effect">Para-5</p>
+    <p class="Effect-Text">Para-6</p>
+    <p class="Effect Text">Para-7</p>
+    <p class="Para Effect Text">Para-8</p>
+</body>
+</html>

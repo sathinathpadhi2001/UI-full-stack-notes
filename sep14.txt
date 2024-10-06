@@ -1,0 +1,299 @@
+Bootstrap Components
+
+- Components are rich in design, styles and functionality.
+- You can customize and reuse across pages.
+- You can rapidly build interactive design with components.
+
+1. Alert
+- It is an embedded message box in page.
+- It can display message dynamically and close explicitly.
+
+Classes:
+    .alert
+    .alert-{contextual}
+    .alert-dismissible
+    .alert-title
+    .alert-link
+
+Attribute:
+    data-bs-dismiss    : It is used to close the component.
+              It refers to component name.
+              It is defined for clickable elements.
+
+    <button data-bs-dismiss="alert">  </button>
+
+    It will close the alert on button click.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <h2>Alerts</h2>
+    <aside class="alert alert-dismissible w-25 alert-success">
+        <button class="btn btn-close" data-bs-dismiss="alert"></button>
+        <img src="../public/images/a10.jpg" width="100" height="100">
+        <p>Home accessories 20% off</p>
+    </aside>
+    <div class="alert alert-danger alert-dismissible">
+        <button class="btn btn-close" data-bs-dismiss="alert"></button>
+        <h2 class="alert-title">Delete Record</h2>
+        <p>Record deleted successfully..</p>
+        <a href="#" class="alert-link">Help?</a>
+    </div>
+    <div class="alert alert-success alert-dismissible">
+        <h2>Registered successfully..</h2>
+        <p>Please active your account from email.</p>
+        <button data-bs-dismiss="alert" class="btn btn-success">OK</button>
+    </div>
+</body>
+</html>    
+
+2. Modal
+- It shows a pop-up dialog box.
+- It keeps the content in backdrop.
+- It allows to open and close dynamically.
+- It can close on backdrop.
+
+Classes:
+    .modal
+    .modal-dialog
+    .modal-content
+    .modal-header
+    .modal-body
+    .modal-footer
+    .modal-dialog-centered
+    .modal-fullscreen
+    .modal-dialog-scrollable
+
+Syntax:
+    <div class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+             ... header ...
+             ... body...
+             ... footer...
+        </div>
+       </div>
+    </div>
+
+Attributes:
+    data-bs-dismiss        : to close
+    data-bs-toggle        : It defines component to open on click
+    data-bs-target        : It defines which component to open.
+                  It refers to "id" of component.
+
+Syntax:
+    <div class="modal"  id="login">
+    </div>
+
+    <button  data-bs-toggle="modal"  data-bs-target="#login">
+    <a href="#login" data-bs-toggle="modal">
+
+- You can apply "fade" class for modal animation.
+
+    <div class="modal fade"> </div>
+
+- Dialog styles are defined in dialog area
+
+    <div class="modal-dialog modal-dialog-centered | modal-fullscreen">
+    </div>
+
+Note: Bootstrap 5+ versions have disabled nested modals. You can't open a modal
+          from another model.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+   <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#login">Login</button>
+   <a data-bs-toggle="modal" href="#offers" class="btn btn-warning mt-2">Offers</a>
+   <div class="modal fade" id="login">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+         <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="bi bi-person-fill"> User Login</h3>
+                <button data-bs-dismiss="modal" class="btn btn-close"></button>
+            </div>
+            <div class="modal-body">
+                <dl>
+                    <dt>User Name</dt>
+                    <dd><input type="text" class="form-control"></dd>
+                    <dt>Password</dt>
+                    <dd><input type="password" class="form-control"></dd>
+                    <dt>User Name</dt>
+                    <dd><input type="text" class="form-control"></dd>
+                    <dt>Password</dt>
+                    <dd><input type="password" class="form-control"></dd>
+                    <dt>User Name</dt>
+                    <dd><input type="text" class="form-control"></dd>
+                    <dt>Password</dt>
+                    <dd><input type="password" class="form-control"></dd>
+                    <dt>User Name</dt>
+                    <dd><input type="text" class="form-control"></dd>
+                    <dt>Password</dt>
+                    <dd><input type="password" class="form-control"></dd>
+                </dl>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-warning">Login</button>
+                <button class="btn btn-danger ms-2" data-bs-dismiss="modal">Cancel</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <div class="modal fade" id="offers">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Festival SALE</h2>
+                <button class="btn btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body mt-4 d-flex justify-content-center">
+                <div>
+                    <img src="../public/images/a7.jpg" width="150" height="150">
+                    <button class="btn btn-dark bi bi-eye mt-2">View Offer</button>
+                </div>
+                <div>
+                    <img src="../public/images/a8.jpg" width="150" height="150">
+                    <button class="btn btn-dark bi bi-eye mt-2">View Offer</button>
+                </div>
+                <div>
+                    <img src="../public/images/a9.jpg" width="150" height="150">
+                    <button class="btn btn-dark bi bi-eye mt-2">View Offer</button>
+                </div>
+            </div>
+        </div>
+      </div>
+   </div>
+</body>
+</html>
+
+3. Offcanvas
+- It is similar to modal but provides various orientations.
+- You can popup from left, right, top and bottom.
+- It keeps the content in backdrop.
+
+Classes:
+    .offcanvas
+    .offcanvas-header
+    .offcanvas-title
+    .offcanvas-body
+    .offcanvas-start
+    .offcanvas-end
+    .offcanvas-top
+    .offcanvas-bottom
+
+Attributes:
+    data-bs-target
+    data-bs-toggle
+    data-bs-dismiss
+
+Syntax:
+    <div class="offcanvas offcanvas-start">
+       <div class="offcanvas-header">
+       </div>
+       <div class="offcanvas-body">
+       </div>
+    </div>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <div class="btn-toolbar p-2 bg-dark justify-content-between">
+        <div>
+            <button data-bs-target="#menu" data-bs-toggle="offcanvas" class="bi btn btn-light bi-justify fs-4"></button>
+            <span class="fs-4 text-white ms-3">Shopper.</span>
+        </div>
+        <div>
+            <button data-bs-toggle="offcanvas" data-bs-target="#settings" class="bi bi-gear-fill btn btn-light"></button>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-start" id="menu">
+        <div class="offcanvas-header bg-dark text-white">
+            <h2>Shopper.</h2>
+            <button class="btn btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul>
+                <li>Home</li>
+                <li>Electronics</li>
+                <li>Fashion</li>
+                <li>Footwear</li>
+            </ul>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-bottom" id="settings">
+        <div class="offcanvas-header">
+            <button class="btn btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body d-flex justify-content-around">
+            <button class="bi fs-1  bi-brightness-high btn btn-lg"></button>
+            <button class="bi fs-1  bi-tv-fill btn btn-lg"></button>
+            <button class="bi fs-1  bi-bell-fill btn btn-lg"></button>
+        </div>
+    </div>
+</body>
+</html>
+
+4. Collapse
+- It is used to display or hide any content dynamically.
+
+Classes:
+    .collapse
+    .show
+
+Attributes:
+    data-bs-target
+    data-bs-toggle
+Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <h1 class="text-primary text-center">Frequently Asked Questions</h1>
+    <button data-bs-toggle="collapse" data-bs-target="#q1" class="btn btn-dark w-100"> What is Netflix? </button>
+    <div class="collapse bg-dark text-white p-2 mt-2" id="q1">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam inventore harum dolores beatae facere nostrum similique eos porro voluptates in, alias dolorem magni, aut omnis cupiditate! Voluptas reiciendis totam pariatur! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem illum, iure exercitationem obcaecati adipisci nobis vero optio autem perspiciatis animi quia voluptates ea sapiente vel nihil nam atque expedita reprehenderit!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et porro provident nobis itaque, aliquam tenetur odio libero placeat nihil accusantium qui reprehenderit eos ut excepturi maxime quaerat! Distinctio, veniam vitae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis commodi, aliquam hic consequatur minima ab odio tempore possimus reiciendis sapiente quis eligendi voluptas totam perspiciatis numquam sit vero, est assumenda!</p>
+    </div>
+    <button class="btn btn-dark w-100 mt-2" data-bs-target="#q2" data-bs-toggle="collapse">How much does Netflix cost?</button>
+    <div class=" collapse bg-dark p-2 text-white mt-2" id="q2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem architecto sunt voluptate, voluptates corporis ducimus corrupti modi ipsum fugiat dignissimos! Repellat molestias dignissimos necessitatibus quam molestiae repudiandae debitis possimus!</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+
+Semantic and Non Semantic Elements to design page Layout:
+
+- HTML 4 uses tables to design page layout. 
+- Tables are not SEO friendly and lead to a situation called "Kiss-of-Death".
+- HTML 5 introduces new semantics to design page layout so that is more SEO friendly and load content in an order.
+- The semantics used for layout design are 
+
+		<header>
+		<footer>
+		<section>
+		<aside>
+		<article>
+		<dialog>
+		<figure>
+		<figcaption>
+		<main>
+		<nav>
+
+- The non semantics used for page design are
+
+		<div>
+		<span>
+
+FAQ: What is <div> ?
+Ans : It is a non semantic that defines the scope of any content in page.
+	 A topic and sub topic can be separated with <div>, which is a division.
+
+FAQ: What is <span>?
+Ans:  It is an non sematic that defines individual content within context of a topic.
+	 It spans along with other content but accessible individually to highlight.
+
+CSS Border:
+
+	{
+	  border: size  style  color;
+	}
+
+	size		: pixels
+	style		: solid, double, dotted, dashed, groove etc.
+	color	: colorName, code
+
+EX:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        div {
+            border: 1px solid black;
+            padding: 20px;
+            margin: 10px;
+        }
+        span {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Web Technologies
+        <div>
+            Front End
+            <div>
+                HTML <br>
+                It is a <span>markup</span> language.
+            </div>
+            <div>
+                CSS <br>
+                It define styles.
+            </div>
+        </div>
+        <div>
+            Back End
+            <div>
+                MongoDB <br>
+                It is database.
+            </div>
+            <div>
+                Node JS <br> 
+                It is server side scripting.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+							Header
+- It defines the content to display at top margin of page.
+- Typically header comprises of 
+		a) Brand Logo
+		b) Brand Title
+		c) Navbar 
+		d) Search etc..
+
+Syntax:
+	<header>
+		… your content … 
+	</header>
+
+	https://www.getbootstrap.com  => Themes
+	https://colorlib.com
+
+Setup Icons for project:
+1. Open terminal in your project
+
+2. Run the command
+
+	 > npm  install  bootstrap-icons --save
+
+3. It will create a new folder by name "node_modules" and install bootstrap icons library into node_modules.
+
+4. All icons are defined in file  "bootstrap-icons.css", which you have to link to your web page.
+
+<head>
+<link rel="stylesheet"  href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+5. Bootstrap icons are configured under the reference of CSS class names. Class name
+    is defined by using "class" attribute.
+
+	<span class="bi bi-house"> </span>
+	<span class="bi bi-person"> </span>
+	<span class="bi bi-heart"> </span>
+	<span class="bi bi-facebook"> </span>
+
+	icons.getbootstrap.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

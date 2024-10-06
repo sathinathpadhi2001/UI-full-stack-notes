@@ -1,0 +1,180 @@
+Multimedia in HTML
+- Multimedia refers to audio, video and animations.
+- HTML multimedia elements are
+    <marquee>
+    <video>
+    <audio>
+    <embed>
+
+            Marquee
+- It configures scrolling and sliding content in page.
+- You can control the behaviour and direction using following attributes
+
+1. scrollamount        : It sets marquee scrolling speed 1 to 100.
+2. direction        : It sets scrolling direction left, right, up, down.
+3. loop            : It specifies the number of times to display.
+4. width, height        : It sets width and height
+5. bgcolor            : It sets background color
+6. behavior        : It sets alternative behaviour [sliding]
+
+Syntax:
+ <marquee scrollamount=""  direction=""  loop="">
+
+        your content
+
+ </marquee>
+
+Ex:
+ <marquee scrollamount="20" direction="left" loop="3" width="50%" bgcolor="yellow">
+         Sale 50% OFF <img src="../public/images/a1.jpg" width="100" height="100"> Offer starts 20-sep-2024
+    </marquee>
+
+Ex:
+<marquee scrollamount="20" behavior="alternate" >
+         Sale 50% OFF <img src="../public/images/a1.jpg" width="100" height="100"> Offer starts 20-sep-2024
+    </marquee>
+
+                Video & Audio
+- Web supports videos of type
+    .mp4, .mkv, .mov, .ogg, .avi etc.
+- Web supports audio of type
+    .mp3, .wav, .midi etc.
+
+Syntax:
+  <video  src=""  controls  poster=""> </video>
+  <audio  src=""  controls  poster=""> </audio>
+
+- You can set  "autoplay" so that video/audio starts playing automatically on page load.
+ 
+   <video src="" controls  autoplay> </video>
+
+Note: <embed> is HTML 4 element used to embed multi media content into page.
+           however the new browsers will not support embed element.
+
+Ex:
+<video src="../public/videos/js-class.mp4" autoplay controls poster="../public/images/ds.png" width="400" height="300"></video>
+
+
+               Styles
+- Styles are attributes defined for HTML elements to make them interactive and responsive.
+- Styles can be defined for elements in 3 ways
+
+    1. Inline Styles
+    2. Embedded Styles
+    3. External Style Sheets [CSS]
+
+
+Inline Styles
+- Styles are defined for elements individually by using "style" attribute.
+- Inline styles render fast.
+- Inline styles can't be re-used across elements.
+
+Syntax:
+        <h1  style="color:red; text-align:center; background-color:yellow">  </h1>
+
+Embedded Styles
+- Styles are defined in a <style> container.
+- Style container is enbedded into page.
+- You can reuse the styles across elements.
+
+Syntax:
+    <style>
+          selector {
+                attribute : value;
+                attribute : value;
+           }
+    </style>
+
+FAQ's:
+1. Where to embed the style container? In head or in body?
+A. You can embed in both locations.
+
+2. What is difference between styles in head and styles in body?
+A. Styles in head section are used to save "round-trips". If styles are frequently requested then better keep in head section.
+
+     Styles in body section always use round trip, if you are configure styles for one time
+     rendering then better keep in body section.
+
+3. If styles are defined for any element in both head and body then which set of styles
+    will apply?
+A. If different attributes are configure then all will apply.
+    If same attribute is defined then the latest will apply. [top to bottom] LIFO
+
+
+4. What is the MIME type for styles?
+A. MIME is "Multipurpose Internet Mail Extension"
+    The MIME type is required to make styles compatible with browser.
+    A browser can read styles easily only when MIME is defined.
+   Styles MIME type is defined by using "text/css".
+
+Syntax:
+    <style  type="text/css">
+    </style>
+
+5. What is the "media" type for styles?
+A. It can classify the content to present on various media devices, which include
+    a) screen
+    b) print
+    c) speech
+
+Syntax:
+    <style  type="text/css"  media="print | screen | speech | all">
+
+    </style>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css" media="screen">
+        .ticket {
+            border: 2px dobule red;
+            background-color: yellow;
+            color:red;
+            padding: 20px;
+            box-shadow: 10px 10px 2px black;
+        }
+        h2 {
+            text-align: center;
+        }
+        dl {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+    </style>
+    <style type="text/css" media="print">
+        .ticket {
+            background-color: white;
+            box-shadow: none;
+        }
+        aside {
+            display: none;
+        }
+        dl {
+            display: grid;
+            grid-template-columns: 12fr;
+        }
+        button {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+   <div class="ticket">
+       <h2>Ticket</h2>
+       <aside>
+         <img src="../public/images/amazon-banner.jpg" width="100" height="100">
+       </aside>
+       <dl>
+        <dt>Departure</dt>
+        <dd>Hyd  14:30 </dd>
+        <dt>Arrival</dt>
+        <dd>Delhi 15:45 </dd>
+       </dl>
+       <button onclick="window.print()">Print Ticket</button>
+   </div>
+</body>
+</html>

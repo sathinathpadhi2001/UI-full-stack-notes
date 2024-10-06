@@ -1,0 +1,277 @@
+						        Nav
+- It defines the navigation area in web page.
+- Nav comprises of menu items used for navigation in application.
+- It keeps nav item SEO friendly. 
+
+Syntax:
+	<nav>
+	    <span> Home </span>	
+	    <span> About </span>
+	    <span> Contact </span>
+	</nav>
+
+CSS Text Style Attributes:
+
+	font-family			: It defines font family name. [ Arial, Tahoma, Algerian …]
+	font-size				: It sets text size
+	font-weight			: It sets bold
+	font-style				: It sets italics 
+	color				: It sets text color
+	
+Syntax:
+	{ 
+	  font-family : Arial;
+	  font-size: 20px;
+	  font-weight: bold;
+	  font-style: italics;
+	  color: red;
+	}
+
+CSS Flex Display:
+
+	display : flex			It makes flexible alignment of content in a container.
+	flex-direction			It aligns content in row or column. [by default it is row]
+	justify-content			It keeps the content in container with 
+							a) space-between
+							b) space-around
+							c) space-evenly
+							d) center
+							e) baseline [left]
+							f) end [right]
+	align-items			It keeps the alignment of items in container
+							a) baseline
+							b) center
+							c) end
+						If container have more height then it can be
+						vertically top, center or bottom.
+
+Syntax:
+	container 
+	{
+	   display: flex;
+	   flex-direction: row;
+	   justify-content: space-between;
+	   align-items:center;
+	}
+
+						           Article 
+- It is a semantic used for publishing highlights or latest trends of website.
+- It keeps the trends of your site SEO friendly. 
+
+Syntax:
+	<article>
+	     … offers … 
+	</article>
+
+						        Section
+- It is a semantic used to display content between header and footer.
+- Website related all content is kept inside section.
+
+Syntax:
+	<header>
+		… top margin … 
+	</header>
+	<section>
+		… page content … 
+	</section>
+	<footer>
+		… bottom margin … 
+	</footer>
+
+Ex:
+shopper-template.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopper</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            font-family: Segoe UI;
+            font-size: 22px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px;
+            align-items: baseline;
+        }
+        .brand-title {
+            font-weight: bold;
+            font-size: 28px;
+        }
+        nav span {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .shortcuts span {
+            margin-right: 5px;
+        }
+        article {
+            background-color: black;
+            color:white;
+            text-align: center;
+            padding: 10px;
+            font-family: Segoe UI;
+        }
+        .bi-lightning-fill {
+            color:goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="brand-title">Shopper.</span>
+        </div>
+        <div>
+            <nav>
+                <span>Home</span>
+                <span>Catalog</span>
+                <span>Shop</span>
+                <span>Pages</span>
+                <span>Blog</span>
+                <span>Docs</span>
+            </nav>
+        </div>
+        <div class="shortcuts">
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart2"></span>
+        </div>
+    </header>
+    <section>
+        <article>
+            <span class="bi bi-lightning-fill"></span>
+            <span> HAPPY HOLIDAY DEALS ON EVERYTHING </span>
+            <span class="bi bi-lightning-fill"></span>
+        </article>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>
+
+CSS Border & Radius
+
+	  border			: It sets border size, style and color [all directions]
+	  border-radius	: It sets rounded border.
+	  border-left
+	  border-right
+	  border-top
+	  border-bottom
+	  border-top-left-radius
+	  border-top-right-radius
+	  border-bottom-left-radius
+	  border-bottom-right-radius
+
+Ex: Landkit 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landkit</title>
+    <style>
+        header {
+            font-size: 22px;
+            font-family: Segoe UI;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .title {
+            font-weight: bold;
+            color:blue;
+            font-size: 28px;
+        }
+        nav span {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .btn-buy {
+            background-color: blue;
+            color:white;
+            padding: 10px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="title">Landkit.</span>
+        </div>
+        <div>
+            <nav>
+                <span>Landings</span>
+                <span>Pages</span>
+                <span>Account</span>
+                <span>Documentation</span>
+            </nav>
+        </div>
+        <div>
+            <span class="btn-buy">Buy now</span>
+        </div>
+    </header>
+</body>
+</html>
+
+Note: You can't change the width and height of any span element.
+	  To control span width & height, you have to set the display style as "inline-block".
+
+Syntax:
+	span {
+	    display:inline-block;
+	    width:30px;
+	    height:30px;
+	    border-radius:30px;
+	 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

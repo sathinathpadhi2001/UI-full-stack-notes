@@ -1,0 +1,372 @@
+Attributes
+1. frame, rules, border
+2. cellspacing, cellpadding
+3. align, valign
+4. width, height
+5. bgcolor, background
+
+6. colspan & rowspan
+
+     colspan        : It can merge multiple columns into one cell.
+     rowspan        : It can merge multiple rows into one cell.
+
+Note: You can apply span only for <th> or <td>.
+
+Syntax:
+        <th  colspan="4">
+        <td  rowspan="6">
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th colspan="2">Name</th>
+                <th colspan="3">Address</th>
+            </tr>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Postal Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td rowspan="6" align="center"> D<br>E<br>L<br>H<br>I </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5" align="center">&copy; copyright 2024</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
+
+Note: You can create nested tables but make sure that the child table is inside <td> or <th> elements.
+
+Syntax:
+        <td>
+            <table>
+
+            </table>
+        </td>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            border-radius: 20px;
+        }
+        .t-head {
+            text-transform: uppercase;
+            font-family: Arial;
+            font-size: 20px;
+        }
+        table {
+            font-family: Arial;
+        }
+    </style>
+</head>
+<body>
+    <table width="100%" border="1" frame="void" cellspacing="20" cellpadding="10">
+        <tr height="500">
+            <td class="card" width="400" valign="top">
+                <table width="100%" rules="rows">
+                    <thead>
+                        <tr>
+                            <th colspan="3" align="center" class="t-head">test - allrounder Rankings</th>
+                        </tr>
+                    </thead>
+                   <tbody>
+                        <tr height="50">
+                            <td>01</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>02</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>03</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>04</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>05</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>06</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>07</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                   </tbody>
+                   <tfoot>
+                    <tr valign="bottom" height="60">
+                        <td colspan="3" align="center"> Full Ratings </td>
+                    </tr>
+                   </tfoot>
+                </table>
+            </td>
+            <td class="card" width="400" valign="top">
+                <table width="100%" rules="rows">
+                    <thead>
+                        <tr>
+                            <th colspan="3" align="center" class="t-head">ODI - allrounder Rankings</th>
+                        </tr>
+                    </thead>
+                   <tbody>
+                        <tr height="50">
+                            <td>01</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>02</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>03</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>04</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>05</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>06</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>07</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                   </tbody>
+                   <tfoot>
+                    <tr valign="bottom" height="60">
+                        <td colspan="3" align="center"> Full Ratings </td>
+                    </tr>
+                   </tfoot>
+                </table>
+            </td>
+            <td class="card" width="400" valign="top">
+                <table width="100%" rules="rows">
+                    <thead>
+                        <tr>
+                            <th colspan="3" align="center" class="t-head">T20 - allrounder Rankings</th>
+                        </tr>
+                    </thead>
+                   <tbody>
+                        <tr height="50">
+                            <td>01</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>02</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>03</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>04</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>05</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>06</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr height="50">
+                            <td>07</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                   </tbody>
+                   <tfoot>
+                    <tr valign="bottom" height="60">
+                        <td colspan="3" align="center"> Full Ratings </td>
+                    </tr>
+                   </tfoot>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+
+                             Forms in HTML
+
+- Form provides an UI for handling various interactions.
+- Form interactions are often known as CRUD operations.
+
+        C    Create        Submit your data to server
+        R    Read        Query data from server
+        U    Update        View and modify data on server
+        D    Delete        View and remove data from server
+
+- Form comprises of various elements like
+        button
+        textbox
+        checkbox
+        radio
+        listbox
+        labels
+        etc..
+- To design forms HTML provides elements like
+        <form>
+        <input>
+        <select>
+        <progress>
+        <meter>
+        <option>
+        <datalist>
+        etc...
+
+The <form> Element:
+- It is a generic container.
+- It have pre-defined functionality like submit, reset, validate etc.
+
+Syntax:
+        <form>
+            … form elements …
+        </form>
+
+Attributes:
+   
+1. id            : It is a unique ID for form later used in scripting to access form.
+
+2. name        : It is a reference name for form but it can be common for multiple
+              elements.
+
+3. class        : It defines a class name used in CSS and script to access element.
+
+
+4. method    : It defines the action to perform.
+              Every form have 2 basic methods
+                a) GET
+                b) POST
+
+FAQ's:
+1. What is the role of GET method?
+A. It is used to submit data for fetching information from server.
+
+2. What is the role of POST method?
+A. It is used to submit data for saving information on server.
+
+Syntax:
+        <form  method="GET | POST">
+        </form>
+
+3. Can we use GET method for saving data on server?
+A. Yes. But it is not recommended always.
+
+4. Why saving data on GET method is not recommended?
+A.
+    - It submits data by appending into browser address bar as "Query String".
+    - Everyone can view your data.
+    - It is not safe.
+    - It is easy to hack your data.
+    - It is stored in browser logs. [history].
+    - It can be bookmarked.
+    - It can't submit complex data like binary.
+    - It have limit for data, which is max 2048 chars.
+   
+5. What is the advantage of submitting data on GET?
+A.  It can cache the data and save round trips.
+
+6. What are the features of POST?
+A.
+   - It submits data as "Form Body".
+   - It not saved in browser logs.
+   - It is safe.
+   - It can't be bookmarked.
+   - You can submit any complex data.
+   - There is no limit for data.
+   - It is hard to hack the data.
+ 
+7. What is issue with POST?
+A. It can't cache the data.

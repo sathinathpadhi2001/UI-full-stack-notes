@@ -1,0 +1,198 @@
+7. Nav & Tabs
+- It is a combination of navigation with tab based content.
+- You can display multiple categories of content in on page.
+- It allows to switch between categories dynamically.
+- Nav is defined by using the classes
+
+    .nav
+    .nav-tabs
+    .nav-pills
+    .nav-item
+    .nav-menu
+    .nav-link
+    .nav-text
+
+- Tab is defined by using the classes
+
+    .tab-content
+    .tab-pane
+
+Attributes:
+    data-bs-target
+    data-bs-toggle
+
+Syntax:
+    <ul class="nav nav-tabs">
+       <li class="nav-item"> <a class="nav-link"> Tab1 </a> </li>
+       ....
+    </ul>
+    <div class="tab-content">
+       <div class="tab-pane"> </div>
+       ....
+    </div>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Tabls</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <h3>Mobiles</h3>
+    <ul class="nav nav-tabs">
+        <li class="nav-item"> <a data-bs-toggle="tab" href="#basic" class="nav-link active">Basic Details</a> </li>
+        <li class="nav-item"> <a data-bs-toggle="tab" href="#preview" class="nav-link">Preview</a></li>
+        <li class="nav-item"> <a data-bs-toggle="tab" href="#offers" class="nav-link">Offers</a> </li>
+        <li class="nav-item"> <a data-bs-toggle="tab" href="#ratings" class="nav-link">Ratings</a></li>
+    </ul>
+    <div class="tab-content mt-4">
+        <div class="tab-pane active" id="basic">
+            <h3>iPhone 14 Black (128 GB)</h3>
+            <h5>&#8377; 69,000</h5>
+        </div>
+        <div class="tab-pane" id="preview">
+            <img src="../public/images/m1.jpg" width="100" height="100">
+            <img src="../public/images/m2.jpg" width="100" height="100">
+            <img src="../public/images/m3.jpg" width="100" height="100">
+            <img src="../public/images/m4.jpg" width="100" height="100">
+        </div>
+        <div class="tab-pane" id="offers">
+            <ul>
+                <li>Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C </li>
+                <li>Special PriceGet extra ₹4901 off (price inclusive of cashback/coupon)T&C</li>
+                <li>Partner OfferMake a purchase and enjoy a surprise cashback/ coupon that you can redeem later!</li>
+            </ul>
+        </div>
+        <div class="tab-pane" id="ratings">
+            <span>4.5 <span class="bi bi-star-fill text-success"></span></span> 4500 ratings & 600 reviews
+        </div>
+    </div>
+</body>
+</html>
+
+8. Dropdown
+- It is used to design a list of items that popup, down, left or right in page.
+- It allows selection of any one item from list.
+- It allows complex formatted content as list item.
+
+Classes:
+    .dropdown
+    .dropstart
+    .dropend
+    .dropup
+    .dropdown-menu
+    .dropdown-item
+    .dropdown-item-text
+    .dropdown-toggle
+    .dropdown-menu-dark [obsolete]   data-bs-theme="dark"
+    .dropdown-divider
+
+Syntax:
+    <div class="dropdown">
+       <button class="dropdown-toggle"> </button>
+       <ul class="dropdown-menu">
+         <li class="dropdown-item"> <span>Item1</span> </li>
+          ...
+       </ul>
+    </div>
+
+Attributes:
+    data-bs-target
+    data-bs-toggle
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <h2>Flipkart Services</h2>
+    <div class="dropend" data-bs-theme="dark">
+        <button data-bs-target="#menu" data-bs-toggle="dropdown" class="btn btn-dark dropdown-toggle"> <span class="bi bi-gear-fill"></span> Our Services</button>
+        <ul class="dropdown-menu" id="menu">
+            <li class="dropdown-item"> <a > <span class="bi bi-bell-fill dropdown-item-text"> Notifications </span> </a> </li>
+            <li class="dropdown-item"> <a> <span class="bi bi-graph-up-arrow dropdown-item-text"> Spend Analysis </span> </a> </li>
+            <li class="dropdown-item"> <a> <span class="bi bi-cart dropdown-item-text"> Cart Items </span> </a> </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-item"> <a> <span class="bi bi-question-circle dropdown-item-text"> Help </span> </a> </li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+9. Navbar
+- It is used for creating a responsive navigation for website.
+- It can toggle between menu and button.
+- It uses media queries that allows to change according to device.
+
+Classes:
+    .navbar
+    .navbar-expand-lg | sm
+    .navbar-dark [data-bs-theme=dark] new
+    .navbar-light
+    .navbar-toggler
+    .navbar-toggler-icon
+    .navbar-brand
+    .navbar-nav
+    .navbar-collapse
+    .nav-item
+    .nav-link
+    .nav-text
+    .nav-menu
+
+Syntax:
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+         
+      </div>
+  </nav>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <nav class="navbar bg-dark navbar-dark navbar-expand-lg">
+       <div class="container-fluid">
+          <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse">
+             <span class="navbar-toggler-icon"></span>
+          </button>
+          <span class="navbar-brand">Shopper.</span>
+          <div class="navbar-collapse collapse" id="menu">
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link"> Home </a> </li>
+                <li class="nav-item"> <a class="nav-link"> Shop </a> </li>
+                <li class="nav-item"> <a class="nav-link"> Pages </a> </li>
+                <li class="nav-item"> <a class="nav-link"> Blog </a> </li>
+                <li class="nav-item"> <a class="nav-link"> Docs </a> </li>
+                <li class="nav-item">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search Shopper.com">
+                        <button class="bi bi-search btn btn-warning"></button>
+                    </div>
+                </li>
+            </ul>
+          </div>
+       </div>
+    </nav>
+</body>
+</html>

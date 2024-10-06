@@ -1,0 +1,138 @@
+Variable in JavaScript
+- Declaring
+- Assignment
+- Initialization
+- Shadowing
+- Hoisting
+- Var keyword
+
+The "let" keyword:
+- It configures a block scope variable.
+- Block scope variable is a accessible with in the specified block and its inner blocks.
+- It supports declaring, assignment and initialization.
+- It will not support shadowing and hoisting.
+
+The "const" keyword:
+- It configures a  block scope variable.
+- It will not allow declaring and assignment.
+- It allows only initialization.
+- It will not allow shadowing and hoisting.
+
+Syntax:
+    const x;        // invalid        missing initializer
+   
+    const x = 10;    // valid
+    x = 20;        // invalid        assignment to const is not possible
+
+FAQ: Is constant read-only?
+Ans:  No.
+
+FAQ: How to change a const value.
+Ans:  By re-initializing memory.
+
+The "global" scope:
+- The global scope allows to configure values, that are accessible across multiple functions.
+- A global scope is defined at "module" level.
+- A global variable can be configured using
+    a) var
+    b) let
+    c) const
+Ex:
+<script>
+    var x = 10;
+    let y = 20;
+    const z = 30;
+    function f1(){
+      document.write("f1 : x=" + x  +"<br>y=" + y + "<br>z=" + z + "<br>");
+    }
+
+    function f2(){
+      document.write("f2 : x=" + x  +"<br>y=" + y + "<br>z=" + z + "<br>");
+    }
+    f1();
+    f2();
+</script>
+
+- A global scope can be defined for variable inside function by using "window" keyword.
+
+Syntax:    
+    window.variableName = value;
+   
+- "window" is a browser object, that allocates dynamic memory for values. Hence it is not possbile for Javascript if its running outside browser.
+
+- You can access the global variable of "window" object just by the reference name.
+
+Syntax:
+    window.x = 10;
+    document.write("x=" + x );
+Note:
+1. If a variable is configured without value the compiler sets as "undefined".
+
+    var x;
+    document.write(x);        // x = undefined
+
+2. If a variable is expecting value at runtime and it is not defined with value then it returns "null".
+
+    var x = prompt("Enter x");
+    document.write("x=" + x);    // x = null   if prompt canceled.
+
+3. You can configure multiple variables with "," delimiter.
+
+    var x, y, z;            // all are undefined
+    var x, y, z=10;        // x & y are undefined  z = 10
+   
+4. You can configure "de-structuring" variables with multiple reference and values.
+
+    var [x, y, z] = 10;        // invalid    "[ ]" requires a range of values
+                   A collection that iterates and assigns.
+    var [x, y, z] = [10, 20, 30];    // x=10, y=20, z=30
+    var [x, y, z] = [10, 20];    // x=10, y=20, z=undefined
+
+    var [x, y, z];        // invalid missing initializer in destructuring declaration.
+    var [x, y, z] = [ ];        // valid  initializing memory but not values.
+                   all are undefined.
+   
+    var [x,y,z] = [ ];
+    x = 20;
+    y = 30;            // valid
+    z = 40;
+
+5. The declaration ends with ";" and continue with ","  for variables.
+
+Syntax:
+    var x, y, z = 10;            // valid
+    var x; y, z = 10;            // invalid  y & z not declared
+    var x=10; let y, z = 20;        // valid    y = undefined, x = 10, z=20
+
+6. Strict mode can control storing same value into multiple references
+
+Syntax:
+    var x = y = z   = 10;        // in strict mode  z is not defined.
+                // if not in strict mode then x=10, y=10, z=10;
+
+    var x, y, z;
+    x=y=z=20;            // x=20, y=20, z=20
+
+Rules:
+- Variable name must start with an alphabet or can start with "_".
+- It can be alpha numeric with special chars, but not recommended to use special chars.
+   
+    var  sales123;
+    var  2024Sales;    // invalid
+    var _2024Sales;    // valid
+    var  sales.2024;    // invalid
+    var sales_2024;    // valid
+
+- It can't be a keyword.
+
+    var which;        // invalid
+    var for;        // invalid
+    var class;        // invalid
+
+- It can be max 255 chars long according to ECMA standards.
+- It must speak what it is.
+
+    var product;
+    var products;
+
+                         Data Types

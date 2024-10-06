@@ -1,0 +1,113 @@
+HTML Page Structure:
+
+1. Page must have extension ".html or  .htm"
+
+FAQ: What is difference between .html & .htm ?
+Ans:  Technically both are same. 
+	  ".htm" is extension name according to the standards of OS. 
+
+2. Every HTML page must have a document declaration. It is mandatory to defined document declaration from HTML 5 version.
+
+		<!DOCTYPE html>
+
+FAQ: What is the role of document declaration?
+Ans:  It notifies browser engine about version of HTML used in page design.
+	 Document declaration is introduced from HTML 5 version.
+	 Hence if there is no document declaration then it is HTML 4.
+
+3. HTML document scope is defined by using  <html> element.
+
+Syntax:
+	<!DOCTYPE html>
+	<html>
+
+	</html>
+
+FAQ: Can we display multiple documents simultaneously at the same time in browser?
+Ans:  Yes. Technically every document requires a scope to handle its elements.
+
+4. <html> element requires "lang" attribute to defines the regional language used for 
+     web page. Browser handles date & time values, number and currency like reference
+     using language type.
+
+Syntax:
+	<!DOCTYPE html>
+	<html lang="en-in">
+	
+	</html>
+
+ Note: "lang" is an attribute, technically attributes provide additional behaviour for element.
+
+5. Every HTML document have 2 sections at high level
+
+		a) <head>
+		b) <body>
+
+    - Content in head section is defined to save "Round Trips".
+    - Content in body section uses round trips.
+
+FAQ: What is Round Trip?
+Ans:  Round Trip is the process of accessing content from server on every request. 
+
+FAQ: How to save round trip?
+Ans:  By caching the data in browser memory we can save round trip.
+         Frequently requested data is fetched from memory instead of fetching from server.
+
+6. Every HTML page head section usually comprises of elements like
+
+		a) <title>
+		b) <link>
+		c) <meta>
+		d) <style>
+		e) <script>
+		f) <base>
+
+Title:
+ - It can display page title in browser title bar.
+ - It is used in bookmarking.
+ - It is used in SEO. [Search Engine Optimization]
+
+Syntax:
+	<!DOCTYPE html>
+	<html lang="en-in">
+	  <head>
+		<title> Flipkart | Shopping </title>
+	  </head>
+	</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

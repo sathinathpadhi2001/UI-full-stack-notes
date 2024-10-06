@@ -1,0 +1,440 @@
+12. Data List with Terms and Definitions
+- Data list defines with <dl>
+- List comprises terms defined with <dt>
+- Every term have definitions <dd>
+
+Syntax:
+    <dl>
+        <dt>Term </dt>
+        <dd> Definition </dd>
+    </dl>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dt {
+            background-color: lightgray;
+            font-weight: bold;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+     <dl>
+        <dt>HTML</dt>
+        <dd>It is a markup language.</dd>
+        <dd>It is used for presentation.</dd>
+        <dt>CSS</dt>
+        <dt>Styles</dt>
+        <dd>It defines styles. </dd>
+        <dt>JavaScript</dt>
+        <dd>It manipulates DOM.</dd>
+     </dl>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dt {
+            background-color: black;
+            font-weight: bold;
+            padding: 5px;
+            margin-bottom: 5px;
+            color:white;
+        }
+        dd {
+            background-color: lightgray;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        dl {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+     <dl>
+        <dt>Your Name</dt>
+        <dd>some text</dd>
+        <dt>Age</dt>
+        <dd>some age</dd>
+        <dt>City</dt>
+        <dd>some city</dd>
+        <dt>Email</dt>
+        <dd>something@gmail.com</dd>
+     </dl>
+</body>
+</html>
+
+CSS Sticky Position:
+- It keeps elements accordion to normal flow of document.
+- It allows to scroll up to specified position and stick to browser.
+- It allows other content to scroll in backdrop.
+
+Syntax:
+    dt {
+        position:sticky;
+        top:0px;
+    }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dt {
+            background-color: black;
+            font-weight: bold;
+            padding: 5px;
+            margin-bottom: 5px;
+            color:white;
+            position: sticky;
+            top: 0px;
+        }
+        dd {
+            background-color: lightgray;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        dl {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+     <dl>
+        <h2>Amazon</h2>
+        <dt>Electronics</dt>
+        <dd>Televisions</dd>
+        <dd>Mobiles</dd>
+        <dd>Watches</dd>
+        <dd>Watches</dd>
+        <dt>Footwear</dt>
+        <dd>Casuals</dd>
+        <dd>Sneakers</dd>
+        <dd>Boots</dd>
+        <dt>Fashion</dt>
+        <dd>Kids</dd>
+        <dd>Women</dd>
+        <dd>Men</dd>
+        <dd>Kids</dd>
+        <dd>Women</dd>
+        <dd>Men</dd>
+        <dd>Kids</dd>
+        <dd>Women</dd>
+        <dd>Men</dd>
+        <dd>Kids</dd>
+        <dd>Women</dd>
+        <dd>Men</dd>
+        <dd>Kids</dd>
+     </dl>
+</body>
+</html>
+
+13. Fieldset with Legend
+- Fieldset is a frame used to define a container with a category of content.
+- Legend is a caption defined for fieldset.
+
+Syntax:
+    <fieldset>
+        <legend> Title </legend>
+
+        … your content...
+
+    </fieldset>
+
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dt {
+            background-color: black;
+            font-weight: bold;
+            padding: 5px;
+            margin-bottom: 5px;
+            color:white;
+            position: sticky;
+            top: 0px;
+        }
+        dd {
+            background-color: lightgray;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        dl {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        fieldset {
+            border:2px solid black;
+            margin: 20px;
+            box-shadow: 4px 4px 2px gray;
+            width: 600px;
+        }
+        legend {
+            text-align: center;
+            background-color: black;
+            color:white;
+            font-size: 16px;
+            font-family: Arial;
+            padding: 5px;
+            width: 150px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px gray;
+        }
+    </style>
+</head>
+<body>
+     <fieldset>
+        <legend>Personal Details</legend>
+        <dl>
+            <dt>First Name</dt>
+            <dd>some name</dd>
+            <dt>Last Name</dt>
+            <dd>some Name</dd>
+            <dt>Age</dt>
+            <dd>some age</dd>
+         </dl>
+     </fieldset>
+
+     <fieldset>
+        <legend>Address Details</legend>
+        <dl>
+            <dt>City</dt>
+            <dd>some city</dd>
+            <dt>State</dt>
+            <dd>some state</dd>
+            <dt>Postal</dt>
+            <dd>some code</dd>
+         </dl>
+     </fieldset>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            width: 50%;
+            text-align: center;
+            font-size: 12px;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            border-top: 1px solid gray;
+            display: flex;
+            justify-content: center;
+        }
+        legend {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .btn {
+            border : 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            width: 60%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+     <fieldset>
+         <legend>New to Amazon?</legend>
+         <div class="btn">
+            Create your Amazon acocunt
+         </div>
+     </fieldset>
+</body>
+</html>
+
+14. Details and Summary
+- Details is a container that allows to expand and collapse the content dynamically.
+- Summary is caption for details container.
+
+Syntax:
+    <details>
+
+        <summary> Title </summary>
+   
+         …. your content ….
+
+    </details>
+           
+- You can keep any details opened by default using "open" attribute.
+
+Syntax:
+    <details open>
+
+        <summary> Title </summary>
+
+    </details>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Frequently Asked Questions</h1>
+    <details open>
+          <summary>What is Netflix?</summary>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti cupiditate fugiat voluptatibus fugit voluptatum autem quibusdam tempora sit repudiandae eligendi at, labore magnam est porro accusamus, iste earum! Blanditiis, magnam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam assumenda debitis, nesciunt quod asperiores illum possimus eaque dolorum placeat provident optio vel veniam quasi veritatis adipisci natus corrupti, eius tempora?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti cupiditate fugiat voluptatibus fugit voluptatum autem quibusdam tempora sit repudiandae eligendi at, labore magnam est porro accusamus, iste earum! Blanditiis, magnam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam assumenda debitis, nesciunt quod asperiores illum possimus eaque dolorum placeat provident optio vel veniam quasi veritatis adipisci natus corrupti, eius tempora?</p>
+    </details>
+    <details>
+         <summary>How much does Netflix cost?</summary>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti cupiditate fugiat voluptatibus fugit voluptatum autem quibusdam tempora sit repudiandae eligendi at, labore magnam est porro accusamus, iste earum! Blanditiis, magnam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam assumenda debitis, nesciunt quod asperiores illum possimus eaque dolorum placeat provident optio vel veniam quasi veritatis adipisci natus corrupti, eius tempora?</p>
+    </details>
+    <h1>Signin</h1>
+    <details>
+          <summary>Need Help?</summary>
+          <dl>
+             <dd>Forgot Password</dd>
+             <dd>Change Password</dd>
+          </dl>
+    </details>
+</body>
+</html>
+
+15. Ordered and Unordered List
+- Ordered list is auto numbering for a list.
+- Numbering updates automatically when you add or remove items.
+- <ol> is used for ordered list.
+- <li> is used for list item.
+
+Syntax:
+    <ol>
+        <li>HTML</li>                1. HTML
+        <li>CSS </li>                2. CSS
+    </ol>
+
+- You can change the numbering type by using  "type" attribute.
+
+Syntax:
+    <ol type="1, A, a, i, I">
+
+    </ol>
+
+- You can configure numbering from any level by using "start" attribute.
+- "start" refers to level number.
+
+Syntax:
+    <ol type="A"  start="5">
+    </ol>
+
+- HTML 5 supports new attribute "reversed", which is a reversed numbering style.
+
+Syntax:
+    <ol type="1"  reversed>
+    </ol>
+
+- You can create a nested list, but make sure that the child list is defined inside <li>
+  element.
+
+Syntax:
+    <ol>
+          <li> Parent
+             <ol>
+            <li> Child </li>
+             </ol>
+          </li>
+    </ol>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol type="1">
+        <li>HTML
+            <ol type="a">
+                <li>Normal Elements</li>
+                <li>Void Elements</li>
+            </ol>
+        </li>
+       
+        <li>JavaScript
+            <ol type="a">
+                <li>Variables
+                    <ol type="i">
+                        <li>var</li>
+                        <li>let</li>
+                        <li>const</li>
+                    </ol>
+                </li>
+                <li>Operators</li>
+                <li>Statements</li>
+            </ol>
+        </li>
+       
+    </ol>
+</body>
+</html>
+
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child-list {
+            margin-top: 20px;
+            columns: 2;
+        }
+        li {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+     <ol type="1">
+          <li>
+                &lt;br&gt is __________ element.
+                <ol type="a" class="child-list">
+                    <li>Void Element</li>
+                    <li>Normal Element</li>
+                    <li>RC Type</li>
+                    <li>Raw Text</li>
+                </ol>
+          </li>
+     </ol>
+</body>
+</html>

@@ -1,0 +1,97 @@
+What is Network?
+What is Internet?
+What is Web?
+Web Standards & Principles?
+
+				      Setup Environment for Web Development
+
+1. Your device requires Window 8+ versions. You can also have other OS services like
+    Mac, Linux.
+
+2. Download and Install "Node JS" on your PC.
+	
+		https://nodejs.org/en
+
+    - Node JS is a JavaScript runtime used by developers to build Servers, 
+      Web Applications, Command Line Tools & Scripts.
+
+    - After installing open Command Prompt  "run > cmd"
+
+
+		C:\> node  -v				// make sure that Node is above 20x version
+		C:\> npm   -v				// NPM is above 8x version
+
+     - NPM is "Node Package Manager".
+     - Package Manager is a software tool used by developers to install, update and 
+       uninstall any library or framework required for project.
+     - There are various package manager tools like
+		a) NPM
+		b) Yarn
+		c) NuGet
+		d) RubyGEMS
+		e) Composer etc.. 
+
+3. Download and Install "Visual Studio Code" editor
+
+	- Editor provides an IDE [Integrated Development Environment]
+        - It allows to build, debug, test and deploy applications.
+	- There are various types of editors
+			a) Webstrom
+			b) Sublime
+			c) Edit Plus
+			d) PyCharm
+			e) Visual Studio
+			f) Visual Studio Code etc..
+
+	https://code.visualstudio.com/
+
+4. Open Visual Studio Code on your PC and install following extensions
+
+			a)  Live Server   [Ritwick Dey]
+			b)  vscode-icons [vscodeicons.team]
+			c)  IntelliSense for CSS class names in HTML
+			d)  ESLint 
+
+	- Live server provides a local server for hosting your web applications.
+	- Live server runs on   "http://127.0.0.1"  (or)  "http://localhost" [Browser]
+
+			Run => ping -t  127.0.0.1
+
+
+Creating a Web Application:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+

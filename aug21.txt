@@ -1,0 +1,396 @@
+httpswww.instagram.comsharmatechgroup
+
+
+
+Semantics for Body layout
+1. header
+2. footer
+3. section
+4. aside
+5. article
+6. address
+7. nav
+8. main
+
+                               Dialog
+- It is used for displaying a popup message.
+- Dialog is hidden by default, you have to set open attribute.
+
+Syntax
+    dialog open
+
+        your content
+
+    dialog
+
+
+                           Figure & Caption
+- It is a container used for display graphics and images.
+- It keeps the images SEO friendly.
+
+Syntax
+    figure
+        … your image …
+
+        figcaption Fig-1 figcaption
+
+    figure
+
+CSS Background Image
+- CSS provides background color and image attributes.
+- You can set a background image for any element.
+
+Syntax
+      {
+       background-image url (path_name);
+      }
+
+- You can control background image with attributes
+
+    background-size
+    background-position
+    background-repeat
+    background-attachment
+   
+CSS Box Shadow & Text Shadow
+
+- Box shadow is defined for containers like div, header, section etc..
+- Text shadow is for container that have text.
+- Shadow have 4 values.
+        a) horizontal
+        b) vertical
+        c) blur
+        d) color
+
+Syntax
+    {
+      text-shadow  Hpx  Vpx  Bpx  color;
+    }
+
+CSS Hover and Opacity
+- CSS provides opacity attribute to set transparent content.
+- Opacity can from 0 to 1.
+
+        {
+         opacity 0.5;
+        }
+
+- CSS provides hover class, which defined effects to apply when mouse pointer is over the element.
+
+        div {                = normal state
+        }
+
+        divhover {        = on mouse over
+        }
+
+Ex
+Shopper-template.html
+
+!DOCTYPE html
+html lang=en
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleShoppertitle
+    link rel=stylesheet href=..node_modulesbootstrap-iconsfontbootstrap-icons.css
+    style
+        header {
+            font-family Segoe UI;
+            font-size 22px;
+            display flex;
+            flex-direction row;
+            justify-content space-between;
+            padding 20px;
+            align-items baseline;
+        }
+        .brand-title {
+            font-weight bold;
+            font-size 28px;
+        }
+        nav span {
+            margin-left 10px;
+            margin-right 10px;
+        }
+        .shortcuts span {
+            margin-right 5px;
+        }
+        article {
+            background-color black;
+            colorwhite;
+            text-align center;
+            padding 10px;
+            font-family Segoe UI;
+        }
+        .bi-lightning-fill {
+            colorgoldenrod;
+        }
+
+        footer {
+            background-color black;
+            colorwhite;
+            font-family Segoe UI;
+            padding 20px;  
+        }
+        .row-1 {
+            text-align center;
+        }
+        .footer-title {
+            font-size 24px;
+            font-weight bold;
+        }
+        .row-2 {
+            text-align center;
+            margin-top 30px;
+        }
+        .email {
+            display inline-block;
+            padding 20px;
+            background-color #888;
+            colorwhite;
+            width 300px;
+            text-align left;
+        }
+        .subscribe {
+            display inline-block;
+            padding 20px;
+            background-color #444;
+            width 150px;
+            margin-left 20px;
+        }
+        .row-3 {
+            display grid;
+            grid-template-columns 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            margin-top 30px;
+        }
+        .col span {
+            display block;
+            margin-top 15px;
+        }
+        .col-title {
+            font-weight bold;
+            font-size 18px;
+        }
+        aside span {
+            padding-right 10px;
+            padding-top 20px;
+            display inline-block;
+        }
+        main {
+            display grid;
+            grid-template-columns 4fr 4fr 4fr;
+            height 450px;
+            margin-top 5px;
+            margin-bottom 10px;
+        }
+        .women-fashion {
+            background-image url(imageswomen-fashion.jpg);
+            background-size cover;
+            display flex;
+            flex-direction column;
+            justify-content space-evenly;
+            align-items center;
+            opacity 0.6;
+        }
+        .men-fashion {
+            background-image url(imagesmen-fashion.jpg);
+            background-size cover;
+            display flex;
+            flex-direction column;
+            justify-content space-evenly;
+            align-items center;
+            opacity 0.6;
+        }
+        .kids-fashion {
+            background-image url(imageskids-fashion.jpg);
+            background-size cover;
+            display flex;
+            flex-direction column;
+            justify-content space-evenly;
+            align-items center;
+            opacity 0.6;
+        }
+        .main-title {
+            colorwhite;
+            font-size 50px;
+            font-family Segoe UI;
+            font-weight bold;
+            text-shadow 2px 2px 2px black;
+        }
+        .btn-shop {
+            background-color white;
+            padding 10px;
+            font-family Segoe UI;
+            width 130px;
+            text-align center;
+        }
+        .women-fashionhover {
+            opacity 1;
+        }
+        .men-fashionhover {
+            opacity 1;
+        }
+        .kids-fashionhover {
+            opacity 1;
+        }
+    style
+head
+body
+    header
+        div
+            span class=brand-titleShopper.span
+        div
+        div
+            nav
+                spanHomespan
+                spanCatalogspan
+                spanShopspan
+                spanPagesspan
+                spanBlogspan
+                spanDocsspan
+            nav
+        div
+        div class=shortcuts
+            span class=bi bi-searchspan
+            span class=bi bi-personspan
+            span class=bi bi-heartspan
+            span class=bi bi-cart2span
+        div
+    header
+    section
+        article
+            span class=bi bi-lightning-fillspan
+            span HAPPY HOLIDAY DEALS ON EVERYTHING span
+            span class=bi bi-lightning-fillspan
+        article
+        main
+            div class=women-fashion
+               
+                    div class=main-titleWomendiv
+                    div class=btn-shop
+                        Shop Women span class=bi bi-arrow-rightspan
+                    div
+               
+            div
+            div class=men-fashion
+                div class=main-titleMendiv
+                div class=btn-shop
+                    Shop Men span class=bi bi-arrow-rightspan
+                div
+            div
+            div class=kids-fashion
+                div class=main-titleKidsdiv
+                div class=btn-shop
+                    Shop Kids span class=bi bi-arrow-rightspan
+                div
+            div
+        main
+    section
+    footer
+        div class=row-1
+            span class=footer-titleWant style Ideas and Treatsspan
+        div
+        div class=row-2
+            span class=emailEnter Emailspan
+            span class=subscribe Subscribe span
+        div
+        div class=row-3
+            div
+                span class=brand-titleShopperspan
+                aside
+                    span class=bi bi-facebookspan
+                    span class=bi bi-twitterspan
+                    span class=bi bi-instagramspan
+                    span class=bi bi-youtubespan
+                    span class=bi bi-linkedinspan
+                aside
+            div
+            div class=col
+                span class=col-titleSupportspan
+                spanContact Usspan
+                spanFAQsspan
+                spanSize Guidespan
+                spanShipping & Returnsspan
+            div
+            div class=col
+                span class=col-titleShopspan
+                spanMen's Shoppingspan
+                spanWomen's Shoppingspan
+                spanKids' Shoppingspan
+                spanDiscountsspan
+            div
+            div class=col
+                span class=col-titleCompanyspan
+                spanOur Storyspan
+                spanCareersspan
+                spanTerms & Conditionsspan
+                spanPrivacy & Cookie policyspan
+            div
+            div
+                address class=col
+                    span class=col-titleContactspan
+                    span1-202-555-0105span
+                    span1-202-555-0106span
+                    spanhelp@shopper.comspan
+                address
+            div
+        div
+    footer
+body
+html
+
+                    Semantics and Entities for Body Content
+
+- Browser can't present the content exactly as defined in your editor.
+- Hence you have to use entities and semantics to display content as expected.
+
+1. Line Break            br
+
+2. Blank Space        &nbsp;
+
+
+FAQ What is difference between br  &  br  
+Ans
+  - There is no br  in HTML.
+  - Browser can understand only br.
+  - br  is to represent self ending elements. [void]
+
+Syntax
+         H &nbsp;&nbsp; T M L br
+         It is a markup language.
+
+
+3. Preformatted            pre         Keeps the formats as defined in editor
+
+4. Code                    code         To display code blocks or snippets
+
+Ex
+!DOCTYPE html
+html lang=en
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleDocumenttitle
+    style
+        code {
+            colorwhite;
+        }
+        pre {
+            background-color black;
+        }
+    style
+head
+body
+    div
+       pre
+        code
+            var createHelloWorld = function() {
+   
+                return function(...args) {
+                   
+                }
+            };
+        code
+       pre
+    div
+body
+html

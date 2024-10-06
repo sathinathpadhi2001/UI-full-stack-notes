@@ -1,0 +1,186 @@
+CSS Display
+
+- CSS "display" attribute can use various values
+
+    a) inline
+    b) flex
+    c) block
+    d) none
+    e) inline-block
+    f) grid
+
+1. Display None
+ - It hides element in page.
+ - It removes the allocated space for element in page.
+
+FAQ: What is difference between "display:none" & "visibility:hidden"?
+Ans:  display removes the space allocated for element while hiding.
+         visibility keeps the allocated space for element and hides from UI.
+
+2. Display Block
+- It sets block style for inline elements.
+- block style will not allow any another element beside the existing.
+- block elements include
+    <h1>, <p>, <div>, <ol>, etc..
+
+Syntax:
+    span {            img {
+         display:block;            display:block
+    }            }
+
+3. Display Inline
+- It sets inline style for block level elements.
+- It allows to display any another element beside existing element.
+
+Syntax:
+    h1 {
+          display:inline;
+    }
+- Inline will convert a block level element to inline element.
+- It removes the block level styles for element.
+
+Syntax:
+    li {
+         display: inline;
+    }
+
+
+4. Display Inline Block
+- Several HTML elements are inline.
+- You can't apply block styles for inline elements, like width, height, positions etc.
+- You have to keep inline and apply block styles, which is possible with "inline-block".
+
+Syntax:
+    span {
+          display:inline-block;
+          width:100px;
+          border: 1px solid black;
+    }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 100px;
+            border:1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+</body>
+</html>
+
+5. Display Flex
+- Flex is defined for container that have elements.
+- It keeps the elements flexible.
+- You can control the flex-direction row, column, row-reverse, column-reverse.
+
+Syntax:
+    {
+     display:flex;
+     flex-direction: row | column | row-reverse | column-reverse;
+    }
+
+- If you set display as flex then the height of elements will adjust according to parent.
+- Default flex direction is row.
+- If you want to place contents with regard to height of container, top, center or bottom then you have to configure "align-items"
+    a) baseline [top]
+    b) center
+    c) end [bottom]
+- If flex direction is column then align items will keep elements
+    a) baseline [left]
+    b) center
+    c) end [right]
+
+Syntax:
+    {
+      display:flex;
+      flex-direction: row;
+      align-item: center | baseline | end;
+    }
+
+- You can display the lastest first by using row-reverse & column-reverse.
+- You can control the placement of elements according to width and height of container by using "align-items".
+- You can control the flexibility of elements in container by using "justify-content"
+   
+    a) space-between
+    b) space-around
+    c) space-evenly
+
+Syntax:
+    {
+      display : flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       ul {
+        list-style: none;
+       }
+       li {
+         margin: 10px 0px 10px 0px;
+         background-color: black;
+         padding: 5px;
+         color:white;
+         height: 40px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+       }
+       .badge {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          border-radius: 20px;
+          background-color: white;
+          color:black;
+          text-align: center;
+       }
+    </style>
+</head>
+<body>
+    <h2 align="center">Table of Contents</h2>
+    <ul>
+        <li> <span>HTML</span> <span class="badge">2</span> </li>
+        <li> <span>CSS</span> <span class="badge">4</span> </li>
+        <li> <span>Bootstrap</span> <span class="badge">7</span> </li>
+        <li> <span>JavaScript</span> <span class="badge">9</span> </li>
+    </ul>
+</body>
+</html>
+- If there are many items in a flex container, then you can control wrapping by using
+  "flex-wrap".
+    a) wrap
+    b) no-wrap
+- The default is set to "wrap".
+
+Syntax:
+    {
+      display:flex;
+      flex-wrap: nowrap;
+    }
+
+
+6. Display Grid
+- It is used to create responsive layout.
+- It can arrange contents into rows and columns.
+- It can dynamically change layout of the content in rows and columns.

@@ -1,0 +1,346 @@
+CSS Text Effects
+
+font-size        
+font-style [italic]        
+font-weight [bold]
+font-family
+font-variant [small-caps]
+
+text-transform [caps, capitalize, lowercase, uppercase]
+text-align
+text-shadow
+text-decoration [style, size, color, type]      [type=underline, overline, line-through]
+text-indent
+color [text-color]
+text-wrap
+text-overflow
+overflow
+white-space
+word-wrap
+letter-spacing
+line-height
+word-spacing
+word-break
+
+                           CSS Columns
+- columns
+- column-width
+- column-gap
+- column-rule
+
+                         CSS List Style
+list-style        : short hand
+list-style-type    : alpha, circle, number etc..
+list-style-image    : custom image as bullet
+list-style-position    : inside, outside
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       ul {
+        list-style: none;
+        list-style-image: url("../public/images/star-bullet.gif");
+        font-size: 32px;
+        list-style-position: inside;
+       }
+       li {
+        border: 1px solid black;
+        padding: 5px;
+        width: 200px;
+       }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+</body>
+</html>                
+
+                    CSS Transforms
+- Transform allow to change position, size and orientation of any element in page.
+- Transform can be defined using various dimensions
+    a) 2D Transforms
+    b) 3D Transforms
+
+2D Transforms:
+- It refers to two-dimensional transformation of element.
+- 2 Dimensions are X & Y.  [Horizontal & Vertical]
+- CSS 2D transforms are
+
+    a) translate()
+    b) scale()
+    c) rotate()
+    d) skew()
+
+- These methods are applied using "transform" attribute.
+
+    {
+       transform : translate(), scale(),  rotate(), skew();
+    }
+
+                      CSS Translate
+- It changes the position of element in page along X and Y axis
+- It provides the methods
+
+    translate()
+    translateX()
+    translateY()
+
+- Units are defined in "px" or "%".
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       img {
+          transform: translate(0px, 0px);
+          transition: 2s;
+       }
+       img:hover {
+         transform: translate(400px, 200px);
+         transition: 5s;
+       }
+    </style>
+</head>
+<body>
+   <img src="../public/images/women-fashion.jpg" width="100" height="100">
+</body>
+</html>
+
+                  CSS Scale
+- It changes size of element.
+- It can set linear width and height.
+- It have methods
+
+    scale()
+    scaleX()
+    scaleY()
+
+- Units are defined using a number  1=100%, 1.5=150%..
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+       img {
+          transform: scale(2,2);
+          transition: 2s;
+       }
+       img:hover {
+          transform: scale(4,4);
+          transition: 5s;
+       }
+    </style>
+</head>
+<body>
+   <img src="../public/images/women-fashion.jpg" width="100" height="100">
+</body>
+</html>
+                    CSS Skew
+- It is used to tilt element by specified angle.
+- It uses the methods
+       
+    skew()
+    skewX()
+    skewY()
+
+- The units are defined in "deg". You can also define -ve value.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+       img {
+          transform: skewY(0deg);
+          transition: 2s;
+       }
+       img:hover {
+          transform: skewY(20deg) ;
+          transition: 5s;
+       }
+    </style>
+</head>
+<body>
+   <img src="../public/images/women-fashion.jpg" width="200" height="200">
+</body>
+</html>
+   
+                           CSS Rotate
+- It rotates element by specific angle.
+- It uses the methods
+   
+    rotate()
+    rotateX()
+    rotateY()
+
+- Units are defined in "deg".
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+       img {
+          transform: rotate(0deg) scale(1);
+          transition: 2s;
+       }
+       img:hover {
+          transform: rotate(-360deg) scale(3) ;
+          transition: 2s;
+       }
+    </style>
+</head>
+<body>
+   <img src="../public/images/women-fashion.jpg" width="200" height="200">
+</body>
+</html>
+
+                          CSS Matrix
+- It allows to define multiple transforms.
+
+Syntax:
+    matrix(scaleX(), skewX(), skewY(), scaleY(), translateX(), translateY())
+
+- Scale is defined with 1=100%
+- Skew is defined with 0.1 = 10deg
+- Translate is defined with 100 = 100px
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+       img {
+          transform: matrix(1,0,0,1,0,0) rotate(0deg);
+          transition: 2s;
+       }
+       img:hover {
+          transform: matrix(2,0.5,0.5,2,100,100) rotate(360deg);
+          transition: 2s;
+       }
+    </style>
+</head>
+<body>
+   <img src="../public/images/women-fashion.jpg" width="100" height="100">
+</body>
+</html>
+
+                   CSS 3D Transforms
+- 3D refers to 3 dimensions, which includes X, Y & Z.
+- Z dimension defines the depth.
+- 3D is just a perspective of viewing.
+- It have methods
+
+    translate3D()
+    scale3D()
+    skew3D()
+    rotate3D()
+   
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        img {
+            transform: scale3d(1,1,1);
+            transition: 2s;
+        }
+        img:hover {
+            transform: scale3d(2,2,4);
+            box-shadow: 15px 15px 2px black;
+            border-radius: 100px;
+            transition: 4s;
+        }
+    </style>
+</head>
+<body>
+   <div>
+      <img src="../public/images/women-fashion.jpg" width="200" height="200">
+   </div>
+</body>
+</html>
+
+Note: The transforms are not compatible across all browsers hence developer have to design
+          transforms with additional plugins.
+
+    transform            : universal for all browsers
+    webkit-transform
+    moz-transform
+    o-transform
+    ms-transform
+
+Syntax:
+    {
+      transform : scale(2);
+      -webkit-transform: scale(2);
+      -moz-transform: scale(2);
+      -o-transform:scale(2);
+      -ms-transform:scale(2);
+    }
+
+
+                      Transition, Animations
